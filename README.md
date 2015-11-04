@@ -1,3 +1,3 @@
-# XFAlertBuilder
+# XFDialogBuilder
 
 完全自定义的IOS输入对话框，你的界面你做主，可以通过外观、大小、位置、主题颜色、动画效果定制。
