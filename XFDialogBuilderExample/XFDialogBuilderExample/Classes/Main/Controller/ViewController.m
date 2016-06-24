@@ -261,6 +261,34 @@
     self.dialogView = comboBoxView;
 }
 
+- (IBAction)popupTextAreaDialog:(id)sender {
+    
+    WS(weakSelf)
+    self.dialogView =
+    [[XFDialogTextArea dialogWithTitle:@"请输入你的想法吧~"
+                                 attrs:@{
+                                         XFDialogTitleViewBackgroundColor : [UIColor grayColor],
+                                         XFDialogTitleColor: [UIColor whiteColor],
+                                         //XFDialogTitleFontSize: @(14.f),
+                                         //XFDialogTitleViewHeight: @(22 + 16),
+                                         //XFDialogTitleAlignment: @(NSTextAlignmentCenter),
+                                         //XFDialogTitleIsMultiLine: @(YES),
+                                         XFDialogTextAreaMargin: @(16.f),
+                                         XFDialogTextAreaHeight: @(120.f),
+                                         XFDialogTextAreaPlaceholderKey: @"说点什么",
+                                         XFDialogTextAreaPlaceholderColorKey: [UIColor grayColor],
+                                         XFDialogTextAreaHintColor: [UIColor grayColor],
+                                         XFDialogLineColor: [UIColor grayColor],
+                                         XFDialogTextAreaFontSize: @(15)
+                                         }
+                        commitCallBack:^(NSString *inputText) {
+                            [weakSelf.dialogView hideWithAnimationBlock:nil];
+                        }
+                         errorCallBack:^(NSString *errorMessage) {
+                             
+                         }] showWithAnimationBlock:nil];
+}
+
 - (void)regionSelectAction:(UIButton *)selector {
     XFComboxListController *regionVC = [[XFComboxListController alloc] init];
     regionVC.borderColor = [UIColor purpleColor];

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -59,6 +59,13 @@
                                     <action selector="popupComboxDialog:" destination="BYZ-38-t0r" eventType="touchUpInside" id="476-ef-zOc"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9P-Kp-BnP">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="弹出文本框"/>
+                                <connections>
+                                    <action selector="popupTextAreaDialog:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7WI-Le-neG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -73,6 +80,8 @@
                             <constraint firstItem="pha-Qf-gvh" firstAttribute="top" secondItem="Kd3-4L-Qgy" secondAttribute="bottom" constant="18" id="fME-mS-zXm"/>
                             <constraint firstItem="O0W-UE-AWx" firstAttribute="top" secondItem="4lL-Dn-fD1" secondAttribute="bottom" constant="20" id="jaT-70-h8G"/>
                             <constraint firstItem="mWs-Da-j7h" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="q1S-MC-LkN"/>
+                            <constraint firstItem="o9P-Kp-BnP" firstAttribute="top" secondItem="pha-Qf-gvh" secondAttribute="bottom" constant="8" id="tn2-ja-zBw"/>
+                            <constraint firstItem="o9P-Kp-BnP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xaF-pQ-fq5"/>
                             <constraint firstItem="4lL-Dn-fD1" firstAttribute="centerX" secondItem="sTU-sZ-z6J" secondAttribute="centerX" id="zbF-vr-jv1"/>
                         </constraints>
                         <variation key="default">
@@ -83,6 +92,7 @@
                                 <exclude reference="O0W-UE-AWx"/>
                                 <exclude reference="Kd3-4L-Qgy"/>
                                 <exclude reference="pha-Qf-gvh"/>
+                                <exclude reference="o9P-Kp-BnP"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="0Ul-1u-EiA"/>
@@ -97,6 +107,8 @@
                                 <exclude reference="cis-Bm-h8x"/>
                                 <exclude reference="2Iw-pz-xax"/>
                                 <exclude reference="fME-mS-zXm"/>
+                                <exclude reference="tn2-ja-zBw"/>
+                                <exclude reference="xaF-pQ-fq5"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -107,6 +119,7 @@
                                 <include reference="O0W-UE-AWx"/>
                                 <include reference="Kd3-4L-Qgy"/>
                                 <include reference="pha-Qf-gvh"/>
+                                <include reference="o9P-Kp-BnP"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="0Ul-1u-EiA"/>
@@ -121,6 +134,8 @@
                                 <include reference="cis-Bm-h8x"/>
                                 <include reference="2Iw-pz-xax"/>
                                 <include reference="fME-mS-zXm"/>
+                                <include reference="tn2-ja-zBw"/>
+                                <include reference="xaF-pQ-fq5"/>
                             </mask>
                         </variation>
                     </view>
