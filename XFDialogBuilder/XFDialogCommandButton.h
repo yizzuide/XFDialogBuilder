@@ -9,13 +9,12 @@
 #import "XFDialogFrame.h"
 
 #define XFDialogCommandButtonDefHeight 49.f
-#define XFDialogCommandButtonLineDefW 1.f
 #define XFDialogCommitButtonDefFontSize 17
 
 extern const NSString *XFDialogCommandButtonHeight;
-
 extern const NSString *XFDialogCancelButtonTitleColor;
 extern const NSString *XFDialogCommitButtonTitleColor;
+extern const NSString *XFDialogCancelButtonTitle;
 extern const NSString *XFDialogCommitButtonTitle;
 extern const NSString *XFDialogCommitButtonFontSize;
 extern const NSString *XFDialogCommitButtonMiddleLineDisable;

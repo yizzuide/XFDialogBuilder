@@ -30,7 +30,7 @@ const NSString *XFDialogOptionButtonFontSize = @"XFDialogOptionButtonFontSize";
 - (UIView *)createMiddleLine
 {
     UIView *lineView = [[UIView alloc] init];
-    lineView.height = XFDialogCommandButtonLineDefH;
+    lineView.height = XFDialogRealValueWithFloatType(XFDialogLineWidth, XFDialogLineDefW);
     lineView.width = self.width;
     lineView.backgroundColor = XFDialogRealValue(XFDialogLineColor, [UIColor grayColor]);
     [self addSubview:lineView];

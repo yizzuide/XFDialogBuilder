@@ -24,6 +24,8 @@ typedef float(^addAnimationEngineBlock)(UIView *view);
 #define XFDialogDefCornerRadius 5
 #define XFDialogTitleDefFontSize 17.f
 #define XFDialogDefItemSpacing 8.f
+#define XFDialogLineDefW 1.f
+
 /**
  *  遮罩层背景色
  */
@@ -36,6 +38,7 @@ extern const NSString *XFDialogSize;
 extern const NSString *XFDialogCornerRadius;
 extern const NSString *XFDialogBackground;
 extern const NSString *XFDialogLineColor;
+extern const NSString *XFDialogLineWidth;
 extern const NSString *XFDialogItemSpacing;
 
 extern const NSString *XFDialogTitleViewBackgroundColor;

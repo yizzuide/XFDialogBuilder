@@ -52,7 +52,7 @@ const NSString *XFDialogComboBoxTitle = @"XFDialogComboBoxTitle";
     for (int i = 0; i < count; i++) {
         XFRightImageButton *menuSelector = [[XFRightImageButton alloc] init];
         menuSelector.layer.borderColor = XFDialogRealValueWithType(XFDialogLineColor, CGColor, [UIColor grayColor].CGColor);
-        menuSelector.layer.borderWidth = XFDialogCommandButtonLineDefW;
+        menuSelector.layer.borderWidth = XFDialogRealValueWithFloatType(XFDialogLineWidth, XFDialogLineDefW);
         menuSelector.size = CGSizeMake(XFDialogRealValueWithFloatType(XFDialogComboBoxW, XFDialogComboBoxDefW), XFDialogRealValueWithFloatType(XFDialogComboBoxH, XFDialogComboBoxDefH));
         
         if (self.attrs[XFDialogComboBoxIcon]) {

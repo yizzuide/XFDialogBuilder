@@ -17,6 +17,7 @@ const NSString *XFDialogSize = @"XFDialogSize";
 const NSString *XFDialogCornerRadius = @"XFCornerRadius";
 const NSString *XFDialogBackground = @"XFDialogBackground";
 const NSString *XFDialogLineColor = @"XFDialogLineColor";
+const NSString *XFDialogLineWidth = @"XFDialogLineWidth";
 const NSString *XFDialogItemSpacing = @"XFDialogItemSpacing";
 
 const NSString *XFDialogTitleViewBackgroundColor = @"XFDialogTitleViewBackgroundColor";

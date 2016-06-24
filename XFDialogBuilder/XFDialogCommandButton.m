@@ -15,6 +15,7 @@
 const NSString *XFDialogCommandButtonHeight = @"XFDialogCommandButtonHeight";
 const NSString *XFDialogCancelButtonTitleColor = @"XFDialogCancelButtonTitleColor";
 const NSString *XFDialogCommitButtonTitleColor = @"XFDialogCommitButtonTitleColor";
+const NSString *XFDialogCancelButtonTitle = @"XFDialogCancelButtonTitle";
 const NSString *XFDialogCommitButtonTitle = @"XFDialogCommitButtonTitle";
 const NSString *XFDialogCommitButtonFontSize = @"XFDialogCommitButtonFontSize";
 const NSString *XFDialogCommitButtonMiddleLineDisable = @"XFDialogCommitButtonMiddleLineDisable";
@@ -37,7 +38,7 @@ const NSString *XFDialogCommitButtonMiddleLineDisable = @"XFDialogCommitButtonMi
 {
     if (_buttonTopLine == nil) {
         UIView *lineView = [[UIView alloc] init];
-        lineView.height = XFDialogCommandButtonLineDefW;
+        lineView.height = XFDialogRealValueWithFloatType(XFDialogLineWidth, XFDialogLineDefW);
         lineView.backgroundColor = XFDialogRealValue(XFDialogLineColor, [UIColor grayColor]);
         
         [self addSubview:lineView];
@@ -51,7 +52,7 @@ const NSString *XFDialogCommitButtonMiddleLineDisable = @"XFDialogCommitButtonMi
 {
     if (_buttonMiddleLine == nil) {
         UIView *lineView = [[UIView alloc] init];
-        lineView.width = XFDialogCommandButtonLineDefW;
+        lineView.width = XFDialogRealValueWithFloatType(XFDialogLineWidth, XFDialogLineDefW);
         lineView.height = [self realCommandButtonHeight];
         lineView.backgroundColor = XFDialogRealValue(XFDialogLineColor, [UIColor grayColor]);
         
@@ -69,7 +70,7 @@ const NSString *XFDialogCommitButtonMiddleLineDisable = @"XFDialogCommitButtonMi
     // 取消按钮
     UIButton *cancelButton = [[UIButton alloc] init];
     //cancelButton.backgroundColor = [UIColor purpleColor];
-    [cancelButton setTitle:@"取消" forState:UIControlStateNormal];
+    [cancelButton setTitle:XFDialogRealValue(XFDialogCancelButtonTitle, @"取消") forState:UIControlStateNormal];
     [cancelButton setTitleColor:XFDialogRealValue(XFDialogCancelButtonTitleColor, [UIColor blackColor]) forState:UIControlStateNormal];
     cancelButton.titleLabel.font = XFDialogRealFont(XFDialogCommitButtonFontSize, XFDialogCommitButtonDefFontSize);
     
