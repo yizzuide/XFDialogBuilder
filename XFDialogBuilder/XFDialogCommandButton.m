@@ -17,6 +17,7 @@ const NSString *XFDialogCancelButtonTitleColor = @"XFDialogCancelButtonTitleColo
 const NSString *XFDialogCommitButtonTitleColor = @"XFDialogCommitButtonTitleColor";
 const NSString *XFDialogCommitButtonTitle = @"XFDialogCommitButtonTitle";
 const NSString *XFDialogCommitButtonFontSize = @"XFDialogCommitButtonFontSize";
+const NSString *XFDialogCommitButtonMiddleLineDisable = @"XFDialogCommitButtonMiddleLineDisable";
 
 
 @interface XFDialogCommandButton ()
@@ -69,7 +70,7 @@ const NSString *XFDialogCommitButtonFontSize = @"XFDialogCommitButtonFontSize";
     UIButton *cancelButton = [[UIButton alloc] init];
     //cancelButton.backgroundColor = [UIColor purpleColor];
     [cancelButton setTitle:@"取消" forState:UIControlStateNormal];
-    [cancelButton setTitleColor:XFDialogRealValue(XFDialogCancelButtonTitleColor, UIColorFromRGB(CBTitleTextColor)) forState:UIControlStateNormal];
+    [cancelButton setTitleColor:XFDialogRealValue(XFDialogCancelButtonTitleColor, UIColorFromRGB(0x000000)) forState:UIControlStateNormal];
     cancelButton.titleLabel.font = XFDialogRealFont(XFDialogCommitButtonFontSize, XFDialogCommitButtonDefFontSize);
     
     [self addSubview:cancelButton];
@@ -79,7 +80,7 @@ const NSString *XFDialogCommitButtonFontSize = @"XFDialogCommitButtonFontSize";
     // 确定按钮
     UIButton *commitButton = [[UIButton alloc] init];
     [commitButton setTitle:XFDialogRealValue(XFDialogCommitButtonTitle, @"确定") forState:UIControlStateNormal];
-    [commitButton setTitleColor: XFDialogRealValue(XFDialogCommitButtonTitleColor, UIColorFromRGB(CBTitleTextColor)) forState:UIControlStateNormal];
+    [commitButton setTitleColor: XFDialogRealValue(XFDialogCommitButtonTitleColor, UIColorFromRGB(0xff0000)) forState:UIControlStateNormal];
     commitButton.titleLabel.font = XFDialogRealFont(XFDialogCommitButtonFontSize, XFDialogCommitButtonDefFontSize);
     [self addSubview:commitButton];
     self.commitButton = commitButton;
@@ -87,7 +88,9 @@ const NSString *XFDialogCommitButtonFontSize = @"XFDialogCommitButtonFontSize";
     
     // 添加线条
     [self buttonTopLine];
-    [self buttonMiddleLine];
+    if (!XFDialogRealValueWithType(XFDialogCommitButtonMiddleLineDisable, boolValue, NO)) {
+        [self buttonMiddleLine];
+    }
 }
 
 - (void)layoutSubviews
@@ -95,8 +98,6 @@ const NSString *XFDialogCommitButtonFontSize = @"XFDialogCommitButtonFontSize";
     [super layoutSubviews];
     
     CGFloat buttonH = [self realCommandButtonHeight];
-    
-    LogWarning(@"dialogSize: %@",NSStringFromCGSize(self.dialogSize));
 
     self.cancelButton.y = self.dialogSize.height - buttonH;
     self.cancelButton.width = self.dialogSize.width * 0.5;
@@ -110,9 +111,11 @@ const NSString *XFDialogCommitButtonFontSize = @"XFDialogCommitButtonFontSize";
     self.buttonTopLine.y = self.commitButton.y - 1;
     self.buttonTopLine.width = self.dialogSize.width;
     
-    self.buttonMiddleLine.y = self.commitButton.y;
-    self.buttonMiddleLine.x = (self.dialogSize.width - self.buttonMiddleLine.width) * 0.5;
-    self.buttonMiddleLine.height = buttonH;
+    if (!XFDialogRealValueWithType(XFDialogCommitButtonMiddleLineDisable, boolValue, NO)) {
+        self.buttonMiddleLine.y = self.commitButton.y;
+        self.buttonMiddleLine.x = (self.dialogSize.width - self.buttonMiddleLine.width) * 0.5;
+        self.buttonMiddleLine.height = buttonH;
+    }
 }
 
 - (CGFloat)realCommandButtonHeight

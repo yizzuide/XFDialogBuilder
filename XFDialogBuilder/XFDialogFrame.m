@@ -11,7 +11,8 @@
 #import "UIView+DialogMeasure.h"
 #import "XFDialogMacro.h"
 
-
+const NSString *XFDialogMaskViewBackgroundColor = @"XFDialogMaskViewBackgroundColor";
+const NSString *XFDialogMaskViewAlpha = @"XFDialogMaskViewAlpha";
 const NSString *XFDialogSize = @"XFDialogSize";
 const NSString *XFDialogCornerRadius = @"XFCornerRadius";
 const NSString *XFDialogBackground = @"XFDialogBackground";
@@ -57,7 +58,7 @@ const NSString *XFDialogTitleIsMultiLine = @"XFDialogTitleIsMultiLine";
     
     UILabel *titleLabel = [[UILabel alloc] init];
     titleLabel.text = title;
-    titleLabel.textColor = XFDialogRealValueForRef(attrs, XFDialogTitleColor, UIColorFromRGB(CBTitleTextColor));
+    titleLabel.textColor = XFDialogRealValueForRef(attrs, XFDialogTitleColor, UIColorFromRGB(0x000000));
     titleLabel.textAlignment = XFDialogRealValueWithTypeForRef(attrs,XFDialogTitleAlignment,intValue,NSTextAlignmentCenter);
     if (attrs[XFDialogTitleIsMultiLine]) {
         titleLabel.numberOfLines = 0;
@@ -70,7 +71,9 @@ const NSString *XFDialogTitleIsMultiLine = @"XFDialogTitleIsMultiLine";
     [dialogFrameView addContentView];
     dialogFrameView.size = [dialogFrameView dialogSize];
     
-    XFMaskView *maskView = [XFMaskView dialogMaskView];
+    UIColor *maskViewBackColor = XFDialogRealValueForRef(attrs, XFDialogMaskViewBackgroundColor, [UIColor blackColor]);
+    CGFloat maskViewAlpha = XFDialogRealValueWithTypeForRef(attrs, XFDialogMaskViewAlpha, floatValue, XFDialogMaskViewDefAlpha);
+    XFMaskView *maskView = [XFMaskView dialogMaskViewWithBackColor:maskViewBackColor alpha:maskViewAlpha];
     maskView.dialogView = dialogFrameView;
     
     dialogFrameView.maskView = maskView;
@@ -116,12 +119,19 @@ const NSString *XFDialogTitleIsMultiLine = @"XFDialogTitleIsMultiLine";
     }
 }
 
+// 获取真实标题高度
 - (CGFloat)realTitleHeight
 {
+    // 如果没有标题
+    if ([@"" isEqualToString:self.titleLabel.text] || self.titleLabel.text == nil) {
+        return 0.0f;
+    }
+    // 是否有设置多行高度
     if (self.titleChangeValue > 0.f) {
         float spacing = XFDialogRealValueWithFloatType(XFDialogItemSpacing, XFDialogDefItemSpacing);
         return self.titleChangeValue + spacing * 2;
     }
+    // 返回初始设置
     return  XFDialogRealValueWithFloatType(XFDialogTitleViewHeight, XFDialogTitleViewDefH);
 }
 

@@ -17,13 +17,21 @@
  */
 typedef float(^addAnimationEngineBlock)(UIView *view);
 
+#define XFDialogMaskViewDefAlpha 0.29f
 #define XFDialogDefW 260
 #define XFDialogDefH 180
 #define XFDialogTitleViewDefH 49
 #define XFDialogDefCornerRadius 5
 #define XFDialogTitleDefFontSize 17.f
 #define XFDialogDefItemSpacing 8.f
-
+/**
+ *  遮罩层背景色
+ */
+extern const NSString *XFDialogMaskViewBackgroundColor;
+/**
+ *  遮罩层透明度
+ */
+extern const NSString *XFDialogMaskViewAlpha;
 extern const NSString *XFDialogSize;
 extern const NSString *XFDialogCornerRadius;
 extern const NSString *XFDialogBackground;
@@ -88,13 +96,13 @@ typedef void(^commitClickBlock)(NSString *inputText);
  */
 + (instancetype)dialogWithTitle:(NSString *)title attrs:(NSDictionary *)attrs commitCallBack:(commitClickBlock)commitCallBack;
 /**
- *  显示
+ *  通过动画引擎显示,使用默认可传nil
  *
  *  @param animationEngineBlock 动画执行Block，如果为空则为默认效果
  */
 - (instancetype)showWithAnimationBlock:(addAnimationEngineBlock)animationEngineBlock;
 /**
- *  隐藏
+ *  通过动画引擎隐藏,使用默认可传nil
  *  @param animationEngineBlock 动画执行Block，如果为空则为默认效果
  */
 - (void)hideWithAnimationBlock:(addAnimationEngineBlock)animationEngineBlock;

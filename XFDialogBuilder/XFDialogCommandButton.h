@@ -18,6 +18,7 @@ extern const NSString *XFDialogCancelButtonTitleColor;
 extern const NSString *XFDialogCommitButtonTitleColor;
 extern const NSString *XFDialogCommitButtonTitle;
 extern const NSString *XFDialogCommitButtonFontSize;
+extern const NSString *XFDialogCommitButtonMiddleLineDisable;
 
 
 @interface XFDialogCommandButton : XFDialogFrame

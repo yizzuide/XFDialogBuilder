@@ -29,20 +29,20 @@
 		401281821C37C76B007A8AE7 /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 401281711C37C76B007A8AE7 /* NSObject+MJProperty.m */; };
 		401281831C37C76B007A8AE7 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 401281731C37C76B007A8AE7 /* NSString+Extension.m */; };
 		401281851C37C7D2007A8AE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 401281841C37C7D2007A8AE7 /* Main.storyboard */; };
-		404865061D1BFFF10049DCD9 /* XFComboxListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 404864ED1D1BFFF10049DCD9 /* XFComboxListController.m */; };
-		404865071D1BFFF10049DCD9 /* XFDropdownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 404864EF1D1BFFF10049DCD9 /* XFDropdownMenu.m */; };
-		404865081D1BFFF10049DCD9 /* XFRightImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 404864F11D1BFFF10049DCD9 /* XFRightImageButton.m */; };
-		404865091D1BFFF10049DCD9 /* UIView+DialogMeasure.m in Sources */ = {isa = PBXBuildFile; fileRef = 404864F31D1BFFF10049DCD9 /* UIView+DialogMeasure.m */; };
-		4048650A1D1BFFF10049DCD9 /* XFDialogComboBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 404864F61D1BFFF10049DCD9 /* XFDialogComboBox.m */; };
-		4048650B1D1BFFF10049DCD9 /* XFDialogCommandButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 404864F81D1BFFF10049DCD9 /* XFDialogCommandButton.m */; };
-		4048650C1D1BFFF10049DCD9 /* XFDialogFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 404864FA1D1BFFF10049DCD9 /* XFDialogFrame.m */; };
-		4048650D1D1BFFF10049DCD9 /* XFDialogInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 404864FC1D1BFFF10049DCD9 /* XFDialogInput.m */; };
-		4048650E1D1BFFF10049DCD9 /* XFDialogNotice.m in Sources */ = {isa = PBXBuildFile; fileRef = 404864FF1D1BFFF10049DCD9 /* XFDialogNotice.m */; };
-		4048650F1D1BFFF10049DCD9 /* XFDialogOptionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 404865011D1BFFF10049DCD9 /* XFDialogOptionButton.m */; };
-		404865101D1BFFF10049DCD9 /* XFDialogTextArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 404865031D1BFFF10049DCD9 /* XFDialogTextArea.m */; };
-		404865111D1BFFF10049DCD9 /* XFMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 404865051D1BFFF10049DCD9 /* XFMaskView.m */; };
-		404865211D1CC9440049DCD9 /* XFDialogAnimationUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 404865201D1CC9440049DCD9 /* XFDialogAnimationUtil.m */; };
 		40B832521D1D14AC00F8CAD7 /* XFUITool.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B832511D1D14AC00F8CAD7 /* XFUITool.m */; };
+		40B832721D1D233B00F8CAD7 /* XFComboxListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B832561D1D233B00F8CAD7 /* XFComboxListController.m */; };
+		40B832731D1D233B00F8CAD7 /* XFDropdownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B832581D1D233B00F8CAD7 /* XFDropdownMenu.m */; };
+		40B832741D1D233B00F8CAD7 /* XFRightImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B8325A1D1D233B00F8CAD7 /* XFRightImageButton.m */; };
+		40B832751D1D233B00F8CAD7 /* UIView+DialogMeasure.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B8325C1D1D233B00F8CAD7 /* UIView+DialogMeasure.m */; };
+		40B832761D1D233B00F8CAD7 /* XFDialogAnimationUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B8325F1D1D233B00F8CAD7 /* XFDialogAnimationUtil.m */; };
+		40B832771D1D233B00F8CAD7 /* XFDialogComboBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B832621D1D233B00F8CAD7 /* XFDialogComboBox.m */; };
+		40B832781D1D233B00F8CAD7 /* XFDialogCommandButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B832641D1D233B00F8CAD7 /* XFDialogCommandButton.m */; };
+		40B832791D1D233B00F8CAD7 /* XFDialogFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B832661D1D233B00F8CAD7 /* XFDialogFrame.m */; };
+		40B8327A1D1D233B00F8CAD7 /* XFDialogInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B832681D1D233B00F8CAD7 /* XFDialogInput.m */; };
+		40B8327B1D1D233B00F8CAD7 /* XFDialogNotice.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B8326B1D1D233B00F8CAD7 /* XFDialogNotice.m */; };
+		40B8327C1D1D233B00F8CAD7 /* XFDialogOptionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B8326D1D1D233B00F8CAD7 /* XFDialogOptionButton.m */; };
+		40B8327D1D1D233B00F8CAD7 /* XFDialogTextArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B8326F1D1D233B00F8CAD7 /* XFDialogTextArea.m */; };
+		40B8327E1D1D233B00F8CAD7 /* XFMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B832711D1D233B00F8CAD7 /* XFMaskView.m */; };
 		DA2800482489614367CF7A1A /* libPods-XFDialogBuilderExampleUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29111F4249E4DFBF97E917C9 /* libPods-XFDialogBuilderExampleUITests.a */; };
 		E81E0E4066A30FC7B2C9721E /* libPods-XFDialogBuilderExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1868D4F5AD89D3347C5DEE5F /* libPods-XFDialogBuilderExample.a */; };
 /* End PBXBuildFile section */
@@ -109,36 +109,36 @@
 		401281721C37C76B007A8AE7 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
 		401281731C37C76B007A8AE7 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
 		401281841C37C7D2007A8AE7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		404864EC1D1BFFF10049DCD9 /* XFComboxListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFComboxListController.h; sourceTree = "<group>"; };
-		404864ED1D1BFFF10049DCD9 /* XFComboxListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFComboxListController.m; sourceTree = "<group>"; };
-		404864EE1D1BFFF10049DCD9 /* XFDropdownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFDropdownMenu.h; sourceTree = "<group>"; };
-		404864EF1D1BFFF10049DCD9 /* XFDropdownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFDropdownMenu.m; sourceTree = "<group>"; };
-		404864F01D1BFFF10049DCD9 /* XFRightImageButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFRightImageButton.h; sourceTree = "<group>"; };
-		404864F11D1BFFF10049DCD9 /* XFRightImageButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFRightImageButton.m; sourceTree = "<group>"; };
-		404864F21D1BFFF10049DCD9 /* UIView+DialogMeasure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DialogMeasure.h"; sourceTree = "<group>"; };
-		404864F31D1BFFF10049DCD9 /* UIView+DialogMeasure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DialogMeasure.m"; sourceTree = "<group>"; };
-		404864F41D1BFFF10049DCD9 /* XFDialogBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFDialogBuilder.h; sourceTree = "<group>"; };
-		404864F51D1BFFF10049DCD9 /* XFDialogComboBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFDialogComboBox.h; sourceTree = "<group>"; };
-		404864F61D1BFFF10049DCD9 /* XFDialogComboBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFDialogComboBox.m; sourceTree = "<group>"; };
-		404864F71D1BFFF10049DCD9 /* XFDialogCommandButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFDialogCommandButton.h; sourceTree = "<group>"; };
-		404864F81D1BFFF10049DCD9 /* XFDialogCommandButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFDialogCommandButton.m; sourceTree = "<group>"; };
-		404864F91D1BFFF10049DCD9 /* XFDialogFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFDialogFrame.h; sourceTree = "<group>"; };
-		404864FA1D1BFFF10049DCD9 /* XFDialogFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFDialogFrame.m; sourceTree = "<group>"; };
-		404864FB1D1BFFF10049DCD9 /* XFDialogInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFDialogInput.h; sourceTree = "<group>"; };
-		404864FC1D1BFFF10049DCD9 /* XFDialogInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFDialogInput.m; sourceTree = "<group>"; };
-		404864FD1D1BFFF10049DCD9 /* XFDialogMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFDialogMacro.h; sourceTree = "<group>"; };
-		404864FE1D1BFFF10049DCD9 /* XFDialogNotice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFDialogNotice.h; sourceTree = "<group>"; };
-		404864FF1D1BFFF10049DCD9 /* XFDialogNotice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFDialogNotice.m; sourceTree = "<group>"; };
-		404865001D1BFFF10049DCD9 /* XFDialogOptionButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFDialogOptionButton.h; sourceTree = "<group>"; };
-		404865011D1BFFF10049DCD9 /* XFDialogOptionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFDialogOptionButton.m; sourceTree = "<group>"; };
-		404865021D1BFFF10049DCD9 /* XFDialogTextArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFDialogTextArea.h; sourceTree = "<group>"; };
-		404865031D1BFFF10049DCD9 /* XFDialogTextArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFDialogTextArea.m; sourceTree = "<group>"; };
-		404865041D1BFFF10049DCD9 /* XFMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFMaskView.h; sourceTree = "<group>"; };
-		404865051D1BFFF10049DCD9 /* XFMaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFMaskView.m; sourceTree = "<group>"; };
-		4048651F1D1CC9440049DCD9 /* XFDialogAnimationUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFDialogAnimationUtil.h; sourceTree = "<group>"; };
-		404865201D1CC9440049DCD9 /* XFDialogAnimationUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFDialogAnimationUtil.m; sourceTree = "<group>"; };
 		40B832501D1D14AC00F8CAD7 /* XFUITool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFUITool.h; sourceTree = "<group>"; };
 		40B832511D1D14AC00F8CAD7 /* XFUITool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFUITool.m; sourceTree = "<group>"; };
+		40B832551D1D233B00F8CAD7 /* XFComboxListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFComboxListController.h; sourceTree = "<group>"; };
+		40B832561D1D233B00F8CAD7 /* XFComboxListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFComboxListController.m; sourceTree = "<group>"; };
+		40B832571D1D233B00F8CAD7 /* XFDropdownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFDropdownMenu.h; sourceTree = "<group>"; };
+		40B832581D1D233B00F8CAD7 /* XFDropdownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFDropdownMenu.m; sourceTree = "<group>"; };
+		40B832591D1D233B00F8CAD7 /* XFRightImageButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFRightImageButton.h; sourceTree = "<group>"; };
+		40B8325A1D1D233B00F8CAD7 /* XFRightImageButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFRightImageButton.m; sourceTree = "<group>"; };
+		40B8325B1D1D233B00F8CAD7 /* UIView+DialogMeasure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DialogMeasure.h"; sourceTree = "<group>"; };
+		40B8325C1D1D233B00F8CAD7 /* UIView+DialogMeasure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DialogMeasure.m"; sourceTree = "<group>"; };
+		40B8325E1D1D233B00F8CAD7 /* XFDialogAnimationUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFDialogAnimationUtil.h; sourceTree = "<group>"; };
+		40B8325F1D1D233B00F8CAD7 /* XFDialogAnimationUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFDialogAnimationUtil.m; sourceTree = "<group>"; };
+		40B832601D1D233B00F8CAD7 /* XFDialogBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFDialogBuilder.h; sourceTree = "<group>"; };
+		40B832611D1D233B00F8CAD7 /* XFDialogComboBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFDialogComboBox.h; sourceTree = "<group>"; };
+		40B832621D1D233B00F8CAD7 /* XFDialogComboBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFDialogComboBox.m; sourceTree = "<group>"; };
+		40B832631D1D233B00F8CAD7 /* XFDialogCommandButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFDialogCommandButton.h; sourceTree = "<group>"; };
+		40B832641D1D233B00F8CAD7 /* XFDialogCommandButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFDialogCommandButton.m; sourceTree = "<group>"; };
+		40B832651D1D233B00F8CAD7 /* XFDialogFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFDialogFrame.h; sourceTree = "<group>"; };
+		40B832661D1D233B00F8CAD7 /* XFDialogFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFDialogFrame.m; sourceTree = "<group>"; };
+		40B832671D1D233B00F8CAD7 /* XFDialogInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFDialogInput.h; sourceTree = "<group>"; };
+		40B832681D1D233B00F8CAD7 /* XFDialogInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFDialogInput.m; sourceTree = "<group>"; };
+		40B832691D1D233B00F8CAD7 /* XFDialogMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFDialogMacro.h; sourceTree = "<group>"; };
+		40B8326A1D1D233B00F8CAD7 /* XFDialogNotice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFDialogNotice.h; sourceTree = "<group>"; };
+		40B8326B1D1D233B00F8CAD7 /* XFDialogNotice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFDialogNotice.m; sourceTree = "<group>"; };
+		40B8326C1D1D233B00F8CAD7 /* XFDialogOptionButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFDialogOptionButton.h; sourceTree = "<group>"; };
+		40B8326D1D1D233B00F8CAD7 /* XFDialogOptionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFDialogOptionButton.m; sourceTree = "<group>"; };
+		40B8326E1D1D233B00F8CAD7 /* XFDialogTextArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFDialogTextArea.h; sourceTree = "<group>"; };
+		40B8326F1D1D233B00F8CAD7 /* XFDialogTextArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFDialogTextArea.m; sourceTree = "<group>"; };
+		40B832701D1D233B00F8CAD7 /* XFMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFMaskView.h; sourceTree = "<group>"; };
+		40B832711D1D233B00F8CAD7 /* XFMaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFMaskView.m; sourceTree = "<group>"; };
 		48D39DE97ED7306CABD367A1 /* Pods-XFDialogBuilderExampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XFDialogBuilderExampleUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XFDialogBuilderExampleUITests/Pods-XFDialogBuilderExampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		52DAC3B753C20283181A7DD3 /* Pods-XFDialogBuilderExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XFDialogBuilderExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-XFDialogBuilderExample/Pods-XFDialogBuilderExample.release.xcconfig"; sourceTree = "<group>"; };
 		7FF07138CC4C6C324FA050D9 /* Pods-XFDialogBuilderExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XFDialogBuilderExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XFDialogBuilderExample/Pods-XFDialogBuilderExample.debug.xcconfig"; sourceTree = "<group>"; };
@@ -177,7 +177,7 @@
 		400073921C351FA300826625 = {
 			isa = PBXGroup;
 			children = (
-				404864EA1D1BFFF10049DCD9 /* XFDialogBuilder */,
+				40B832531D1D233B00F8CAD7 /* XFDialogBuilder */,
 				4000739D1C351FA300826625 /* XFDialogBuilderExample */,
 				400073B71C351FA300826625 /* XFDialogBuilderExampleTests */,
 				400073C21C351FA400826625 /* XFDialogBuilderExampleUITests */,
@@ -345,53 +345,54 @@
 			path = Tool;
 			sourceTree = "<group>";
 		};
-		404864EA1D1BFFF10049DCD9 /* XFDialogBuilder */ = {
+		40B832531D1D233B00F8CAD7 /* XFDialogBuilder */ = {
 			isa = PBXGroup;
 			children = (
-				4048651A1D1CC65E0049DCD9 /* Utils */,
-				404864EB1D1BFFF10049DCD9 /* ComboBoxExtention */,
-				404864F21D1BFFF10049DCD9 /* UIView+DialogMeasure.h */,
-				404864F31D1BFFF10049DCD9 /* UIView+DialogMeasure.m */,
-				404864F41D1BFFF10049DCD9 /* XFDialogBuilder.h */,
-				404864F51D1BFFF10049DCD9 /* XFDialogComboBox.h */,
-				404864F61D1BFFF10049DCD9 /* XFDialogComboBox.m */,
-				404864F71D1BFFF10049DCD9 /* XFDialogCommandButton.h */,
-				404864F81D1BFFF10049DCD9 /* XFDialogCommandButton.m */,
-				404864F91D1BFFF10049DCD9 /* XFDialogFrame.h */,
-				404864FA1D1BFFF10049DCD9 /* XFDialogFrame.m */,
-				404864FB1D1BFFF10049DCD9 /* XFDialogInput.h */,
-				404864FC1D1BFFF10049DCD9 /* XFDialogInput.m */,
-				404864FD1D1BFFF10049DCD9 /* XFDialogMacro.h */,
-				404864FE1D1BFFF10049DCD9 /* XFDialogNotice.h */,
-				404864FF1D1BFFF10049DCD9 /* XFDialogNotice.m */,
-				404865001D1BFFF10049DCD9 /* XFDialogOptionButton.h */,
-				404865011D1BFFF10049DCD9 /* XFDialogOptionButton.m */,
-				404865021D1BFFF10049DCD9 /* XFDialogTextArea.h */,
-				404865031D1BFFF10049DCD9 /* XFDialogTextArea.m */,
-				404865041D1BFFF10049DCD9 /* XFMaskView.h */,
-				404865051D1BFFF10049DCD9 /* XFMaskView.m */,
+				40B832541D1D233B00F8CAD7 /* ComboBoxExtention */,
+				40B8325B1D1D233B00F8CAD7 /* UIView+DialogMeasure.h */,
+				40B8325C1D1D233B00F8CAD7 /* UIView+DialogMeasure.m */,
+				40B8325D1D1D233B00F8CAD7 /* Utils */,
+				40B832601D1D233B00F8CAD7 /* XFDialogBuilder.h */,
+				40B832611D1D233B00F8CAD7 /* XFDialogComboBox.h */,
+				40B832621D1D233B00F8CAD7 /* XFDialogComboBox.m */,
+				40B832631D1D233B00F8CAD7 /* XFDialogCommandButton.h */,
+				40B832641D1D233B00F8CAD7 /* XFDialogCommandButton.m */,
+				40B832651D1D233B00F8CAD7 /* XFDialogFrame.h */,
+				40B832661D1D233B00F8CAD7 /* XFDialogFrame.m */,
+				40B832671D1D233B00F8CAD7 /* XFDialogInput.h */,
+				40B832681D1D233B00F8CAD7 /* XFDialogInput.m */,
+				40B832691D1D233B00F8CAD7 /* XFDialogMacro.h */,
+				40B8326A1D1D233B00F8CAD7 /* XFDialogNotice.h */,
+				40B8326B1D1D233B00F8CAD7 /* XFDialogNotice.m */,
+				40B8326C1D1D233B00F8CAD7 /* XFDialogOptionButton.h */,
+				40B8326D1D1D233B00F8CAD7 /* XFDialogOptionButton.m */,
+				40B8326E1D1D233B00F8CAD7 /* XFDialogTextArea.h */,
+				40B8326F1D1D233B00F8CAD7 /* XFDialogTextArea.m */,
+				40B832701D1D233B00F8CAD7 /* XFMaskView.h */,
+				40B832711D1D233B00F8CAD7 /* XFMaskView.m */,
 			);
-			path = XFDialogBuilder;
+			name = XFDialogBuilder;
+			path = ../XFDialogBuilder;
 			sourceTree = "<group>";
 		};
-		404864EB1D1BFFF10049DCD9 /* ComboBoxExtention */ = {
+		40B832541D1D233B00F8CAD7 /* ComboBoxExtention */ = {
 			isa = PBXGroup;
 			children = (
-				404864EC1D1BFFF10049DCD9 /* XFComboxListController.h */,
-				404864ED1D1BFFF10049DCD9 /* XFComboxListController.m */,
-				404864EE1D1BFFF10049DCD9 /* XFDropdownMenu.h */,
-				404864EF1D1BFFF10049DCD9 /* XFDropdownMenu.m */,
-				404864F01D1BFFF10049DCD9 /* XFRightImageButton.h */,
-				404864F11D1BFFF10049DCD9 /* XFRightImageButton.m */,
+				40B832551D1D233B00F8CAD7 /* XFComboxListController.h */,
+				40B832561D1D233B00F8CAD7 /* XFComboxListController.m */,
+				40B832571D1D233B00F8CAD7 /* XFDropdownMenu.h */,
+				40B832581D1D233B00F8CAD7 /* XFDropdownMenu.m */,
+				40B832591D1D233B00F8CAD7 /* XFRightImageButton.h */,
+				40B8325A1D1D233B00F8CAD7 /* XFRightImageButton.m */,
 			);
 			path = ComboBoxExtention;
 			sourceTree = "<group>";
 		};
-		4048651A1D1CC65E0049DCD9 /* Utils */ = {
+		40B8325D1D1D233B00F8CAD7 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				4048651F1D1CC9440049DCD9 /* XFDialogAnimationUtil.h */,
-				404865201D1CC9440049DCD9 /* XFDialogAnimationUtil.m */,
+				40B8325E1D1D233B00F8CAD7 /* XFDialogAnimationUtil.h */,
+				40B8325F1D1D233B00F8CAD7 /* XFDialogAnimationUtil.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -682,34 +683,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4048650A1D1BFFF10049DCD9 /* XFDialogComboBox.m in Sources */,
 				401281781C37C76B007A8AE7 /* main.m in Sources */,
+				40B832751D1D233B00F8CAD7 /* UIView+DialogMeasure.m in Sources */,
 				401281761C37C76B007A8AE7 /* XFRegion.m in Sources */,
 				4012817C1C37C76B007A8AE7 /* MJConst.m in Sources */,
+				40B8327C1D1D233B00F8CAD7 /* XFDialogOptionButton.m in Sources */,
 				401281801C37C76B007A8AE7 /* NSObject+MJCoding.m in Sources */,
+				40B832781D1D233B00F8CAD7 /* XFDialogCommandButton.m in Sources */,
 				401281751C37C76B007A8AE7 /* ViewController.m in Sources */,
-				4048650D1D1BFFF10049DCD9 /* XFDialogInput.m in Sources */,
-				404865091D1BFFF10049DCD9 /* UIView+DialogMeasure.m in Sources */,
 				401281811C37C76B007A8AE7 /* NSObject+MJKeyValue.m in Sources */,
+				40B832771D1D233B00F8CAD7 /* XFDialogComboBox.m in Sources */,
+				40B832741D1D233B00F8CAD7 /* XFRightImageButton.m in Sources */,
 				4012817B1C37C76B007A8AE7 /* README.mdown in Sources */,
-				404865061D1BFFF10049DCD9 /* XFComboxListController.m in Sources */,
-				404865081D1BFFF10049DCD9 /* XFRightImageButton.m in Sources */,
-				404865111D1BFFF10049DCD9 /* XFMaskView.m in Sources */,
-				4048650B1D1BFFF10049DCD9 /* XFDialogCommandButton.m in Sources */,
 				401281831C37C76B007A8AE7 /* NSString+Extension.m in Sources */,
 				401281821C37C76B007A8AE7 /* NSObject+MJProperty.m in Sources */,
-				404865101D1BFFF10049DCD9 /* XFDialogTextArea.m in Sources */,
-				4048650C1D1BFFF10049DCD9 /* XFDialogFrame.m in Sources */,
+				40B832791D1D233B00F8CAD7 /* XFDialogFrame.m in Sources */,
+				40B832731D1D233B00F8CAD7 /* XFDropdownMenu.m in Sources */,
+				40B8327D1D1D233B00F8CAD7 /* XFDialogTextArea.m in Sources */,
+				40B832721D1D233B00F8CAD7 /* XFComboxListController.m in Sources */,
+				40B8327A1D1D233B00F8CAD7 /* XFDialogInput.m in Sources */,
 				40B832521D1D14AC00F8CAD7 /* XFUITool.m in Sources */,
+				40B8327E1D1D233B00F8CAD7 /* XFMaskView.m in Sources */,
+				40B832761D1D233B00F8CAD7 /* XFDialogAnimationUtil.m in Sources */,
+				40B8327B1D1D233B00F8CAD7 /* XFDialogNotice.m in Sources */,
 				401281771C37C76B007A8AE7 /* AppDelegate.m in Sources */,
-				404865211D1CC9440049DCD9 /* XFDialogAnimationUtil.m in Sources */,
-				404865071D1BFFF10049DCD9 /* XFDropdownMenu.m in Sources */,
 				4012817E1C37C76B007A8AE7 /* MJProperty.m in Sources */,
 				4012817F1C37C76B007A8AE7 /* MJType.m in Sources */,
-				4048650F1D1BFFF10049DCD9 /* XFDialogOptionButton.m in Sources */,
 				4012817A1C37C76B007A8AE7 /* MBProgressHUD.m in Sources */,
 				4012817D1C37C76B007A8AE7 /* MJFoundation.m in Sources */,
-				4048650E1D1BFFF10049DCD9 /* XFDialogNotice.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
