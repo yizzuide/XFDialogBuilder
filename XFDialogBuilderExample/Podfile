@@ -1,0 +1,22 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, '6.0'
+
+target 'XFDialogBuilderExample' do
+  # Uncomment this line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for XFDialogBuilderExample
+  pod 'UITextView+Placeholder'
+  pod 'pop'
+
+  target 'XFDialogBuilderExampleTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'XFDialogBuilderExampleUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

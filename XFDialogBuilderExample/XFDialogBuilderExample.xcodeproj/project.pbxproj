@@ -1,0 +1,953 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		32EC21811274AF6805D94B42 /* libPods-XFDialogBuilderExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BA1F45E3740CBE6B043AD00 /* libPods-XFDialogBuilderExampleTests.a */; };
+		400073AB1C351FA300826625 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 400073AA1C351FA300826625 /* Assets.xcassets */; };
+		400073AE1C351FA300826625 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 400073AC1C351FA300826625 /* LaunchScreen.storyboard */; };
+		400073B91C351FA300826625 /* XFDialogBuilderExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 400073B81C351FA300826625 /* XFDialogBuilderExampleTests.m */; };
+		400073C41C351FA400826625 /* XFDialogBuilderExampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 400073C31C351FA400826625 /* XFDialogBuilderExampleUITests.m */; };
+		4012813D1C37C564007A8AE7 /* regions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4012813C1C37C564007A8AE7 /* regions.plist */; };
+		401281751C37C76B007A8AE7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 401281531C37C76B007A8AE7 /* ViewController.m */; };
+		401281761C37C76B007A8AE7 /* XFRegion.m in Sources */ = {isa = PBXBuildFile; fileRef = 401281561C37C76B007A8AE7 /* XFRegion.m */; };
+		401281771C37C76B007A8AE7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 401281591C37C76B007A8AE7 /* AppDelegate.m */; };
+		401281781C37C76B007A8AE7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4012815A1C37C76B007A8AE7 /* main.m */; };
+		401281791C37C76B007A8AE7 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 4012815E1C37C76B007A8AE7 /* LICENSE */; };
+		4012817A1C37C76B007A8AE7 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 401281601C37C76B007A8AE7 /* MBProgressHUD.m */; };
+		4012817B1C37C76B007A8AE7 /* README.mdown in Sources */ = {isa = PBXBuildFile; fileRef = 401281611C37C76B007A8AE7 /* README.mdown */; };
+		4012817C1C37C76B007A8AE7 /* MJConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 401281641C37C76B007A8AE7 /* MJConst.m */; };
+		4012817D1C37C76B007A8AE7 /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 401281671C37C76B007A8AE7 /* MJFoundation.m */; };
+		4012817E1C37C76B007A8AE7 /* MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 401281691C37C76B007A8AE7 /* MJProperty.m */; };
+		4012817F1C37C76B007A8AE7 /* MJType.m in Sources */ = {isa = PBXBuildFile; fileRef = 4012816B1C37C76B007A8AE7 /* MJType.m */; };
+		401281801C37C76B007A8AE7 /* NSObject+MJCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 4012816D1C37C76B007A8AE7 /* NSObject+MJCoding.m */; };
+		401281811C37C76B007A8AE7 /* NSObject+MJKeyValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 4012816F1C37C76B007A8AE7 /* NSObject+MJKeyValue.m */; };
+		401281821C37C76B007A8AE7 /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 401281711C37C76B007A8AE7 /* NSObject+MJProperty.m */; };
+		401281831C37C76B007A8AE7 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 401281731C37C76B007A8AE7 /* NSString+Extension.m */; };
+		401281851C37C7D2007A8AE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 401281841C37C7D2007A8AE7 /* Main.storyboard */; };
+		404865061D1BFFF10049DCD9 /* XFComboxListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 404864ED1D1BFFF10049DCD9 /* XFComboxListController.m */; };
+		404865071D1BFFF10049DCD9 /* XFDropdownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 404864EF1D1BFFF10049DCD9 /* XFDropdownMenu.m */; };
+		404865081D1BFFF10049DCD9 /* XFRightImageButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 404864F11D1BFFF10049DCD9 /* XFRightImageButton.m */; };
+		404865091D1BFFF10049DCD9 /* UIView+DialogMeasure.m in Sources */ = {isa = PBXBuildFile; fileRef = 404864F31D1BFFF10049DCD9 /* UIView+DialogMeasure.m */; };
+		4048650A1D1BFFF10049DCD9 /* XFDialogComboBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 404864F61D1BFFF10049DCD9 /* XFDialogComboBox.m */; };
+		4048650B1D1BFFF10049DCD9 /* XFDialogCommandButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 404864F81D1BFFF10049DCD9 /* XFDialogCommandButton.m */; };
+		4048650C1D1BFFF10049DCD9 /* XFDialogFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 404864FA1D1BFFF10049DCD9 /* XFDialogFrame.m */; };
+		4048650D1D1BFFF10049DCD9 /* XFDialogInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 404864FC1D1BFFF10049DCD9 /* XFDialogInput.m */; };
+		4048650E1D1BFFF10049DCD9 /* XFDialogNotice.m in Sources */ = {isa = PBXBuildFile; fileRef = 404864FF1D1BFFF10049DCD9 /* XFDialogNotice.m */; };
+		4048650F1D1BFFF10049DCD9 /* XFDialogOptionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 404865011D1BFFF10049DCD9 /* XFDialogOptionButton.m */; };
+		404865101D1BFFF10049DCD9 /* XFDialogTextArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 404865031D1BFFF10049DCD9 /* XFDialogTextArea.m */; };
+		404865111D1BFFF10049DCD9 /* XFMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 404865051D1BFFF10049DCD9 /* XFMaskView.m */; };
+		404865211D1CC9440049DCD9 /* XFDialogAnimationUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 404865201D1CC9440049DCD9 /* XFDialogAnimationUtil.m */; };
+		DA2800482489614367CF7A1A /* libPods-XFDialogBuilderExampleUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29111F4249E4DFBF97E917C9 /* libPods-XFDialogBuilderExampleUITests.a */; };
+		E81E0E4066A30FC7B2C9721E /* libPods-XFDialogBuilderExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1868D4F5AD89D3347C5DEE5F /* libPods-XFDialogBuilderExample.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		400073B51C351FA300826625 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 400073931C351FA300826625 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4000739A1C351FA300826625;
+			remoteInfo = XFDialogBuilderExample;
+		};
+		400073C01C351FA400826625 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 400073931C351FA300826625 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4000739A1C351FA300826625;
+			remoteInfo = XFDialogBuilderExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1868D4F5AD89D3347C5DEE5F /* libPods-XFDialogBuilderExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XFDialogBuilderExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BA1F45E3740CBE6B043AD00 /* libPods-XFDialogBuilderExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XFDialogBuilderExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		29111F4249E4DFBF97E917C9 /* libPods-XFDialogBuilderExampleUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XFDialogBuilderExampleUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		34C47932E12F75C00FC9854D /* Pods-XFDialogBuilderExampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XFDialogBuilderExampleUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-XFDialogBuilderExampleUITests/Pods-XFDialogBuilderExampleUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4000739B1C351FA300826625 /* XFDialogBuilderExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XFDialogBuilderExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		400073AA1C351FA300826625 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		400073AD1C351FA300826625 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		400073AF1C351FA300826625 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		400073B41C351FA300826625 /* XFDialogBuilderExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XFDialogBuilderExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		400073B81C351FA300826625 /* XFDialogBuilderExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XFDialogBuilderExampleTests.m; sourceTree = "<group>"; };
+		400073BA1C351FA400826625 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		400073BF1C351FA400826625 /* XFDialogBuilderExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XFDialogBuilderExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		400073C31C351FA400826625 /* XFDialogBuilderExampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XFDialogBuilderExampleUITests.m; sourceTree = "<group>"; };
+		400073C51C351FA400826625 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4012813C1C37C564007A8AE7 /* regions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = regions.plist; sourceTree = "<group>"; };
+		401281521C37C76B007A8AE7 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		401281531C37C76B007A8AE7 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		401281551C37C76B007A8AE7 /* XFRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFRegion.h; sourceTree = "<group>"; };
+		401281561C37C76B007A8AE7 /* XFRegion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFRegion.m; sourceTree = "<group>"; };
+		401281581C37C76B007A8AE7 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		401281591C37C76B007A8AE7 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4012815A1C37C76B007A8AE7 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4012815E1C37C76B007A8AE7 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		4012815F1C37C76B007A8AE7 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		401281601C37C76B007A8AE7 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		401281611C37C76B007A8AE7 /* README.mdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.mdown; sourceTree = "<group>"; };
+		401281631C37C76B007A8AE7 /* MJConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJConst.h; sourceTree = "<group>"; };
+		401281641C37C76B007A8AE7 /* MJConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJConst.m; sourceTree = "<group>"; };
+		401281651C37C76B007A8AE7 /* MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtension.h; sourceTree = "<group>"; };
+		401281661C37C76B007A8AE7 /* MJFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJFoundation.h; sourceTree = "<group>"; };
+		401281671C37C76B007A8AE7 /* MJFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJFoundation.m; sourceTree = "<group>"; };
+		401281681C37C76B007A8AE7 /* MJProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJProperty.h; sourceTree = "<group>"; };
+		401281691C37C76B007A8AE7 /* MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJProperty.m; sourceTree = "<group>"; };
+		4012816A1C37C76B007A8AE7 /* MJType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJType.h; sourceTree = "<group>"; };
+		4012816B1C37C76B007A8AE7 /* MJType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJType.m; sourceTree = "<group>"; };
+		4012816C1C37C76B007A8AE7 /* NSObject+MJCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJCoding.h"; sourceTree = "<group>"; };
+		4012816D1C37C76B007A8AE7 /* NSObject+MJCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJCoding.m"; sourceTree = "<group>"; };
+		4012816E1C37C76B007A8AE7 /* NSObject+MJKeyValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJKeyValue.h"; sourceTree = "<group>"; };
+		4012816F1C37C76B007A8AE7 /* NSObject+MJKeyValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJKeyValue.m"; sourceTree = "<group>"; };
+		401281701C37C76B007A8AE7 /* NSObject+MJProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MJProperty.h"; sourceTree = "<group>"; };
+		401281711C37C76B007A8AE7 /* NSObject+MJProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MJProperty.m"; sourceTree = "<group>"; };
+		401281721C37C76B007A8AE7 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		401281731C37C76B007A8AE7 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		401281841C37C7D2007A8AE7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		404864EC1D1BFFF10049DCD9 /* XFComboxListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFComboxListController.h; sourceTree = "<group>"; };
+		404864ED1D1BFFF10049DCD9 /* XFComboxListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFComboxListController.m; sourceTree = "<group>"; };
+		404864EE1D1BFFF10049DCD9 /* XFDropdownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFDropdownMenu.h; sourceTree = "<group>"; };
+		404864EF1D1BFFF10049DCD9 /* XFDropdownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFDropdownMenu.m; sourceTree = "<group>"; };
+		404864F01D1BFFF10049DCD9 /* XFRightImageButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFRightImageButton.h; sourceTree = "<group>"; };
+		404864F11D1BFFF10049DCD9 /* XFRightImageButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFRightImageButton.m; sourceTree = "<group>"; };
+		404864F21D1BFFF10049DCD9 /* UIView+DialogMeasure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DialogMeasure.h"; sourceTree = "<group>"; };
+		404864F31D1BFFF10049DCD9 /* UIView+DialogMeasure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DialogMeasure.m"; sourceTree = "<group>"; };
+		404864F41D1BFFF10049DCD9 /* XFDialogBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFDialogBuilder.h; sourceTree = "<group>"; };
+		404864F51D1BFFF10049DCD9 /* XFDialogComboBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFDialogComboBox.h; sourceTree = "<group>"; };
+		404864F61D1BFFF10049DCD9 /* XFDialogComboBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFDialogComboBox.m; sourceTree = "<group>"; };
+		404864F71D1BFFF10049DCD9 /* XFDialogCommandButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFDialogCommandButton.h; sourceTree = "<group>"; };
+		404864F81D1BFFF10049DCD9 /* XFDialogCommandButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFDialogCommandButton.m; sourceTree = "<group>"; };
+		404864F91D1BFFF10049DCD9 /* XFDialogFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFDialogFrame.h; sourceTree = "<group>"; };
+		404864FA1D1BFFF10049DCD9 /* XFDialogFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFDialogFrame.m; sourceTree = "<group>"; };
+		404864FB1D1BFFF10049DCD9 /* XFDialogInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFDialogInput.h; sourceTree = "<group>"; };
+		404864FC1D1BFFF10049DCD9 /* XFDialogInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFDialogInput.m; sourceTree = "<group>"; };
+		404864FD1D1BFFF10049DCD9 /* XFDialogMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFDialogMacro.h; sourceTree = "<group>"; };
+		404864FE1D1BFFF10049DCD9 /* XFDialogNotice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFDialogNotice.h; sourceTree = "<group>"; };
+		404864FF1D1BFFF10049DCD9 /* XFDialogNotice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFDialogNotice.m; sourceTree = "<group>"; };
+		404865001D1BFFF10049DCD9 /* XFDialogOptionButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFDialogOptionButton.h; sourceTree = "<group>"; };
+		404865011D1BFFF10049DCD9 /* XFDialogOptionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFDialogOptionButton.m; sourceTree = "<group>"; };
+		404865021D1BFFF10049DCD9 /* XFDialogTextArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFDialogTextArea.h; sourceTree = "<group>"; };
+		404865031D1BFFF10049DCD9 /* XFDialogTextArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFDialogTextArea.m; sourceTree = "<group>"; };
+		404865041D1BFFF10049DCD9 /* XFMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFMaskView.h; sourceTree = "<group>"; };
+		404865051D1BFFF10049DCD9 /* XFMaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFMaskView.m; sourceTree = "<group>"; };
+		4048651F1D1CC9440049DCD9 /* XFDialogAnimationUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFDialogAnimationUtil.h; sourceTree = "<group>"; };
+		404865201D1CC9440049DCD9 /* XFDialogAnimationUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFDialogAnimationUtil.m; sourceTree = "<group>"; };
+		48D39DE97ED7306CABD367A1 /* Pods-XFDialogBuilderExampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XFDialogBuilderExampleUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XFDialogBuilderExampleUITests/Pods-XFDialogBuilderExampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		52DAC3B753C20283181A7DD3 /* Pods-XFDialogBuilderExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XFDialogBuilderExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-XFDialogBuilderExample/Pods-XFDialogBuilderExample.release.xcconfig"; sourceTree = "<group>"; };
+		7FF07138CC4C6C324FA050D9 /* Pods-XFDialogBuilderExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XFDialogBuilderExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XFDialogBuilderExample/Pods-XFDialogBuilderExample.debug.xcconfig"; sourceTree = "<group>"; };
+		A90E581B890CA2CE81B0A0C9 /* Pods-XFDialogBuilderExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XFDialogBuilderExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-XFDialogBuilderExampleTests/Pods-XFDialogBuilderExampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		F89DBB156FB7BB3B23E15535 /* Pods-XFDialogBuilderExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XFDialogBuilderExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XFDialogBuilderExampleTests/Pods-XFDialogBuilderExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		400073981C351FA300826625 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E81E0E4066A30FC7B2C9721E /* libPods-XFDialogBuilderExample.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		400073B11C351FA300826625 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32EC21811274AF6805D94B42 /* libPods-XFDialogBuilderExampleTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		400073BC1C351FA400826625 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA2800482489614367CF7A1A /* libPods-XFDialogBuilderExampleUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		400073921C351FA300826625 = {
+			isa = PBXGroup;
+			children = (
+				404864EA1D1BFFF10049DCD9 /* XFDialogBuilder */,
+				4000739D1C351FA300826625 /* XFDialogBuilderExample */,
+				400073B71C351FA300826625 /* XFDialogBuilderExampleTests */,
+				400073C21C351FA400826625 /* XFDialogBuilderExampleUITests */,
+				4000739C1C351FA300826625 /* Products */,
+				DB6E8F42E6A8F8B5ECD2752C /* Pods */,
+				D0B2607BB52CC1DAF87E4B76 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4000739C1C351FA300826625 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4000739B1C351FA300826625 /* XFDialogBuilderExample.app */,
+				400073B41C351FA300826625 /* XFDialogBuilderExampleTests.xctest */,
+				400073BF1C351FA400826625 /* XFDialogBuilderExampleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4000739D1C351FA300826625 /* XFDialogBuilderExample */ = {
+			isa = PBXGroup;
+			children = (
+				401281411C37C67E007A8AE7 /* Classes */,
+				400073AA1C351FA300826625 /* Assets.xcassets */,
+				400073AC1C351FA300826625 /* LaunchScreen.storyboard */,
+				4000739E1C351FA300826625 /* Supporting Files */,
+			);
+			path = XFDialogBuilderExample;
+			sourceTree = "<group>";
+		};
+		4000739E1C351FA300826625 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				400073AF1C351FA300826625 /* Info.plist */,
+				4012813C1C37C564007A8AE7 /* regions.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		400073B71C351FA300826625 /* XFDialogBuilderExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				400073B81C351FA300826625 /* XFDialogBuilderExampleTests.m */,
+				400073BA1C351FA400826625 /* Info.plist */,
+			);
+			path = XFDialogBuilderExampleTests;
+			sourceTree = "<group>";
+		};
+		400073C21C351FA400826625 /* XFDialogBuilderExampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				400073C31C351FA400826625 /* XFDialogBuilderExampleUITests.m */,
+				400073C51C351FA400826625 /* Info.plist */,
+			);
+			path = XFDialogBuilderExampleUITests;
+			sourceTree = "<group>";
+		};
+		401281411C37C67E007A8AE7 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				401281501C37C76B007A8AE7 /* Main */,
+				401281571C37C76B007A8AE7 /* Other */,
+				4012815B1C37C76B007A8AE7 /* Public */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		401281501C37C76B007A8AE7 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				401281511C37C76B007A8AE7 /* Controller */,
+				401281541C37C76B007A8AE7 /* Model */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		401281511C37C76B007A8AE7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				401281521C37C76B007A8AE7 /* ViewController.h */,
+				401281531C37C76B007A8AE7 /* ViewController.m */,
+				401281841C37C7D2007A8AE7 /* Main.storyboard */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		401281541C37C76B007A8AE7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				401281551C37C76B007A8AE7 /* XFRegion.h */,
+				401281561C37C76B007A8AE7 /* XFRegion.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		401281571C37C76B007A8AE7 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				401281581C37C76B007A8AE7 /* AppDelegate.h */,
+				401281591C37C76B007A8AE7 /* AppDelegate.m */,
+				4012815A1C37C76B007A8AE7 /* main.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		4012815B1C37C76B007A8AE7 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				4012815C1C37C76B007A8AE7 /* Lib */,
+				401281741C37C76B007A8AE7 /* Tool */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		4012815C1C37C76B007A8AE7 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				4012815D1C37C76B007A8AE7 /* MBProgressHUD */,
+				401281621C37C76B007A8AE7 /* MJExtension */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		4012815D1C37C76B007A8AE7 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				4012815E1C37C76B007A8AE7 /* LICENSE */,
+				4012815F1C37C76B007A8AE7 /* MBProgressHUD.h */,
+				401281601C37C76B007A8AE7 /* MBProgressHUD.m */,
+				401281611C37C76B007A8AE7 /* README.mdown */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		401281621C37C76B007A8AE7 /* MJExtension */ = {
+			isa = PBXGroup;
+			children = (
+				401281631C37C76B007A8AE7 /* MJConst.h */,
+				401281641C37C76B007A8AE7 /* MJConst.m */,
+				401281651C37C76B007A8AE7 /* MJExtension.h */,
+				401281661C37C76B007A8AE7 /* MJFoundation.h */,
+				401281671C37C76B007A8AE7 /* MJFoundation.m */,
+				401281681C37C76B007A8AE7 /* MJProperty.h */,
+				401281691C37C76B007A8AE7 /* MJProperty.m */,
+				4012816A1C37C76B007A8AE7 /* MJType.h */,
+				4012816B1C37C76B007A8AE7 /* MJType.m */,
+				4012816C1C37C76B007A8AE7 /* NSObject+MJCoding.h */,
+				4012816D1C37C76B007A8AE7 /* NSObject+MJCoding.m */,
+				4012816E1C37C76B007A8AE7 /* NSObject+MJKeyValue.h */,
+				4012816F1C37C76B007A8AE7 /* NSObject+MJKeyValue.m */,
+				401281701C37C76B007A8AE7 /* NSObject+MJProperty.h */,
+				401281711C37C76B007A8AE7 /* NSObject+MJProperty.m */,
+				401281721C37C76B007A8AE7 /* NSString+Extension.h */,
+				401281731C37C76B007A8AE7 /* NSString+Extension.m */,
+			);
+			path = MJExtension;
+			sourceTree = "<group>";
+		};
+		401281741C37C76B007A8AE7 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		404864EA1D1BFFF10049DCD9 /* XFDialogBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				4048651A1D1CC65E0049DCD9 /* Utils */,
+				404864EB1D1BFFF10049DCD9 /* ComboBoxExtention */,
+				404864F21D1BFFF10049DCD9 /* UIView+DialogMeasure.h */,
+				404864F31D1BFFF10049DCD9 /* UIView+DialogMeasure.m */,
+				404864F41D1BFFF10049DCD9 /* XFDialogBuilder.h */,
+				404864F51D1BFFF10049DCD9 /* XFDialogComboBox.h */,
+				404864F61D1BFFF10049DCD9 /* XFDialogComboBox.m */,
+				404864F71D1BFFF10049DCD9 /* XFDialogCommandButton.h */,
+				404864F81D1BFFF10049DCD9 /* XFDialogCommandButton.m */,
+				404864F91D1BFFF10049DCD9 /* XFDialogFrame.h */,
+				404864FA1D1BFFF10049DCD9 /* XFDialogFrame.m */,
+				404864FB1D1BFFF10049DCD9 /* XFDialogInput.h */,
+				404864FC1D1BFFF10049DCD9 /* XFDialogInput.m */,
+				404864FD1D1BFFF10049DCD9 /* XFDialogMacro.h */,
+				404864FE1D1BFFF10049DCD9 /* XFDialogNotice.h */,
+				404864FF1D1BFFF10049DCD9 /* XFDialogNotice.m */,
+				404865001D1BFFF10049DCD9 /* XFDialogOptionButton.h */,
+				404865011D1BFFF10049DCD9 /* XFDialogOptionButton.m */,
+				404865021D1BFFF10049DCD9 /* XFDialogTextArea.h */,
+				404865031D1BFFF10049DCD9 /* XFDialogTextArea.m */,
+				404865041D1BFFF10049DCD9 /* XFMaskView.h */,
+				404865051D1BFFF10049DCD9 /* XFMaskView.m */,
+			);
+			path = XFDialogBuilder;
+			sourceTree = "<group>";
+		};
+		404864EB1D1BFFF10049DCD9 /* ComboBoxExtention */ = {
+			isa = PBXGroup;
+			children = (
+				404864EC1D1BFFF10049DCD9 /* XFComboxListController.h */,
+				404864ED1D1BFFF10049DCD9 /* XFComboxListController.m */,
+				404864EE1D1BFFF10049DCD9 /* XFDropdownMenu.h */,
+				404864EF1D1BFFF10049DCD9 /* XFDropdownMenu.m */,
+				404864F01D1BFFF10049DCD9 /* XFRightImageButton.h */,
+				404864F11D1BFFF10049DCD9 /* XFRightImageButton.m */,
+			);
+			path = ComboBoxExtention;
+			sourceTree = "<group>";
+		};
+		4048651A1D1CC65E0049DCD9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4048651F1D1CC9440049DCD9 /* XFDialogAnimationUtil.h */,
+				404865201D1CC9440049DCD9 /* XFDialogAnimationUtil.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		D0B2607BB52CC1DAF87E4B76 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1868D4F5AD89D3347C5DEE5F /* libPods-XFDialogBuilderExample.a */,
+				1BA1F45E3740CBE6B043AD00 /* libPods-XFDialogBuilderExampleTests.a */,
+				29111F4249E4DFBF97E917C9 /* libPods-XFDialogBuilderExampleUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB6E8F42E6A8F8B5ECD2752C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7FF07138CC4C6C324FA050D9 /* Pods-XFDialogBuilderExample.debug.xcconfig */,
+				52DAC3B753C20283181A7DD3 /* Pods-XFDialogBuilderExample.release.xcconfig */,
+				F89DBB156FB7BB3B23E15535 /* Pods-XFDialogBuilderExampleTests.debug.xcconfig */,
+				A90E581B890CA2CE81B0A0C9 /* Pods-XFDialogBuilderExampleTests.release.xcconfig */,
+				48D39DE97ED7306CABD367A1 /* Pods-XFDialogBuilderExampleUITests.debug.xcconfig */,
+				34C47932E12F75C00FC9854D /* Pods-XFDialogBuilderExampleUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4000739A1C351FA300826625 /* XFDialogBuilderExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 400073C81C351FA400826625 /* Build configuration list for PBXNativeTarget "XFDialogBuilderExample" */;
+			buildPhases = (
+				29596721BB11E532776C2F4F /* [CP] Check Pods Manifest.lock */,
+				400073971C351FA300826625 /* Sources */,
+				400073981C351FA300826625 /* Frameworks */,
+				400073991C351FA300826625 /* Resources */,
+				F4E14103DB6DF5292EF1EEB9 /* [CP] Embed Pods Frameworks */,
+				8484FDF4DE4AD0B8D40D3276 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XFDialogBuilderExample;
+			productName = XFDialogBuilderExample;
+			productReference = 4000739B1C351FA300826625 /* XFDialogBuilderExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		400073B31C351FA300826625 /* XFDialogBuilderExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 400073CB1C351FA400826625 /* Build configuration list for PBXNativeTarget "XFDialogBuilderExampleTests" */;
+			buildPhases = (
+				EBB207FA3BC10E3F582164DC /* [CP] Check Pods Manifest.lock */,
+				400073B01C351FA300826625 /* Sources */,
+				400073B11C351FA300826625 /* Frameworks */,
+				400073B21C351FA300826625 /* Resources */,
+				F99123FE203484729AB5B5E4 /* [CP] Embed Pods Frameworks */,
+				153C449764D17EF8671A13E1 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				400073B61C351FA300826625 /* PBXTargetDependency */,
+			);
+			name = XFDialogBuilderExampleTests;
+			productName = XFDialogBuilderExampleTests;
+			productReference = 400073B41C351FA300826625 /* XFDialogBuilderExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		400073BE1C351FA400826625 /* XFDialogBuilderExampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 400073CE1C351FA400826625 /* Build configuration list for PBXNativeTarget "XFDialogBuilderExampleUITests" */;
+			buildPhases = (
+				D2B4C6DD0EFCA203B8559743 /* [CP] Check Pods Manifest.lock */,
+				400073BB1C351FA400826625 /* Sources */,
+				400073BC1C351FA400826625 /* Frameworks */,
+				400073BD1C351FA400826625 /* Resources */,
+				181D1A202AB8CD037C95D914 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				400073C11C351FA400826625 /* PBXTargetDependency */,
+			);
+			name = XFDialogBuilderExampleUITests;
+			productName = XFDialogBuilderExampleUITests;
+			productReference = 400073BF1C351FA400826625 /* XFDialogBuilderExampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		400073931C351FA300826625 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = yizzuide;
+				TargetAttributes = {
+					4000739A1C351FA300826625 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					400073B31C351FA300826625 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 4000739A1C351FA300826625;
+					};
+					400073BE1C351FA400826625 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 4000739A1C351FA300826625;
+					};
+				};
+			};
+			buildConfigurationList = 400073961C351FA300826625 /* Build configuration list for PBXProject "XFDialogBuilderExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 400073921C351FA300826625;
+			productRefGroup = 4000739C1C351FA300826625 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4000739A1C351FA300826625 /* XFDialogBuilderExample */,
+				400073B31C351FA300826625 /* XFDialogBuilderExampleTests */,
+				400073BE1C351FA400826625 /* XFDialogBuilderExampleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		400073991C351FA300826625 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				400073AE1C351FA300826625 /* LaunchScreen.storyboard in Resources */,
+				401281851C37C7D2007A8AE7 /* Main.storyboard in Resources */,
+				400073AB1C351FA300826625 /* Assets.xcassets in Resources */,
+				401281791C37C76B007A8AE7 /* LICENSE in Resources */,
+				4012813D1C37C564007A8AE7 /* regions.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		400073B21C351FA300826625 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		400073BD1C351FA400826625 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		153C449764D17EF8671A13E1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XFDialogBuilderExampleTests/Pods-XFDialogBuilderExampleTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		181D1A202AB8CD037C95D914 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XFDialogBuilderExampleUITests/Pods-XFDialogBuilderExampleUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		29596721BB11E532776C2F4F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8484FDF4DE4AD0B8D40D3276 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XFDialogBuilderExample/Pods-XFDialogBuilderExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2B4C6DD0EFCA203B8559743 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EBB207FA3BC10E3F582164DC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F4E14103DB6DF5292EF1EEB9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XFDialogBuilderExample/Pods-XFDialogBuilderExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F99123FE203484729AB5B5E4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XFDialogBuilderExampleTests/Pods-XFDialogBuilderExampleTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		400073971C351FA300826625 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4048650A1D1BFFF10049DCD9 /* XFDialogComboBox.m in Sources */,
+				401281781C37C76B007A8AE7 /* main.m in Sources */,
+				401281761C37C76B007A8AE7 /* XFRegion.m in Sources */,
+				4012817C1C37C76B007A8AE7 /* MJConst.m in Sources */,
+				401281801C37C76B007A8AE7 /* NSObject+MJCoding.m in Sources */,
+				401281751C37C76B007A8AE7 /* ViewController.m in Sources */,
+				4048650D1D1BFFF10049DCD9 /* XFDialogInput.m in Sources */,
+				404865091D1BFFF10049DCD9 /* UIView+DialogMeasure.m in Sources */,
+				401281811C37C76B007A8AE7 /* NSObject+MJKeyValue.m in Sources */,
+				4012817B1C37C76B007A8AE7 /* README.mdown in Sources */,
+				404865061D1BFFF10049DCD9 /* XFComboxListController.m in Sources */,
+				404865081D1BFFF10049DCD9 /* XFRightImageButton.m in Sources */,
+				404865111D1BFFF10049DCD9 /* XFMaskView.m in Sources */,
+				4048650B1D1BFFF10049DCD9 /* XFDialogCommandButton.m in Sources */,
+				401281831C37C76B007A8AE7 /* NSString+Extension.m in Sources */,
+				401281821C37C76B007A8AE7 /* NSObject+MJProperty.m in Sources */,
+				404865101D1BFFF10049DCD9 /* XFDialogTextArea.m in Sources */,
+				4048650C1D1BFFF10049DCD9 /* XFDialogFrame.m in Sources */,
+				401281771C37C76B007A8AE7 /* AppDelegate.m in Sources */,
+				404865211D1CC9440049DCD9 /* XFDialogAnimationUtil.m in Sources */,
+				404865071D1BFFF10049DCD9 /* XFDropdownMenu.m in Sources */,
+				4012817E1C37C76B007A8AE7 /* MJProperty.m in Sources */,
+				4012817F1C37C76B007A8AE7 /* MJType.m in Sources */,
+				4048650F1D1BFFF10049DCD9 /* XFDialogOptionButton.m in Sources */,
+				4012817A1C37C76B007A8AE7 /* MBProgressHUD.m in Sources */,
+				4012817D1C37C76B007A8AE7 /* MJFoundation.m in Sources */,
+				4048650E1D1BFFF10049DCD9 /* XFDialogNotice.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		400073B01C351FA300826625 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				400073B91C351FA300826625 /* XFDialogBuilderExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		400073BB1C351FA400826625 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				400073C41C351FA400826625 /* XFDialogBuilderExampleUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		400073B61C351FA300826625 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4000739A1C351FA300826625 /* XFDialogBuilderExample */;
+			targetProxy = 400073B51C351FA300826625 /* PBXContainerItemProxy */;
+		};
+		400073C11C351FA400826625 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4000739A1C351FA300826625 /* XFDialogBuilderExample */;
+			targetProxy = 400073C01C351FA400826625 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		400073AC1C351FA300826625 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				400073AD1C351FA300826625 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		400073C61C351FA400826625 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		400073C71C351FA400826625 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		400073C91C351FA400826625 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FF07138CC4C6C324FA050D9 /* Pods-XFDialogBuilderExample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = XFDialogBuilderExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yizzuide.XFDialogBuilderExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		400073CA1C351FA400826625 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52DAC3B753C20283181A7DD3 /* Pods-XFDialogBuilderExample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = XFDialogBuilderExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yizzuide.XFDialogBuilderExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		400073CC1C351FA400826625 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F89DBB156FB7BB3B23E15535 /* Pods-XFDialogBuilderExampleTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = XFDialogBuilderExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yizzuide.XFDialogBuilderExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XFDialogBuilderExample.app/XFDialogBuilderExample";
+			};
+			name = Debug;
+		};
+		400073CD1C351FA400826625 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A90E581B890CA2CE81B0A0C9 /* Pods-XFDialogBuilderExampleTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = XFDialogBuilderExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yizzuide.XFDialogBuilderExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XFDialogBuilderExample.app/XFDialogBuilderExample";
+			};
+			name = Release;
+		};
+		400073CF1C351FA400826625 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48D39DE97ED7306CABD367A1 /* Pods-XFDialogBuilderExampleUITests.debug.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = XFDialogBuilderExampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yizzuide.XFDialogBuilderExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = XFDialogBuilderExample;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		400073D01C351FA400826625 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34C47932E12F75C00FC9854D /* Pods-XFDialogBuilderExampleUITests.release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = XFDialogBuilderExampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yizzuide.XFDialogBuilderExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = XFDialogBuilderExample;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		400073961C351FA300826625 /* Build configuration list for PBXProject "XFDialogBuilderExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				400073C61C351FA400826625 /* Debug */,
+				400073C71C351FA400826625 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		400073C81C351FA400826625 /* Build configuration list for PBXNativeTarget "XFDialogBuilderExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				400073C91C351FA400826625 /* Debug */,
+				400073CA1C351FA400826625 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		400073CB1C351FA400826625 /* Build configuration list for PBXNativeTarget "XFDialogBuilderExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				400073CC1C351FA400826625 /* Debug */,
+				400073CD1C351FA400826625 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		400073CE1C351FA400826625 /* Build configuration list for PBXNativeTarget "XFDialogBuilderExampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				400073CF1C351FA400826625 /* Debug */,
+				400073D01C351FA400826625 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 400073931C351FA300826625 /* Project object */;
+}

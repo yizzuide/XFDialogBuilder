@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWs-Da-j7h">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="弹出提示框"/>
+                                <connections>
+                                    <action selector="popupHintDialog" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cez-LS-EfU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sTU-sZ-z6J">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="弹出无标题提示框"/>
+                                <connections>
+                                    <action selector="popupNoTitleHintDialog:" destination="BYZ-38-t0r" eventType="touchUpInside" id="njU-Rr-eOP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4lL-Dn-fD1">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="弹出可选按钮框"/>
+                                <connections>
+                                    <action selector="popupOptionButtonDialog:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j1J-zz-c48"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O0W-UE-AWx">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="弹出登录框"/>
+                                <connections>
+                                    <action selector="popupLoginInputDialog:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h8t-ta-piP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kd3-4L-Qgy">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="弹出修改密码框"/>
+                                <connections>
+                                    <action selector="popupUpdatePasswordDialog:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5EV-c9-96N"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pha-Qf-gvh">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="弹出下拉列表框"/>
+                                <connections>
+                                    <action selector="popupComboxDialog:" destination="BYZ-38-t0r" eventType="touchUpInside" id="476-ef-zOc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mWs-Da-j7h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0Ul-1u-EiA"/>
+                            <constraint firstItem="pha-Qf-gvh" firstAttribute="leading" secondItem="Kd3-4L-Qgy" secondAttribute="leading" id="2Iw-pz-xax"/>
+                            <constraint firstItem="sTU-sZ-z6J" firstAttribute="top" secondItem="mWs-Da-j7h" secondAttribute="bottom" constant="13" id="3lL-0J-Sjt"/>
+                            <constraint firstItem="O0W-UE-AWx" firstAttribute="leading" secondItem="mWs-Da-j7h" secondAttribute="leading" id="A5j-dW-M1d"/>
+                            <constraint firstItem="sTU-sZ-z6J" firstAttribute="centerX" secondItem="mWs-Da-j7h" secondAttribute="centerX" id="BQb-5v-9Ka"/>
+                            <constraint firstItem="Kd3-4L-Qgy" firstAttribute="leading" secondItem="4lL-Dn-fD1" secondAttribute="leading" id="Bmz-CY-vAk"/>
+                            <constraint firstItem="4lL-Dn-fD1" firstAttribute="top" secondItem="sTU-sZ-z6J" secondAttribute="bottom" constant="16" id="XVy-7r-tYm"/>
+                            <constraint firstItem="Kd3-4L-Qgy" firstAttribute="top" secondItem="O0W-UE-AWx" secondAttribute="bottom" constant="20" id="cis-Bm-h8x"/>
+                            <constraint firstItem="pha-Qf-gvh" firstAttribute="top" secondItem="Kd3-4L-Qgy" secondAttribute="bottom" constant="18" id="fME-mS-zXm"/>
+                            <constraint firstItem="O0W-UE-AWx" firstAttribute="top" secondItem="4lL-Dn-fD1" secondAttribute="bottom" constant="20" id="jaT-70-h8G"/>
+                            <constraint firstItem="mWs-Da-j7h" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="q1S-MC-LkN"/>
+                            <constraint firstItem="4lL-Dn-fD1" firstAttribute="centerX" secondItem="sTU-sZ-z6J" secondAttribute="centerX" id="zbF-vr-jv1"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="mWs-Da-j7h"/>
+                                <exclude reference="sTU-sZ-z6J"/>
+                                <exclude reference="4lL-Dn-fD1"/>
+                                <exclude reference="O0W-UE-AWx"/>
+                                <exclude reference="Kd3-4L-Qgy"/>
+                                <exclude reference="pha-Qf-gvh"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="0Ul-1u-EiA"/>
+                                <exclude reference="q1S-MC-LkN"/>
+                                <exclude reference="3lL-0J-Sjt"/>
+                                <exclude reference="BQb-5v-9Ka"/>
+                                <exclude reference="XVy-7r-tYm"/>
+                                <exclude reference="zbF-vr-jv1"/>
+                                <exclude reference="A5j-dW-M1d"/>
+                                <exclude reference="jaT-70-h8G"/>
+                                <exclude reference="Bmz-CY-vAk"/>
+                                <exclude reference="cis-Bm-h8x"/>
+                                <exclude reference="2Iw-pz-xax"/>
+                                <exclude reference="fME-mS-zXm"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="mWs-Da-j7h"/>
+                                <include reference="sTU-sZ-z6J"/>
+                                <include reference="4lL-Dn-fD1"/>
+                                <include reference="O0W-UE-AWx"/>
+                                <include reference="Kd3-4L-Qgy"/>
+                                <include reference="pha-Qf-gvh"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="0Ul-1u-EiA"/>
+                                <include reference="q1S-MC-LkN"/>
+                                <include reference="3lL-0J-Sjt"/>
+                                <include reference="BQb-5v-9Ka"/>
+                                <include reference="XVy-7r-tYm"/>
+                                <include reference="zbF-vr-jv1"/>
+                                <include reference="A5j-dW-M1d"/>
+                                <include reference="jaT-70-h8G"/>
+                                <include reference="Bmz-CY-vAk"/>
+                                <include reference="cis-Bm-h8x"/>
+                                <include reference="2Iw-pz-xax"/>
+                                <include reference="fME-mS-zXm"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="321" y="223"/>
+        </scene>
+    </scenes>
+</document>
