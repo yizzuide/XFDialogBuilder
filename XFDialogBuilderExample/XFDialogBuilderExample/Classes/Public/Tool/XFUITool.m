@@ -1,5 +1,5 @@
 //
-//  CBUITool.m
+//  XFUITool.m
 //  XFDialogBuilderExample
 //
 //  Created by yizzuide on 15/9/18.

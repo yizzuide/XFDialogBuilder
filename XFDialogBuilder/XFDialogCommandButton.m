@@ -70,7 +70,7 @@ const NSString *XFDialogCommitButtonMiddleLineDisable = @"XFDialogCommitButtonMi
     UIButton *cancelButton = [[UIButton alloc] init];
     //cancelButton.backgroundColor = [UIColor purpleColor];
     [cancelButton setTitle:@"取消" forState:UIControlStateNormal];
-    [cancelButton setTitleColor:XFDialogRealValue(XFDialogCancelButtonTitleColor, UIColorFromRGB(0x000000)) forState:UIControlStateNormal];
+    [cancelButton setTitleColor:XFDialogRealValue(XFDialogCancelButtonTitleColor, [UIColor blackColor]) forState:UIControlStateNormal];
     cancelButton.titleLabel.font = XFDialogRealFont(XFDialogCommitButtonFontSize, XFDialogCommitButtonDefFontSize);
     
     [self addSubview:cancelButton];
@@ -80,7 +80,7 @@ const NSString *XFDialogCommitButtonMiddleLineDisable = @"XFDialogCommitButtonMi
     // 确定按钮
     UIButton *commitButton = [[UIButton alloc] init];
     [commitButton setTitle:XFDialogRealValue(XFDialogCommitButtonTitle, @"确定") forState:UIControlStateNormal];
-    [commitButton setTitleColor: XFDialogRealValue(XFDialogCommitButtonTitleColor, UIColorFromRGB(0xff0000)) forState:UIControlStateNormal];
+    [commitButton setTitleColor: XFDialogRealValue(XFDialogCommitButtonTitleColor, [UIColor redColor]) forState:UIControlStateNormal];
     commitButton.titleLabel.font = XFDialogRealFont(XFDialogCommitButtonFontSize, XFDialogCommitButtonDefFontSize);
     [self addSubview:commitButton];
     self.commitButton = commitButton;

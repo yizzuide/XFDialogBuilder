@@ -1,5 +1,5 @@
 //
-//  CBDialogMaskView.m
+//  XFDialogMaskView.m
 //  CreativeButton
 //
 //  Created by yizzuide on 15/9/30.
