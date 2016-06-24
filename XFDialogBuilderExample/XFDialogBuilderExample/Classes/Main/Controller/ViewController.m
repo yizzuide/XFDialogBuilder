@@ -14,6 +14,7 @@
 #import "UIView+DialogMeasure.h"
 #import "XFDialogMacro.h"
 #import "XFDialogAnimationUtil.h"
+#import "XFUITool.h"
 
 
 @interface ViewController ()
@@ -115,6 +116,7 @@
                                               }
                                commitCallBack:^(NSString *inputText) {
                                    NSLog(@"你选择的是: %@",inputText);
+                                   [XFUITool showToastWithTitle:[NSString stringWithFormat:@"你选择的是: %@",inputText] complete:nil];
                                    [weakSelf.dialogView hideWithAnimationBlock:nil];
                                }] showWithAnimationBlock:nil];
     
@@ -162,8 +164,10 @@
                                          }
                         commitCallBack:^(NSString *inputText) {
                             [weakSelf.dialogView hideWithAnimationBlock:nil];
+                            [XFUITool showToastWithTitle:@"登录成功" complete:nil];
                         } errorCallBack:^(NSString *errorMessage) {
                             NSLog(@"error -- %@",errorMessage);
+                            [XFUITool showToastWithTitle:errorMessage complete:nil];
                         }] showWithAnimationBlock:nil];
 }
 
@@ -213,10 +217,12 @@
                                                      }]
                                          }
                         commitCallBack:^(NSString *inputText) {
-                            NSLog(@"请输的密码：%@",inputText);
+                            NSLog(@"输的密码：%@",inputText);
+                            [XFUITool showToastWithTitle:[NSString stringWithFormat:@"你密码的是: %@",inputText] complete:nil];
                             [weakSelf.dialogView hideWithAnimationBlock:nil];
                         } errorCallBack:^(NSString *errorMessage) {
                             NSLog(@"error -- %@",errorMessage);
+                            [XFUITool showToastWithTitle:errorMessage complete:nil];
                         }] showWithAnimationBlock:nil];
     
 }
@@ -242,6 +248,7 @@
                                             }
                            commitCallBack:^(NSString *inputText) {
                                [weakSelf.dialogView hideWithAnimationBlock:nil];
+                               [XFUITool showToastWithTitle:inputText complete:nil];
     }] showWithAnimationBlock:nil];
     
     self.selectors = comboBoxView.menuSelectors;
@@ -273,6 +280,7 @@
             }
         }else{
             NSLog(@"先选择省份！");
+            [XFUITool showToastWithTitle:@"先选择省份！" complete:nil];
             return;
         }
     }else{ // 如果是省份

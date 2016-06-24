@@ -42,6 +42,7 @@
 		404865101D1BFFF10049DCD9 /* XFDialogTextArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 404865031D1BFFF10049DCD9 /* XFDialogTextArea.m */; };
 		404865111D1BFFF10049DCD9 /* XFMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 404865051D1BFFF10049DCD9 /* XFMaskView.m */; };
 		404865211D1CC9440049DCD9 /* XFDialogAnimationUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 404865201D1CC9440049DCD9 /* XFDialogAnimationUtil.m */; };
+		40B832521D1D14AC00F8CAD7 /* XFUITool.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B832511D1D14AC00F8CAD7 /* XFUITool.m */; };
 		DA2800482489614367CF7A1A /* libPods-XFDialogBuilderExampleUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29111F4249E4DFBF97E917C9 /* libPods-XFDialogBuilderExampleUITests.a */; };
 		E81E0E4066A30FC7B2C9721E /* libPods-XFDialogBuilderExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1868D4F5AD89D3347C5DEE5F /* libPods-XFDialogBuilderExample.a */; };
 /* End PBXBuildFile section */
@@ -136,6 +137,8 @@
 		404865051D1BFFF10049DCD9 /* XFMaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFMaskView.m; sourceTree = "<group>"; };
 		4048651F1D1CC9440049DCD9 /* XFDialogAnimationUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFDialogAnimationUtil.h; sourceTree = "<group>"; };
 		404865201D1CC9440049DCD9 /* XFDialogAnimationUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFDialogAnimationUtil.m; sourceTree = "<group>"; };
+		40B832501D1D14AC00F8CAD7 /* XFUITool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFUITool.h; sourceTree = "<group>"; };
+		40B832511D1D14AC00F8CAD7 /* XFUITool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFUITool.m; sourceTree = "<group>"; };
 		48D39DE97ED7306CABD367A1 /* Pods-XFDialogBuilderExampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XFDialogBuilderExampleUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XFDialogBuilderExampleUITests/Pods-XFDialogBuilderExampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		52DAC3B753C20283181A7DD3 /* Pods-XFDialogBuilderExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XFDialogBuilderExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-XFDialogBuilderExample/Pods-XFDialogBuilderExample.release.xcconfig"; sourceTree = "<group>"; };
 		7FF07138CC4C6C324FA050D9 /* Pods-XFDialogBuilderExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XFDialogBuilderExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XFDialogBuilderExample/Pods-XFDialogBuilderExample.debug.xcconfig"; sourceTree = "<group>"; };
@@ -336,6 +339,8 @@
 		401281741C37C76B007A8AE7 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				40B832501D1D14AC00F8CAD7 /* XFUITool.h */,
+				40B832511D1D14AC00F8CAD7 /* XFUITool.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -695,6 +700,7 @@
 				401281821C37C76B007A8AE7 /* NSObject+MJProperty.m in Sources */,
 				404865101D1BFFF10049DCD9 /* XFDialogTextArea.m in Sources */,
 				4048650C1D1BFFF10049DCD9 /* XFDialogFrame.m in Sources */,
+				40B832521D1D14AC00F8CAD7 /* XFUITool.m in Sources */,
 				401281771C37C76B007A8AE7 /* AppDelegate.m in Sources */,
 				404865211D1CC9440049DCD9 /* XFDialogAnimationUtil.m in Sources */,
 				404865071D1BFFF10049DCD9 /* XFDropdownMenu.m in Sources */,
