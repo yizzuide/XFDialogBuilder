@@ -287,6 +287,7 @@
                                          }
                         commitCallBack:^(NSString *inputText) {
                             [weakSelf.dialogView hideWithAnimationBlock:nil];
+                            [XFUITool showToastWithTitle:[NSString stringWithFormat:@"输入的内容是: %@",inputText] complete:nil];
                         }
                          errorCallBack:^(NSString *errorMessage) {
                              
