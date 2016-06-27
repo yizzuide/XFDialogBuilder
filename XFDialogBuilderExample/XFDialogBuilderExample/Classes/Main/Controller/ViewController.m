@@ -72,8 +72,8 @@
     self.dialogView =
     [[XFDialogNotice dialogWithTitle:@"提示"
                                   attrs:@{
-                                          XFDialogTitleViewBackgroundColor : [UIColor yellowColor],
-                                          XFDialogLineColor : [UIColor purpleColor]
+                                          XFDialogTitleViewBackgroundColor : [UIColor darkGrayColor],
+                                          XFDialogLineColor : [UIColor darkGrayColor],
                                           }
                          commitCallBack:^(NSString *inputText) {
                              [weakSelf.dialogView hideWithAnimationBlock:nil];
@@ -231,6 +231,7 @@
 }
 
 - (IBAction)popupComboxDialog:(id)sender {
+    self.currentProvinceID = 0;
      WS(weakSelf)
     XFDialogComboBox *comboBoxView =
     [[XFDialogComboBox dialogWithTitle:@"选择地址"
