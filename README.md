@@ -39,3 +39,7 @@
 1.`cd ...XFDialogBuilderExample`("..."要根据自己的路径来)
 
 2.`pod install`
+
+
+##整体框架图
+![XFDialogBuilder framework](./ScreenShot/framework.png)
