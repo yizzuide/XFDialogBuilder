@@ -9,6 +9,15 @@
 
 ![XFDialogBuilder usage](./ScreenShot/usage.gif)
 
+##XFDialogBuilder框架特点
+1.快速开发，使用json搭建界面
+
+2.相比其它框架，UI定制性强
+
+3.使用者能分别自定义弹入、弹出动画引擎，可使用IOS自带动画方式，也可用其它第三方引擎，如pop、MMTweenAnimation、JHChainableAnimations等（兼容所有UIView动画引擎的嵌入)
+
+4.扩展性强，提供多种对话框类型，开发者可自己基于模板进行扩展
+
 ##安装
 1、通过cocoapods
 > pod 'XFDialogBuilder','1.0.2'
