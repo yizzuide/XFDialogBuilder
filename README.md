@@ -12,7 +12,7 @@
 ##XFDialogBuilder框架特点
 1.快速开发，使用json搭建界面
 
-2.相比其它酷炫框架([SIAlertView](https://github.com/Sumi-Interactive/SIAlertView)、[SCLAlertView](https://github.com/dogo/SCLAlertView)、[AMSmoothAlertView](https://github.com/mtonio91/AMSmoothAlert)等)，本框架UI定制性强，需求更符合国情，是真正能拿到自己项目用的
+2.相比其它高度封装+酷炫框架([SIAlertView](https://github.com/Sumi-Interactive/SIAlertView)、[SCLAlertView](https://github.com/dogo/SCLAlertView)、[AMSmoothAlertView](https://github.com/mtonio91/AMSmoothAlert)等)，本框架UI定制性更强,，需求更符合国情，是真正能拿到自己项目用的
 
 3.使用者能分别自定义弹入、弹出动画引擎，可使用IOS自带动画方式，也可用其它第三方引擎，如pop、MMTweenAnimation、JHChainableAnimations等（兼容所有UIView动画引擎的嵌入)
 
