@@ -5,7 +5,7 @@
 ![License](https://img.shields.io/npm/l/express.svg)
 ![Version](https://img.shields.io/badge/platform-ios6%2B-green.svg)
 
-可配置型IOS对话框，可定制窗口大小、UI主题、文本内容、字体大小、布局内容、弹出消失动画引擎。
+巨匠级可配置型IOS对话框，可定制窗口大小、UI主题、文本内容、字体大小、布局内容、弹出消失动画引擎。
 
 ![XFDialogBuilder usage](./ScreenShot/usage.gif)
 
