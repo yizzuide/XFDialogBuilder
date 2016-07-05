@@ -16,3 +16,10 @@
 2、手动加入
 
 把XFDialogBuilder整个目录拖入到工程，添加依赖库`pop`、`UITextView+Placeholder`。
+
+##Demo运行注意
+需要用命令行:
+
+1.`cd ...XFDialogBuilderExample`("..."要根据自己的路径来)
+
+2.`pod install`
