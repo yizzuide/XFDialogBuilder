@@ -131,6 +131,86 @@ extern const NSString *XFDialogTitleIsMultiLine;
  */
 + (instancetype)dialogWithTitle:(NSString *)title attrs:(NSDictionary *)attrs commitCallBack:(commitClickBlock)commitCallBack;
 ```
+#####1.4.动画引擎
+设置动画引擎,内建有默认Core Animation动画，不自定义动画时可以传nil。
+```objc
+/**
+ *  通过动画引擎显示,使用默认可传nil
+ *
+ *  @param animationEngineBlock 动画执行Block，如果为空则为默认效果
+ */
+- (instancetype)showWithAnimationBlock:(addAnimationEngineBlock)animationEngineBlock;
+/**
+ *  通过动画引擎隐藏,使用默认可传nil
+ *  @param animationEngineBlock 动画执行Block，如果为空则为默认效果
+ */
+- (void)hideWithAnimationBlock:(addAnimationEngineBlock)animationEngineBlock;
+/**
+ *  设置取消事件的动画效果（只有在自定义动画时要设置）
+ */
+@property (nonatomic, copy) addAnimationEngineBlock cancelAnimationEngineBlock;
+```
+
+使用内置pop引擎工具类`XFDialogAnimationUtil`
+```objc
+/**
+ *  推入对话框动画
+ *
+ *  @return 动画Block
+ */
++ (addAnimationEngineBlock)topToCenter;
+/**
+ *  退出对话框动画
+ *
+ *  @return 动画Block
+ */
++ (addAnimationEngineBlock)centerToTop;
+```
+
+使用`addAnimationEngineBlock`自定义动画
+
+Block定义:
+```objc
+/**
+ *  动画执行代码
+ *
+ *  @param view 执行动画的视图
+ *
+ *  @return 动画执行时间
+ */
+typedef float(^addAnimationEngineBlock)(UIView *view);
+```
+以pop动画引擎为例的使用方法:
+```objc
+// 显示动画，传入的View是显示的dialogView
+[self.dialogView showWithAnimationBlock:^float(UIView *view) {
+        view.y = -view.height;
+        
+        POPSpringAnimation *springPosY=[POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionY];
+        springPosY.fromValue = @(0);
+        springPosY.toValue= @(view.maskView.centerY);
+        springPosY.springBounciness=10;
+        [view.layer pop_addAnimation:springPosY forKey:@"springPosY"];
+        // 显示动画直接返回0即可
+        return 0;
+    }];
+// 消失动画，传入的View是显示的dialogView
+ [self.dialogView hideWithAnimationBlock:^float(UIView *view) {
+        POPSpringAnimation *springPosY=[POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionY];
+        springPosY.toValue= @(-view.maskView.height);
+        
+        springPosY.springBounciness=10;
+        POPSpringAnimation *springScaleXY=[POPSpringAnimation animationWithPropertyNamed:kPOPLayerScaleXY];
+        springScaleXY.toValue=[NSValue valueWithCGPoint:CGPointMake(0.1, 0.1)];
+        
+        springScaleXY.springBounciness=20;
+        [view.layer pop_addAnimation:springPosY forKey:@"springPosY"];
+        [view.layer pop_addAnimation:springScaleXY forKey:@"springScaleXY"];
+        // 消失动画必须返回动画执行时间，而显示动画直接返回0即可
+        return 0.5;
+    }];
+```
+
 
 
 
