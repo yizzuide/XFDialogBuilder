@@ -381,10 +381,8 @@ extern const NSString *XFDialogInputEyeCloseImage;
                                          }
                         commitCallBack:^(NSString *inputText) {
                             [weakSelf.dialogView hideWithAnimationBlock:nil];
-                            [XFUITool showToastWithTitle:@"登录成功" complete:nil];
                         } errorCallBack:^(NSString *errorMessage) {
                             NSLog(@"error -- %@",errorMessage);
-                            [XFUITool showToastWithTitle:errorMessage complete:nil];
                         }] showWithAnimationBlock:nil];
 ```
 #####3.3.多项文本框验证：
