@@ -285,8 +285,161 @@ typedef void(^commitClickBlock)(NSString *inputText);
 - (void)onErrorWithMesssage:(NSString *)errorMessage;
 ```
 
+####3.功能强大的输入对话框`XFDialogInput`
+之所以说它强大，是因为它能做的事很多：
+- 可添加无数个UITextField,只有屏幕能显示得下
+- 支持文本框的普通文本显示和密码框显示，并支持密码明文切换显示
+- 支持对每个文本框进行单独的样式配置
+- 支持跟随键盘向上浮动，并能处理键盘“下一步”动作跳转到下一个文本框
+- 强大的验证系统，支持单个文本框的单项验证、多个文本框的多项验证（如重置密码），验证失败后以红框显示错误文本框
+- 类方法扩展一个错误回调
 
+扩展属性：
+```objc
+/** 文本框数组 NSArray类型*/
+extern const NSString *XFDialogInputFields;
+/** 文本框类弄 枚举UIKeyboardType类型*/
+extern const NSString *XFDialogInputTypeKey;
+/** 文本框是否是密码 BOOL类型*/
+extern const NSString *XFDialogInputIsPasswordKey;
+/** 文本框Placeholder NSString类型*/
+extern const NSString *XFDialogInputPlaceholderKey;
+/** 文本框光标颜色 UIColor类型*/
+extern const NSString *XFDialogInputHintColor;
+/** 文本框文字颜色 UIColor类型*/
+extern const NSString *XFDialogInputTextColor;
+/** 文本框Margin float类型*/
+extern const NSString *XFDialogInputMargin;
+/** 文本框高度 float类型*/
+extern const NSString *XFDialogInputHeight;
+/** 文本框字体大小 float类型*/
+extern const NSString *XFDialogInputFontSize;
+/** 文本框单项验证数组 NSArray类型*/
+extern const NSString *XFDialogValidatorMatchers;
+/** 文本框多项验证数组 NSArray类型*/
+extern const NSString *XFDialogMultiValidatorMatchers;
+/** 文本框密码明文设置 NSDictionary类型*/
+extern const NSString *XFDialogInputPasswordEye;
+/** 文本框密码图标大小 float类型*/
+extern const NSString *XFDialogInputEyeSize;
+/** 文本框显示密文图标名 NSString类型*/
+extern const NSString *XFDialogInputEyeOpenImage;
+/** 文本框明文图标名 NSString类型*/
+extern const NSString *XFDialogInputEyeCloseImage;
+```
+#####3.1.扩展创建对话框类方法，支持错误回调：
+```objc
+/**
+ *  显示对话框
+ *
+ *  @param title          标题
+ *  @param attrs          对话框属性
+ *  @param commitCallBack 确定输入内容的回调
+ *  @param errorCallBack  错误回调
+ */
++ (instancetype)dialogWithTitle:(NSString *)title attrs:(NSDictionary *)attrs commitCallBack:(commitClickBlock)commitCallBack errorCallBack:(errorHappenBlock)errorCallBack;
+```
+#####3.2.单项文本框验证使用：
+```objc
+    self.dialogView =
+    [[XFDialogInput dialogWithTitle:@"登录"
+                                 attrs:@{
+                                         XFDialogTitleViewBackgroundColor : [UIColor orangeColor],
+                                         XFDialogTitleColor: [UIColor whiteColor],
+                                         XFDialogLineColor: [UIColor orangeColor],
+                                         XFDialogInputFields:@[
+                                                 @{
+                                                     XFDialogInputPlaceholderKey : @"输入用户名",
+                                                     XFDialogInputTypeKey : @(UIKeyboardTypeDefault),
+                                                     },
+                                                 @{
+                                                     XFDialogInputPlaceholderKey : @"输入新密码",
+                                                     XFDialogInputTypeKey : @(UIKeyboardTypeDefault),
+                                                     XFDialogInputIsPasswordKey : @(YES),
+                                                     XFDialogInputPasswordEye : @{
+                                                             XFDialogInputEyeOpenImage : @"ic_eye",
+                                                             XFDialogInputEyeCloseImage : @"ic_eye_close"
+                                                             }
+                                                     },
+                                                 ],
+                                         XFDialogInputHintColor : [UIColor purpleColor],
+                                         XFDialogInputTextColor: [UIColor orangeColor],
+                                         XFDialogCommitButtonTitleColor: [UIColor orangeColor],
+                                         XFDialogMultiValidatorMatchers: @[
+                                                 @{
+                                                     ValidatorConditionKey: ^(NSArray<UITextField *> *textfields){
+        
+        return textfields[0].text.length < 6;
+    },ValidatorErrorKey: @"用户名小于6位！"
+                                                     },
+                                          @{
+                                              ValidatorConditionKey: ^(NSArray<UITextField *> *textfields){
+        
+        return textfields[1].text.length < 6;
+    },ValidatorErrorKey: @"密码小于6位！"
+                                              }]
+                                         }
+                        commitCallBack:^(NSString *inputText) {
+                            [weakSelf.dialogView hideWithAnimationBlock:nil];
+                            [XFUITool showToastWithTitle:@"登录成功" complete:nil];
+                        } errorCallBack:^(NSString *errorMessage) {
+                            NSLog(@"error -- %@",errorMessage);
+                            [XFUITool showToastWithTitle:errorMessage complete:nil];
+                        }] showWithAnimationBlock:nil];
+```
+#####3.3.多项文本框验证：
+```objc
+self.dialogView =
+    [[XFDialogInput dialogWithTitle:@"修改密码"
+                                 attrs:@{
+                                         XFDialogTitleViewBackgroundColor : [UIColor greenColor],
+                                         XFDialogTitleColor: [UIColor whiteColor],
+                                         XFDialogLineColor: [UIColor greenColor],
+                                         XFDialogInputFields:@[
+                                                 @{
+                                                     XFDialogInputPlaceholderKey : @"请输入新密码",
+                                                     XFDialogInputTypeKey : @(UIKeyboardTypeDefault),
+                                                     XFDialogInputIsPasswordKey : @(YES),
+                                                     XFDialogInputPasswordEye : @{
+                                                             XFDialogInputEyeOpenImage : @"ic_eye",
+                                                             XFDialogInputEyeCloseImage : @"ic_eye_close"
+                                                             }
+                                                     },
+                                                 @{
+                                                     XFDialogInputPlaceholderKey : @"再次输入密码",
+                                                     XFDialogInputTypeKey : @(UIKeyboardTypeDefault),
+                                                     XFDialogInputIsPasswordKey : @(YES),
+                                                     XFDialogInputPasswordEye : @{
+                                                             XFDialogInputEyeOpenImage : @"ic_eye",
+                                                             XFDialogInputEyeCloseImage : @"ic_eye_close"
+                                                             }
+                                                     },
+                                                 ],
+                                         XFDialogInputHintColor : [UIColor purpleColor],
+                                         XFDialogInputTextColor: [UIColor greenColor],
+                                         XFDialogCommitButtonTitleColor: [UIColor greenColor],
+                                         XFDialogMultiValidatorMatchers: @[
+                                                 @{
+                                                     ValidatorConditionKey: ^(NSArray<UITextField *> *textfields){
+        
+        return textfields[0].text.length < 6 || textfields[1].text.length < 6;
+    },ValidatorErrorKey: @"密码小于6位"
+                                                     },
+                                                 @{
+                                                     ValidatorConditionKey: ^(NSArray<UITextField *> *textfields){
+        
+        return ![textfields[0].text isEqualToString:textfields[1].text];
+    },ValidatorErrorKey: @"两次密码不一致！"
+                                                     }]
+                                         }
+                        commitCallBack:^(NSString *inputText) {
+                            NSLog(@"输的密码：%@",inputText);
+                            [weakSelf.dialogView hideWithAnimationBlock:nil];
+                        } errorCallBack:^(NSString *errorMessage) {
+                            NSLog(@"error -- %@",errorMessage);
+                        }] showWithAnimationBlock:nil];
 
+```
 
 
 
