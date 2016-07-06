@@ -118,7 +118,7 @@ extern const NSString *XFDialogTitleAlignment;
 /** 对话框标题是否为多行 Bool类型*/
 extern const NSString *XFDialogTitleIsMultiLine;
 ```
-3.构建对话框
+#####1.3.构建对话框
 所有子控件都通过下面方法显示对话框，子控件添加自己的视图则通过`- (void)addContentView;`勾子方法。
 ```objc
 /**
