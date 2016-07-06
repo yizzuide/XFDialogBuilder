@@ -94,7 +94,7 @@ extern const NSString *XFDialogMaskViewBackgroundColor;
 /** 遮罩层透明度 float类型*/
 extern const NSString *XFDialogMaskViewAlpha;
 /** 对话框大小 CGSize类型*/
-extern const NSString *XFDialogSize; // 如果不设置，会根所当前对话框类型自己计算
+extern const NSString *XFDialogSize; // 如果不设置，会根据当前对话框类型自己计算
 /** 对话框圆角 float类型*/
 extern const NSString *XFDialogCornerRadius;
 /** 对话框背景色 UIColor类型*/
@@ -132,7 +132,7 @@ extern const NSString *XFDialogTitleIsMultiLine;
 + (instancetype)dialogWithTitle:(NSString *)title attrs:(NSDictionary *)attrs commitCallBack:(commitClickBlock)commitCallBack;
 ```
 #####1.4.动画引擎
-设置动画引擎,内建有默认Core Animation动画，不自定义动画时可以传nil。
+设置动画引擎,内建有默认`Core Animation`动画，不自定义动画时可以传`nil`。
 ```objc
 /**
  *  通过动画引擎显示,使用默认可传nil
@@ -180,7 +180,7 @@ Block定义:
  */
 typedef float(^addAnimationEngineBlock)(UIView *view);
 ```
-以pop动画引擎为例的使用方法:
+以pop动画引擎为例的使用方法(建议将自定义代码封装成工具类，可以参考`XFDialogAnimationUtil`类):
 ```objc
 // 显示动画，传入的View是显示的dialogView
 [self.dialogView showWithAnimationBlock:^float(UIView *view) {
