@@ -119,7 +119,7 @@ extern const NSString *XFDialogTitleAlignment;
 extern const NSString *XFDialogTitleIsMultiLine;
 ```
 #####1.3.构建对话框
-所有子控件都通过下面方法显示对话框，子控件添加自己的视图则通过`- (void)addContentView;`勾子方法。
+所有子控件调用下面方法显示对话框，子控件添加自己的视图则通过`- (void)addContentView;`勾子方法。
 ```objc
 /**
  *  构建对话框
@@ -211,6 +211,61 @@ typedef float(^addAnimationEngineBlock)(UIView *view);
     }];
 ```
 
+####2.命令式按钮控件`XFDialogCommandButton`
+所有具有“确定”、“取消”的对话框都继承自`XFDialogCommandButton`,这个类具有“确定”、“取消”的回调，并有在“确定”时执行的抽象验证方法，验证方法的具体实现在它的子控件`XFDialogInput`。
+
+#####2.1.命令式回调
+成功回调,可以直接使用上面的显示对话框类方法赋值，定义如下：
+```objc
+/**
+ *  确定事件的回调
+ *
+ *  @param inputText 确定内容
+ */
+typedef void(^commitClickBlock)(NSString *inputText);
+@property (nonatomic, copy, readonly) commitClickBlock commitCallBack;
+```
+确定消息的回传：
+```objc
+/**
+ *  子控件可以覆盖确定时的输入内容，用于作为参数输出给commitCallBack回调，默认返回"commit"
+ */
+@property (nonatomic, copy) NSString *inputText;
+```
+取消回调，没有直接使用的回调方式（处理这个回调情况很少），可以参考`XFDialogAnimationUtil`实现的方法：
+```objc
+/**
+ *  退出对话框动画
+ *
+ *  @param workBlock 退出前的操作
+ *
+ *  @return 动画Block
+ */
++ (addAnimationEngineBlock)dialogDisappearAnimWithWorkBlock:(void(^)())workBlock {
+    if (workBlock) {
+        workBlock();
+    }
+    return [self centerToTop];
+}
+```
+
+#####2.2.抽象验证
+
+验证器核心方法:
+```objc
+/**
+ *  子控件是否有验证方法，没有或验证成功返回nil
+ *
+ *  @return 返回错误字符串
+ */
+- (NSString *)validate;
+/**
+ *  子控件可以覆盖确定按钮事件发生错误的方法
+ *
+ *  @param errorMessage 错误消息
+ */
+- (void)onErrorWithMesssage:(NSString *)errorMessage;
+```
 
 
 
