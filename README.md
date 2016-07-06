@@ -109,13 +109,13 @@ extern const NSString *XFDialogItemSpacing;
 extern const NSString *XFDialogTitleViewBackgroundColor;
 /** 对话框标题颜色 UIColor类型*/
 extern const NSString *XFDialogTitleColor;
-/** 对话框标题font float类型*/
+/** 对话框标题字体大小 float类型*/
 extern const NSString *XFDialogTitleFontSize;
 /** 对话框标题高度 float类型*/
 extern const NSString *XFDialogTitleViewHeight;
-/** 对话框标题对齐方式 float类型*/
+/** 对话框标题对齐方式 枚举NSTextAlignment类型*/
 extern const NSString *XFDialogTitleAlignment;
-/** 对话框标题是否为多行 Bool类型*/
+/** 对话框标题是否为多行 BOOL类型*/
 extern const NSString *XFDialogTitleIsMultiLine;
 ```
 #####1.3.构建对话框
@@ -213,6 +213,24 @@ typedef float(^addAnimationEngineBlock)(UIView *view);
 
 ####2.命令式按钮控件`XFDialogCommandButton`
 所有具有“确定”、“取消”的对话框都继承自`XFDialogCommandButton`,这个类具有“确定”、“取消”的回调，并有在“确定”时执行的抽象验证方法，验证方法的具体实现在它的子控件`XFDialogInput`。
+
+扩展配置属性：
+```objc
+/** 按钮高度 float类型*/
+extern const NSString *XFDialogCommandButtonHeight;
+/** 取消按钮标题颜色 UIColor类型*/
+extern const NSString *XFDialogCancelButtonTitleColor;
+/** 确定按钮标题颜色 UIColor类型*/
+extern const NSString *XFDialogCommitButtonTitleColor;
+/** 取消按钮标题文字 NSString类型*/
+extern const NSString *XFDialogCancelButtonTitle;
+/** 确定按钮标题文字 NSString类型*/
+extern const NSString *XFDialogCommitButtonTitle;
+/** 按钮标题文字字体大小 float类型*/
+extern const NSString *XFDialogCommitButtonFontSize;
+/** 禁用中线 BOOL类型*/
+extern const NSString *XFDialogCommitButtonMiddleLineDisable;
+```
 
 #####2.1.命令式回调
 成功回调,可以直接使用上面的显示对话框类方法赋值，定义如下：
