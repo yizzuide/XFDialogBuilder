@@ -26,26 +26,34 @@ typedef float(^addAnimationEngineBlock)(UIView *view);
 #define XFDialogDefItemSpacing 8.f
 #define XFDialogLineDefW 1.f
 
-/**
- *  遮罩层背景色
- */
+// 注意：以下属性都有默认设置
+/** 遮罩层背景色 UIColor类型*/
 extern const NSString *XFDialogMaskViewBackgroundColor;
-/**
- *  遮罩层透明度
- */
+/** 遮罩层透明度 float类型*/
 extern const NSString *XFDialogMaskViewAlpha;
-extern const NSString *XFDialogSize;
+/** 对话框大小 CGSize类型*/
+extern const NSString *XFDialogSize; // 如果不设置，会根据当前对话框类型自己计算
+/** 对话框圆角 float类型*/
 extern const NSString *XFDialogCornerRadius;
+/** 对话框背景色 UIColor类型*/
 extern const NSString *XFDialogBackground;
+/** 对话框线条颜色 UIColor类型*/
 extern const NSString *XFDialogLineColor;
+/** 对话框线条宽度 float类型*/
 extern const NSString *XFDialogLineWidth;
+/** 对话框子内容的间隔 float类型*/
 extern const NSString *XFDialogItemSpacing;
-
+/** 对话框标题背景色 UIColor类型*/
 extern const NSString *XFDialogTitleViewBackgroundColor;
+/** 对话框标题颜色 UIColor类型*/
 extern const NSString *XFDialogTitleColor;
+/** 对话框标题字体大小 float类型*/
 extern const NSString *XFDialogTitleFontSize;
+/** 对话框标题高度 float类型*/
 extern const NSString *XFDialogTitleViewHeight;
+/** 对话框标题对齐方式 枚举NSTextAlignment类型*/
 extern const NSString *XFDialogTitleAlignment;
+/** 对话框标题是否为多行 BOOL类型*/
 extern const NSString *XFDialogTitleIsMultiLine;
 
 /**
@@ -65,7 +73,7 @@ typedef void(^commitClickBlock)(NSString *inputText);
 @property (nonatomic, copy, readonly) commitClickBlock commitCallBack;
 
 /**
- *  设置取消事件的动画效果
+ *  设置取消事件的动画效果（只有在自定义动画时要设置）
  */
 @property (nonatomic, copy) addAnimationEngineBlock cancelAnimationEngineBlock;
 

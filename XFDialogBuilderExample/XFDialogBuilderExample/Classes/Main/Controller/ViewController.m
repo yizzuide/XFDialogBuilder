@@ -68,11 +68,13 @@
 
 
 - (IBAction)popupHintDialog {
-    WS(weakSelf)
+    //WS(weakSelf)
+    __weak ViewController *weakSelf = self;
     self.dialogView =
     [[XFDialogNotice dialogWithTitle:@"提示"
                                   attrs:@{
-                                          XFDialogTitleViewBackgroundColor : [UIColor darkGrayColor],
+                                          XFDialogTitleViewBackgroundColor : [UIColor grayColor],
+                                          XFDialogNoticeText: @"确定退出？",
                                           XFDialogLineColor : [UIColor darkGrayColor],
                                           }
                          commitCallBack:^(NSString *inputText) {
@@ -104,6 +106,7 @@
                          commitCallBack:^(NSString *inputText) {
                              [weakSelf.dialogView hideWithAnimationBlock:[XFDialogAnimationUtil centerToTop]];
                          }] showWithAnimationBlock:[XFDialogAnimationUtil topToCenter]];
+    // 使用自定义动画引擎后要设置取消动画
     self.dialogView.cancelAnimationEngineBlock = [XFDialogAnimationUtil centerToTop];
 }
 
