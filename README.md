@@ -1,4 +1,4 @@
-# XFDialogBuilder
+![XFDialogBuilder logo](./ScreenShot/logo.png)
 
 [![CocoaPods](https://img.shields.io/badge/cocoapods-v1.0.2-brightgreen.svg)](http://cocoadocs.org/docsets/XFSettings)
 ![Language](https://img.shields.io/badge/language-ObjC-orange.svg)
