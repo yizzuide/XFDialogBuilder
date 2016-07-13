@@ -26,16 +26,16 @@
     self = [super initWithFrame:frame];
     if (self) {
         // 侦听屏幕旋转
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(willRotateWithNoti:) name:UIDeviceOrientationDidChangeNotification object:nil];
+        //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(willRotateWithNoti:) name:UIDeviceOrientationDidChangeNotification object:nil];
     }
     return self;
 }
 
-- (void)willRotateWithNoti:(NSNotification *)noti {
-    [UIView animateWithDuration:0.25 animations:^{
-        self.frame = CGRectMake(0, 0, ScreenSize.width, ScreenSize.height);
-    }];
-}
+//- (void)willRotateWithNoti:(NSNotification *)noti {
+    //[UIView animateWithDuration:0.25 animations:^{
+        //self.frame = CGRectMake(0, 0, ScreenSize.width, ScreenSize.height);
+    //}];
+//}
 
 - (UIWindow *)frontWindow
 {
@@ -60,9 +60,16 @@
 
 - (void)setDialogView:(UIView *)dialogView
 {
-    //    _dialogView = dialogView;
     
     [self.frontWindow addSubview:self];
+    
+    self.translatesAutoresizingMaskIntoConstraints = NO;
+    NSArray *hConstraint = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[maskView]-0-|" options:0 metrics:nil views:@{@"maskView":self}];
+    [self.frontWindow addConstraints:hConstraint];
+    NSArray *vConstraint = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[maskView]-0-|" options:0 metrics:nil views:@{@"maskView":self}];
+    [self.frontWindow addConstraints:vConstraint];
+    
+    
     dialogView.centerX = self.centerX;
     dialogView.centerY = self.centerY;
     dialogView.hidden = YES;
@@ -169,9 +176,9 @@
 }
 
 
-- (void)dealloc
+/*- (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
+}*/
 
 @end
