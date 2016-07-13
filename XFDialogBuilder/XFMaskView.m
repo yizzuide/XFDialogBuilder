@@ -9,6 +9,7 @@
 #import "XFMaskView.h"
 #import "UIView+DialogMeasure.h"
 #import "XFDialogFrame.h"
+#import "XFDialogMacro.h"
 
 
 @interface XFMaskView ()
@@ -19,6 +20,22 @@
 @end
 
 @implementation XFMaskView
+
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        // 侦听屏幕旋转
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(willRotateWithNoti:) name:UIDeviceOrientationDidChangeNotification object:nil];
+    }
+    return self;
+}
+
+- (void)willRotateWithNoti:(NSNotification *)noti {
+    [UIView animateWithDuration:0.25 animations:^{
+        self.frame = CGRectMake(0, 0, ScreenSize.width, ScreenSize.height);
+    }];
+}
 
 - (UIWindow *)frontWindow
 {
@@ -140,6 +157,21 @@
     XFDialogFrame *df = (XFDialogFrame *)self.dialogView;
     [df endEditing:YES];
     [self hideWithAnimationBlock:df.cancelAnimationEngineBlock];
+}
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    // 重新布局对话框视图
+    self.dialogView.centerX = self.centerX;
+    self.dialogView.centerY = self.centerY;
+    [self.dialogView layoutIfNeeded];
+}
+
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end
