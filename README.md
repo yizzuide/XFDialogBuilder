@@ -197,7 +197,8 @@ typedef float(^addAnimationEngineBlock)(UIView *view);
     }];
 ```
 
-#####1.4.扩展子对话框，显示自己想要的对话框，如果完全自己自定义就继承`XFDialogFrame`,如果想拥有底部“取消”、“确定”按钮而只定义上面内容就继承`XFDialogCommandButton`，然后通过以下两个方法进行扩展（可以参考`XFDialogNotice`类的扩展实现）:
+#####1.4.扩展子对话框
+显示自己想要的对话框，如果完全自己自定义就继承`XFDialogFrame`,如果想拥有底部“取消”、“确定”按钮而只定义上面内容就继承`XFDialogCommandButton`，然后通过以下两个方法进行扩展（可以参考`XFDialogNotice`类的扩展实现）:
 
 ```objc
 /**
