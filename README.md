@@ -70,22 +70,8 @@
 下图是框架整体结构：
 ![XFDialogBuilder framework](./ScreenShot/framework.png)
 
-#####1.1.扩展子控件
-子控件必须实现以下方法：
-```objc
-/**
- *  添加子视图
- */
-- (void)addContentView;
-/**
- *  对话框大小
- *
- *  @return Size
- */
-- (CGSize)dialogSize;
-```
 
-#####1.2.容器配置属性
+#####1.1.容器配置属性
 子控件类都会继承自`XFDialogFrame`这些配置：
 ```objc
 // 注意：以下属性都有默认设置
@@ -118,7 +104,7 @@ extern const NSString *XFDialogTitleAlignment;
 /** 对话框标题是否为多行 BOOL类型*/
 extern const NSString *XFDialogTitleIsMultiLine;
 ```
-#####1.3.构建对话框
+#####1.2.构建对话框
 所有子控件调用下面方法显示对话框，子控件添加自己的视图则通过`- (void)addContentView;`勾子方法。
 ```objc
 /**
@@ -131,7 +117,7 @@ extern const NSString *XFDialogTitleIsMultiLine;
  */
 + (instancetype)dialogWithTitle:(NSString *)title attrs:(NSDictionary *)attrs commitCallBack:(commitClickBlock)commitCallBack;
 ```
-#####1.4.动画引擎
+#####1.3.动画引擎
 设置动画引擎,内建有默认`Core Animation`动画，不自定义动画时可以传`nil`。
 ```objc
 /**
@@ -180,7 +166,7 @@ Block定义:
  */
 typedef float(^addAnimationEngineBlock)(UIView *view);
 ```
-以pop动画引擎为例的使用方法(建议将自定义代码封装成工具类，可以参考`XFDialogAnimationUtil`类):
+以pop动画引擎为例的使用方法(建议将自定义代码封装成工具类，可以参考`XFDialogAnimationUtil`类实现):
 ```objc
 // 显示动画，传入的View是显示的dialogView
 [self.dialogView showWithAnimationBlock:^float(UIView *view) {
@@ -206,13 +192,29 @@ typedef float(^addAnimationEngineBlock)(UIView *view);
         springScaleXY.springBounciness=20;
         [view.layer pop_addAnimation:springPosY forKey:@"springPosY"];
         [view.layer pop_addAnimation:springScaleXY forKey:@"springScaleXY"];
-        // 消失动画必须返回动画执行时间，而显示动画直接返回0即可
+        // 消失动画必须返回动画执行时间
         return 0.5;
     }];
 ```
 
+#####1.4.扩展子对话框，显示自己想要的对话框，如果完全自己自定义就继承`XFDialogFrame`,如果想拥有底部“取消”、“确定”按钮而只定义上面内容就继承`XFDialogCommandButton`，然后通过以下两个方法进行扩展（可以参考`XFDialogNotice`类的扩展实现）:
+
+```objc
+/**
+ *  添加子视图
+ */
+- (void)addContentView;
+/**
+ *  对话框大小
+ *
+ *  @return Size
+ */
+- (CGSize)dialogSize;
+```
+
+
 ####2.命令式按钮控件`XFDialogCommandButton`
-所有具有“确定”、“取消”的对话框都继承自`XFDialogCommandButton`,这个类具有“确定”、“取消”的回调，并有在“确定”时执行的抽象验证方法，验证方法的具体实现在它的子控件`XFDialogInput`。
+所有具有“确定”、“取消”的对话框都继承自`XFDialogCommandButton`，这个类具有“确定”、“取消”的回调，并有在“确定”时执行的抽象验证方法，验证方法的具体实现在它的子控件`XFDialogInput`。
 
 扩展配置属性：
 ```objc
