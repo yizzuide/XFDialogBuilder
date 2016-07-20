@@ -48,7 +48,11 @@
 
 3.显示对话框
 
-![XFDialogBuilder quickstart](./ScreenShot/quickstart.png)
+
+<p align="center">
+    <img src="./ScreenShot/quickstart.png" alt="quickstart" />
+</p>
+
 ```objc
     __weak ViewController *weakSelf = self;
     self.dialogView =
