@@ -131,6 +131,11 @@ const NSString *XFDialogInputEyeCloseImage = @"XFDialogInputEyeCloseImage";
             weakSelf.transform = CGAffineTransformMakeTranslation(0, (keyY - kScreenH) * 0.35);
         }];
     }];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        [weakSelf.inputTextFields[0] becomeFirstResponder];
+    });
 }
 
 - (void)secureTextChangeAction:(UIButton *)btn
@@ -204,13 +209,8 @@ const NSString *XFDialogInputEyeCloseImage = @"XFDialogInputEyeCloseImage";
     CGFloat allInputFieldsH = inputH * self.inputTextFields.count;
     CGFloat allMarginH = margin * (self.inputTextFields.count + 1);
     CGFloat bottomButtonH = [self realCommandButtonHeight];
-    CGFloat topH;
-    if (self.attrs[XFDialogTitleIsMultiLine]) {
-        float spacing = XFDialogRealValueWithFloatType(XFDialogItemSpacing, XFDialogDefItemSpacing);
-        topH = [self realTitleHeight] - spacing + spacing * 2;
-    }else{
-        topH = [self realTitleHeight];
-    }
+    CGFloat topH = [self realTitleHeight];
+    
     return CGSizeMake(XFDialogDefW, topH + allInputFieldsH + allMarginH + bottomButtonH);
 }
 

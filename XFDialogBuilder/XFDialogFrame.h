@@ -41,8 +41,6 @@ extern const NSString *XFDialogBackground;
 extern const NSString *XFDialogLineColor;
 /** 对话框线条宽度 float类型*/
 extern const NSString *XFDialogLineWidth;
-/** 对话框子内容的间隔 float类型*/
-extern const NSString *XFDialogItemSpacing;
 /** 对话框标题背景色 UIColor类型*/
 extern const NSString *XFDialogTitleViewBackgroundColor;
 /** 对话框标题颜色 UIColor类型*/
@@ -55,6 +53,8 @@ extern const NSString *XFDialogTitleViewHeight;
 extern const NSString *XFDialogTitleAlignment;
 /** 对话框标题是否为多行 BOOL类型*/
 extern const NSString *XFDialogTitleIsMultiLine;
+/** 对话框多行标题的Margin float类型*/
+extern const NSString *XFDialogMultiLineTitleMargin;
 
 /**
  *  确定事件的回调

@@ -12,6 +12,7 @@
 		400073AE1C351FA300826625 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 400073AC1C351FA300826625 /* LaunchScreen.storyboard */; };
 		400073B91C351FA300826625 /* XFDialogBuilderExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 400073B81C351FA300826625 /* XFDialogBuilderExampleTests.m */; };
 		400073C41C351FA400826625 /* XFDialogBuilderExampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 400073C31C351FA400826625 /* XFDialogBuilderExampleUITests.m */; };
+		4009B6951D4128EB00FE2BD8 /* XFDialogMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4009B6941D4128EB00FE2BD8 /* XFDialogMessage.m */; };
 		4012813D1C37C564007A8AE7 /* regions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4012813C1C37C564007A8AE7 /* regions.plist */; };
 		401281751C37C76B007A8AE7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 401281531C37C76B007A8AE7 /* ViewController.m */; };
 		401281761C37C76B007A8AE7 /* XFRegion.m in Sources */ = {isa = PBXBuildFile; fileRef = 401281561C37C76B007A8AE7 /* XFRegion.m */; };
@@ -29,6 +30,7 @@
 		401281821C37C76B007A8AE7 /* NSObject+MJProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 401281711C37C76B007A8AE7 /* NSObject+MJProperty.m */; };
 		401281831C37C76B007A8AE7 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 401281731C37C76B007A8AE7 /* NSString+Extension.m */; };
 		401281851C37C7D2007A8AE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 401281841C37C7D2007A8AE7 /* Main.storyboard */; };
+		40A7666F1D37BA9100C63018 /* XFDialogPanelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A7666E1D37BA9100C63018 /* XFDialogPanelView.m */; };
 		40B832521D1D14AC00F8CAD7 /* XFUITool.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B832511D1D14AC00F8CAD7 /* XFUITool.m */; };
 		40B832721D1D233B00F8CAD7 /* XFComboxListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B832561D1D233B00F8CAD7 /* XFComboxListController.m */; };
 		40B832731D1D233B00F8CAD7 /* XFDropdownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B832581D1D233B00F8CAD7 /* XFDropdownMenu.m */; };
@@ -79,6 +81,8 @@
 		400073BF1C351FA400826625 /* XFDialogBuilderExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XFDialogBuilderExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		400073C31C351FA400826625 /* XFDialogBuilderExampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XFDialogBuilderExampleUITests.m; sourceTree = "<group>"; };
 		400073C51C351FA400826625 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4009B6931D4128EB00FE2BD8 /* XFDialogMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFDialogMessage.h; sourceTree = "<group>"; };
+		4009B6941D4128EB00FE2BD8 /* XFDialogMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFDialogMessage.m; sourceTree = "<group>"; };
 		4012813C1C37C564007A8AE7 /* regions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = regions.plist; sourceTree = "<group>"; };
 		401281521C37C76B007A8AE7 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		401281531C37C76B007A8AE7 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
@@ -109,6 +113,8 @@
 		401281721C37C76B007A8AE7 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
 		401281731C37C76B007A8AE7 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
 		401281841C37C7D2007A8AE7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		40A7666D1D37BA9100C63018 /* XFDialogPanelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFDialogPanelView.h; sourceTree = "<group>"; };
+		40A7666E1D37BA9100C63018 /* XFDialogPanelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFDialogPanelView.m; sourceTree = "<group>"; };
 		40B832501D1D14AC00F8CAD7 /* XFUITool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFUITool.h; sourceTree = "<group>"; };
 		40B832511D1D14AC00F8CAD7 /* XFUITool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFUITool.m; sourceTree = "<group>"; };
 		40B832551D1D233B00F8CAD7 /* XFComboxListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFComboxListController.h; sourceTree = "<group>"; };
@@ -235,6 +241,15 @@
 			path = XFDialogBuilderExampleUITests;
 			sourceTree = "<group>";
 		};
+		4009B6921D41288400FE2BD8 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4009B6931D4128EB00FE2BD8 /* XFDialogMessage.h */,
+				4009B6941D4128EB00FE2BD8 /* XFDialogMessage.m */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		401281411C37C67E007A8AE7 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -286,6 +301,7 @@
 		4012815B1C37C76B007A8AE7 /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				4009B6921D41288400FE2BD8 /* Extension */,
 				4012815C1C37C76B007A8AE7 /* Lib */,
 				401281741C37C76B007A8AE7 /* Tool */,
 			);
@@ -348,10 +364,10 @@
 		40B832531D1D233B00F8CAD7 /* XFDialogBuilder */ = {
 			isa = PBXGroup;
 			children = (
+				40B8325D1D1D233B00F8CAD7 /* Utils */,
 				40B832541D1D233B00F8CAD7 /* ComboBoxExtention */,
 				40B8325B1D1D233B00F8CAD7 /* UIView+DialogMeasure.h */,
 				40B8325C1D1D233B00F8CAD7 /* UIView+DialogMeasure.m */,
-				40B8325D1D1D233B00F8CAD7 /* Utils */,
 				40B832601D1D233B00F8CAD7 /* XFDialogBuilder.h */,
 				40B832611D1D233B00F8CAD7 /* XFDialogComboBox.h */,
 				40B832621D1D233B00F8CAD7 /* XFDialogComboBox.m */,
@@ -370,6 +386,8 @@
 				40B8326F1D1D233B00F8CAD7 /* XFDialogTextArea.m */,
 				40B832701D1D233B00F8CAD7 /* XFMaskView.h */,
 				40B832711D1D233B00F8CAD7 /* XFMaskView.m */,
+				40A7666D1D37BA9100C63018 /* XFDialogPanelView.h */,
+				40A7666E1D37BA9100C63018 /* XFDialogPanelView.m */,
 			);
 			name = XFDialogBuilder;
 			path = ../XFDialogBuilder;
@@ -688,6 +706,8 @@
 				401281761C37C76B007A8AE7 /* XFRegion.m in Sources */,
 				4012817C1C37C76B007A8AE7 /* MJConst.m in Sources */,
 				40B8327C1D1D233B00F8CAD7 /* XFDialogOptionButton.m in Sources */,
+				4009B6951D4128EB00FE2BD8 /* XFDialogMessage.m in Sources */,
+				40A7666F1D37BA9100C63018 /* XFDialogPanelView.m in Sources */,
 				401281801C37C76B007A8AE7 /* NSObject+MJCoding.m in Sources */,
 				40B832781D1D233B00F8CAD7 /* XFDialogCommandButton.m in Sources */,
 				401281751C37C76B007A8AE7 /* ViewController.m in Sources */,

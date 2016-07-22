@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -66,9 +66,17 @@
                                     <action selector="popupTextAreaDialog:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7WI-Le-neG"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqm-bl-kpu">
+                                <rect key="frame" x="255" y="478" width="90" height="30"/>
+                                <state key="normal" title="自定义对话框"/>
+                                <connections>
+                                    <action selector="popupCustomDialog" destination="BYZ-38-t0r" eventType="touchUpInside" id="kZn-CZ-zsY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="dqm-bl-kpu" firstAttribute="top" secondItem="o9P-Kp-BnP" secondAttribute="bottom" constant="25" id="30U-9d-mIM"/>
                             <constraint firstItem="pha-Qf-gvh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8HP-Tt-YDH"/>
                             <constraint firstItem="4lL-Dn-fD1" firstAttribute="top" secondItem="sTU-sZ-z6J" secondAttribute="bottom" constant="22" id="AmC-Vi-mrq"/>
                             <constraint firstItem="Kd3-4L-Qgy" firstAttribute="top" secondItem="O0W-UE-AWx" secondAttribute="bottom" constant="22" id="CkG-kP-73R"/>
@@ -83,6 +91,7 @@
                             <constraint firstItem="o9P-Kp-BnP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qLx-pV-Ue4"/>
                             <constraint firstItem="7e5-Z4-v5r" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="sHX-wy-yAJ"/>
                             <constraint firstItem="4lL-Dn-fD1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="y4O-wl-aAs"/>
+                            <constraint firstItem="dqm-bl-kpu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zAL-tU-qTJ"/>
                         </constraints>
                     </view>
                 </viewController>

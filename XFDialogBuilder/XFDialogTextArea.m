@@ -75,6 +75,11 @@ typedef BOOL(^ValidatorBlock)(UITextView *textView);
             weakSelf.transform = CGAffineTransformMakeTranslation(0, (keyY - kScreenH) * 0.45);
         }];
     }];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        [weakSelf.textView becomeFirstResponder];
+    });
 }
 
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
@@ -114,13 +119,7 @@ typedef BOOL(^ValidatorBlock)(UITextView *textView);
     CGFloat textAreaH = XFDialogRealValueWithFloatType(XFDialogTextAreaHeight, XFTextAreaDefH);
     CGFloat allMarginH = margin * 2;
     CGFloat bottomButtonH = [self realCommandButtonHeight];
-    CGFloat topH;
-    if (self.attrs[XFDialogTitleIsMultiLine]) {
-        float spacing = XFDialogRealValueWithFloatType(XFDialogItemSpacing, XFDialogDefItemSpacing);
-        topH = [self realTitleHeight] - spacing + spacing * 2;
-    }else{
-        topH = [self realTitleHeight];
-    }
+    CGFloat topH = [self realTitleHeight];
     return CGSizeMake(XFDialogDefW, topH + textAreaH + allMarginH + bottomButtonH);
 }
 

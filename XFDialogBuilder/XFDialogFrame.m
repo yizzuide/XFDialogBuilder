@@ -10,6 +10,7 @@
 #import "XFMaskView.h"
 #import "UIView+DialogMeasure.h"
 #import "XFDialogMacro.h"
+#import "XFDialogPanelView.h"
 
 const NSString *XFDialogMaskViewBackgroundColor = @"XFDialogMaskViewBackgroundColor";
 const NSString *XFDialogMaskViewAlpha = @"XFDialogMaskViewAlpha";
@@ -18,7 +19,7 @@ const NSString *XFDialogCornerRadius = @"XFCornerRadius";
 const NSString *XFDialogBackground = @"XFDialogBackground";
 const NSString *XFDialogLineColor = @"XFDialogLineColor";
 const NSString *XFDialogLineWidth = @"XFDialogLineWidth";
-const NSString *XFDialogItemSpacing = @"XFDialogItemSpacing";
+
 
 const NSString *XFDialogTitleViewBackgroundColor = @"XFDialogTitleViewBackgroundColor";
 const NSString *XFDialogTitleColor = @"XFDialogTitleColor";
@@ -26,6 +27,7 @@ const NSString *XFDialogTitleFontSize= @"XFDialogTitleFontSize";
 const NSString *XFDialogTitleViewHeight= @"XFDialogTitleViewHeight";
 const NSString *XFDialogTitleAlignment = @"XFDialogTitleAlignment";
 const NSString *XFDialogTitleIsMultiLine = @"XFDialogTitleIsMultiLine";
+const NSString *XFDialogMultiLineTitleMargin = @"XFDialogMultiLineTitleMargin";
 
 @interface XFDialogFrame ()
 
@@ -50,6 +52,7 @@ const NSString *XFDialogTitleIsMultiLine = @"XFDialogTitleIsMultiLine";
 
 + (instancetype)dialogWithTitle:(NSString *)title attrs:(NSDictionary *)attrs commitCallBack:(commitClickBlock)commitCallBack
 {
+    // 初始化对话框
     XFDialogFrame *dialogFrameView = [[self alloc] init];
     dialogFrameView.attrs = attrs;
     dialogFrameView.commitCallBack = commitCallBack;
@@ -57,6 +60,13 @@ const NSString *XFDialogTitleIsMultiLine = @"XFDialogTitleIsMultiLine";
     dialogFrameView.layer.cornerRadius = XFDialogRealValueWithTypeForRef(attrs, XFDialogCornerRadius, floatValue, XFDialogDefCornerRadius);
     dialogFrameView.backgroundColor = XFDialogRealValueForRef(attrs, XFDialogBackground, [UIColor whiteColor]);
     
+    // 添加背板层
+    XFDialogPanelView *panelView = [[XFDialogPanelView alloc] init];
+    panelView.backgroundColor = [UIColor whiteColor];
+    panelView.size = [dialogFrameView dialogSize];
+    [dialogFrameView addSubview:panelView];
+    
+    // 添加标题
     UILabel *titleLabel = [[UILabel alloc] init];
     titleLabel.text = title;
     titleLabel.textColor = XFDialogRealValueForRef(attrs, XFDialogTitleColor, UIColorFromRGB(0x000000));
@@ -69,9 +79,12 @@ const NSString *XFDialogTitleIsMultiLine = @"XFDialogTitleIsMultiLine";
     [dialogFrameView addSubview:titleLabel];
     dialogFrameView.titleLabel = titleLabel;
     
+    // 添加子控件其它视图
     [dialogFrameView addContentView];
+    // 设置对话框大小
     dialogFrameView.size = [dialogFrameView dialogSize];
     
+    // 添加到遮盖层
     UIColor *maskViewBackColor = XFDialogRealValueForRef(attrs, XFDialogMaskViewBackgroundColor, [UIColor blackColor]);
     CGFloat maskViewAlpha = XFDialogRealValueWithTypeForRef(attrs, XFDialogMaskViewAlpha, floatValue, XFDialogMaskViewDefAlpha);
     XFMaskView *maskView = [XFMaskView dialogMaskViewWithBackColor:maskViewBackColor alpha:maskViewAlpha];
@@ -108,11 +121,12 @@ const NSString *XFDialogTitleIsMultiLine = @"XFDialogTitleIsMultiLine";
     
     if (self.attrs[XFDialogTitleIsMultiLine]) {
         self.titleChangeValue = 0.f;
-        float spacing = XFDialogRealValueWithFloatType(XFDialogItemSpacing, XFDialogDefItemSpacing);
+        float spacing = XFDialogRealValueWithFloatType(XFDialogMultiLineTitleMargin, XFDialogDefItemSpacing);
         self.titleLabel.x = spacing;
-        self.titleLabel.y = spacing * 2;
-        self.titleLabel.width = self.dialogSize.width - spacing;
-        self.titleLabel.height = [self realTitleHeight] - spacing * 2;
+        self.titleLabel.y = spacing;
+        self.titleLabel.width = self.dialogSize.width - spacing * 2;
+        CGSize titleSize = [self.titleLabel.text sizeWithFont:self.titleLabel.font constrainedToSize:CGSizeMake(self.titleLabel.width, MAXFLOAT) lineBreakMode:NSLineBreakByCharWrapping];
+        self.titleLabel.height = titleSize.height;
         self.titleChangeValue = self.titleLabel.height;
     }else{
         self.titleLabel.width = self.dialogSize.width;
@@ -127,10 +141,20 @@ const NSString *XFDialogTitleIsMultiLine = @"XFDialogTitleIsMultiLine";
     if ([@"" isEqualToString:self.titleLabel.text] || self.titleLabel.text == nil) {
         return 0.0f;
     }
-    // 是否有设置多行高度
-    if (self.titleChangeValue > 0.f) {
-        float spacing = XFDialogRealValueWithFloatType(XFDialogItemSpacing, XFDialogDefItemSpacing);
-        return self.titleChangeValue + spacing * 2;
+    // 计算多行文本标题高度给子对话框使用
+    if (self.attrs[XFDialogTitleIsMultiLine]) {
+        float spacing = XFDialogRealValueWithFloatType(XFDialogMultiLineTitleMargin, XFDialogDefItemSpacing);
+        // 如果布局完成
+        if (self.titleChangeValue) {
+            return self.titleChangeValue + spacing;
+        }else{
+            // 在布局之前，只能手动再计算一次
+            CGSize dialogSize = XFDialogRealValueWithType(XFDialogSize, CGSizeValue, CGSizeMake(XFDialogDefW, XFDialogDefH));
+            self.titleLabel.width = dialogSize.width - spacing * 2;
+            CGSize titleSize = [self.titleLabel.text sizeWithFont:self.titleLabel.font constrainedToSize:CGSizeMake(self.titleLabel.width, MAXFLOAT) lineBreakMode:NSLineBreakByCharWrapping];
+            return titleSize.height + spacing;
+        }
+        
     }
     // 返回初始设置
     return  XFDialogRealValueWithFloatType(XFDialogTitleViewHeight, XFDialogTitleViewDefH);

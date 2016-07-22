@@ -15,6 +15,7 @@
 #import "XFDialogMacro.h"
 #import "XFDialogAnimationUtil.h"
 #import "XFUITool.h"
+#import "XFDialogMessage.h"
 
 
 @interface ViewController ()
@@ -68,14 +69,15 @@
 
 
 - (IBAction)popupHintDialog {
-    //WS(weakSelf)
-    __weak ViewController *weakSelf = self;
+    WS(weakSelf)
     self.dialogView =
     [[XFDialogNotice dialogWithTitle:@"提示"
                                   attrs:@{
-                                          XFDialogTitleViewBackgroundColor : [UIColor grayColor],
+                                          XFDialogMaskViewBackgroundColor:UIColorFromRGB(0xcccccc),
+                                          XFDialogMaskViewAlpha:@(0.5f),
+                                          XFDialogTitleViewBackgroundColor :UIColorFromRGB(0xcccccc),
+                                          XFDialogTitleColor: [UIColor whiteColor],
                                           XFDialogNoticeText: @"确定退出？",
-                                          XFDialogLineColor : [UIColor darkGrayColor],
                                           }
                          commitCallBack:^(NSString *inputText) {
                              [weakSelf.dialogView hideWithAnimationBlock:nil];
@@ -96,7 +98,7 @@
                                         XFDialogCancelButtonTitle:@"否",
                                         XFDialogCommitButtonTitle:@"是",
                                         XFDialogNoticeTypeSet : @(XFDialogNoticeTypeIconWithTextVertical),
-                                        //XFDialogNoticeText: @"你确定不需要吗?",
+                                        //XFDialogNoticeText: @"你确定要退出吗?",
                                         XFDialogNoticeContentItemSpacing:@(20.f),
                                         XFDialogNoticeTextColor: [UIColor redColor],
                                         XFDialogNoticeIcon: [UIImage imageNamed:@"warn"],
@@ -116,6 +118,8 @@
     self.dialogView =
     [[XFDialogOptionButton dialogWithTitle:@"选择性别"
                                         attrs:@{
+                                                XFDialogMaskViewBackgroundColor:[UIColor redColor],
+                                                XFDialogMaskViewAlpha:@(0.5f),
                                               XFDialogTitleViewBackgroundColor : [UIColor redColor],
                                               XFDialogTitleColor: [UIColor whiteColor],
                                               XFDialogOptionTextList: @[@"男",@"女"]
@@ -272,15 +276,14 @@
     
     WS(weakSelf)
     self.dialogView =
-    [[XFDialogTextArea dialogWithTitle:@"请输入你的想法吧~"
+    [[XFDialogTextArea dialogWithTitle:@"请输入你的想法吧~\n多给我们提提议建吧~"
                                  attrs:@{
-                                         XFDialogTitleViewBackgroundColor : [UIColor grayColor],
-                                         XFDialogTitleColor: [UIColor whiteColor],
-                                         //XFDialogTitleFontSize: @(14.f),
-                                         //XFDialogTitleViewHeight: @(22 + 16),
-                                         //XFDialogTitleAlignment: @(NSTextAlignmentCenter),
-                                         //XFDialogTitleIsMultiLine: @(YES),
-                                         XFDialogTextAreaMargin: @(16.f),
+                                         XFDialogTitleViewBackgroundColor : [UIColor whiteColor],
+                                         XFDialogTitleColor: [UIColor blackColor],
+                                         XFDialogTitleFontSize: @(14.f),
+                                         XFDialogTitleAlignment: @(NSTextAlignmentLeft),
+                                         XFDialogTitleIsMultiLine: @(YES),
+                                         XFDialogTextAreaMargin: @(12.f),
                                          XFDialogTextAreaHeight: @(120.f),
                                          XFDialogTextAreaPlaceholderKey: @"说点什么",
                                          XFDialogTextAreaPlaceholderColorKey: [UIColor grayColor],
@@ -296,6 +299,22 @@
                              
                          }] showWithAnimationBlock:nil];
 }
+
+
+- (IBAction)popupCustomDialog {
+     WS(weakSelf)
+    self.dialogView = [[XFDialogMessage dialogWithTitle:nil attrs:@{} commitCallBack:^(NSString *inputText) {
+        [weakSelf.dialogView hideWithAnimationBlock:nil];
+    }] showWithAnimationBlock:nil];
+    
+}
+
+
+
+
+
+
+
 
 - (void)regionSelectAction:(UIButton *)selector {
     XFComboxListController *regionVC = [[XFComboxListController alloc] init];
