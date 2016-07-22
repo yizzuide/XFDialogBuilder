@@ -93,8 +93,6 @@ extern const NSString *XFDialogBackground;
 extern const NSString *XFDialogLineColor;
 /** 对话框线条宽度 float类型*/
 extern const NSString *XFDialogLineWidth;
-/** 对话框子内容的间隔 float类型*/
-extern const NSString *XFDialogItemSpacing;
 /** 对话框标题背景色 UIColor类型*/
 extern const NSString *XFDialogTitleViewBackgroundColor;
 /** 对话框标题颜色 UIColor类型*/
@@ -107,6 +105,8 @@ extern const NSString *XFDialogTitleViewHeight;
 extern const NSString *XFDialogTitleAlignment;
 /** 对话框标题是否为多行 BOOL类型*/
 extern const NSString *XFDialogTitleIsMultiLine;
+/** 对话框多行标题的Margin float类型*/
+extern const NSString *XFDialogMultiLineTitleMargin;
 ```
 #####1.2.构建对话框
 所有子控件调用下面方法显示对话框，子控件添加自己的视图则通过`- (void)addContentView;`勾子方法。
@@ -202,19 +202,36 @@ typedef float(^addAnimationEngineBlock)(UIView *view);
 ```
 
 #####1.4.扩展子对话框
-显示自己想要的对话框，如果完全自己自定义就继承`XFDialogFrame`,如果想拥有底部“取消”、“确定”按钮而只定义上面内容就继承`XFDialogCommandButton`，然后通过以下两个方法进行扩展（可以参考`XFDialogNotice`类的扩展实现）:
+显示自己想要的对话框，如果完全自己自定义就继承`XFDialogFrame`,如果想拥有底部“取消”、“确定”按钮而只定义上面内容就继承`XFDialogCommandButton`，然后通过以下两个方法进行扩展（可以参考`XFDialogTextArea`类的扩展实现）:
 
 ```objc
-/**
- *  添加子视图
- */
-- (void)addContentView;
-/**
- *  对话框大小
- *
- *  @return Size
- */
-- (CGSize)dialogSize;
+// 第一步： 添加子视图内容
+- (void)addContentView
+{
+    // 调用父类实现
+    [super addContentView];
+    
+    
+}
+
+// 第二步：返回对话框大小：父类有默认的大小，如果这个自定义对话框添加子视图，就必须自己计算整个对话框显示的大小
+- (CGSize)dialogSize{
+    // 获得标题高度（宽度是对话框宽度）
+    CGFloat titleH = [self realTitleHeight];
+    // 获得命令式按钮高度（宽度是对话框宽度）
+    CGFloat confirmButtonH = [self realCommandButtonHeight];
+    // 计算自己添加的视图大小
+    
+    return  CGSizeMake(XFDialogDefW, titleH + confirmButtonH /* + ...其它高度 */);
+}
+
+// 第三步：布局子视图
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+    // 计算添加的子视图Frame
+}
 ```
 
 
