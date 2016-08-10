@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 /**
- *  这个类在以后的版本可能会扩充渐变等绘制效果
+ *  毛玻璃效果层
  */
 @interface XFDialogPanelView : UIView
 

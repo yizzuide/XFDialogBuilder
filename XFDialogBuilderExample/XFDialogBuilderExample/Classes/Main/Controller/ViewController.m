@@ -73,10 +73,11 @@
     self.dialogView =
     [[XFDialogNotice dialogWithTitle:@"提示"
                                   attrs:@{
-                                          XFDialogMaskViewBackgroundColor:UIColorFromRGB(0xcccccc),
-                                          XFDialogMaskViewAlpha:@(0.5f),
-                                          XFDialogTitleViewBackgroundColor :UIColorFromRGB(0xcccccc),
-                                          XFDialogTitleColor: [UIColor whiteColor],
+                                          XFDialogMaskViewAlpha:@(0.f),
+                                          // 设置毛玻璃效果时，最好把遮罩层背景去掉，标题栏背景颜色透明
+                                          XFDialogEnableBlurEffect:@YES,
+                                          XFDialogTitleViewBackgroundColor :UIColorFromARGB(0x00000000),
+                                          XFDialogTitleColor: [UIColor blackColor],
                                           XFDialogNoticeText: @"确定退出？",
                                           }
                          commitCallBack:^(NSString *inputText) {
@@ -92,6 +93,7 @@
                                         XFDialogMaskViewBackgroundColor:[UIColor redColor],
                                         XFDialogMaskViewAlpha:@(0.5f),
                                         XFDialogSize:[NSValue valueWithCGSize:CGSizeMake(240, 180)],
+                                        XFDialogTitleViewBackgroundColor :UIColorFromARGB(0x00000000),
                                         XFDialogTitleViewBackgroundColor : [UIColor redColor],
                                         XFDialogLineColor: [UIColor redColor],
                                         XFDialogLineWidth: @(0.5f),

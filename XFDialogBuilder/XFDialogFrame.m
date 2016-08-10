@@ -14,6 +14,7 @@
 
 const NSString *XFDialogMaskViewBackgroundColor = @"XFDialogMaskViewBackgroundColor";
 const NSString *XFDialogMaskViewAlpha = @"XFDialogMaskViewAlpha";
+const NSString *XFDialogEnableBlurEffect = @"XFDialogEnableBlurEffect";
 const NSString *XFDialogSize = @"XFDialogSize";
 const NSString *XFDialogCornerRadius = @"XFCornerRadius";
 const NSString *XFDialogBackground = @"XFDialogBackground";
@@ -35,6 +36,8 @@ const NSString *XFDialogMultiLineTitleMargin = @"XFDialogMultiLineTitleMargin";
 @property (nonatomic, weak, readwrite) UILabel *titleLabel;
 @property (nonatomic, copy,readwrite) commitClickBlock commitCallBack;
 @property (nonatomic, weak, readwrite) XFMaskView *maskView;
+
+@property (nonatomic, weak) UIView *panelView;
 
 @property (nonatomic, assign) CGFloat titleChangeValue;
 @end
@@ -60,11 +63,16 @@ const NSString *XFDialogMultiLineTitleMargin = @"XFDialogMultiLineTitleMargin";
     dialogFrameView.layer.cornerRadius = XFDialogRealValueWithTypeForRef(attrs, XFDialogCornerRadius, floatValue, XFDialogDefCornerRadius);
     dialogFrameView.backgroundColor = XFDialogRealValueForRef(attrs, XFDialogBackground, [UIColor whiteColor]);
     
-    // 添加背板层
-    XFDialogPanelView *panelView = [[XFDialogPanelView alloc] init];
-    panelView.backgroundColor = [UIColor whiteColor];
-    panelView.size = [dialogFrameView dialogSize];
-    [dialogFrameView addSubview:panelView];
+    // 添加毛玻璃层
+    if(attrs[XFDialogEnableBlurEffect]){
+        XFDialogPanelView *panelView = [[XFDialogPanelView alloc] init];
+        panelView.backgroundColor = [UIColor whiteColor];
+        panelView.size = [dialogFrameView dialogSize];
+        [dialogFrameView addSubview:panelView];
+        dialogFrameView.panelView = panelView;
+    }
+    
+
     
     // 添加标题
     UILabel *titleLabel = [[UILabel alloc] init];
@@ -132,6 +140,8 @@ const NSString *XFDialogMultiLineTitleMargin = @"XFDialogMultiLineTitleMargin";
         self.titleLabel.width = self.dialogSize.width;
         self.titleLabel.height = [self realTitleHeight];
     }
+    
+    self.panelView.size = self.dialogSize;
 }
 
 // 获取真实标题高度

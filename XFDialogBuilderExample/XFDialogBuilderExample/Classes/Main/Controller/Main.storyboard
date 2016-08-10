@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,77 +18,101 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sTU-sZ-z6J">
-                                <rect key="frame" x="240" y="158" width="120" height="30"/>
-                                <state key="normal" title="弹出无标题提示框"/>
-                                <connections>
-                                    <action selector="popupNoTitleHintDialog:" destination="BYZ-38-t0r" eventType="touchUpInside" id="njU-Rr-eOP"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7e5-Z4-v5r">
                                 <rect key="frame" x="262" y="100" width="75" height="30"/>
-                                <state key="normal" title="弹出提示框"/>
+                                <state key="normal" title="弹出提示框">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="popupHintDialog" destination="BYZ-38-t0r" eventType="touchUpInside" id="TDh-2K-8ef"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sTU-sZ-z6J">
+                                <rect key="frame" x="240" y="158" width="120" height="30"/>
+                                <state key="normal" title="弹出无标题提示框">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="popupNoTitleHintDialog:" destination="BYZ-38-t0r" eventType="touchUpInside" id="njU-Rr-eOP"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4lL-Dn-fD1">
                                 <rect key="frame" x="247" y="210" width="105" height="30"/>
-                                <state key="normal" title="弹出可选按钮框"/>
+                                <state key="normal" title="弹出可选按钮框">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="popupOptionButtonDialog:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j1J-zz-c48"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O0W-UE-AWx">
+                                <rect key="frame" x="263" y="262" width="75" height="30"/>
+                                <state key="normal" title="弹出登录框">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="popupLoginInputDialog:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h8t-ta-piP"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kd3-4L-Qgy">
                                 <rect key="frame" x="248" y="314" width="105" height="30"/>
-                                <state key="normal" title="弹出修改密码框"/>
+                                <state key="normal" title="弹出修改密码框">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="popupUpdatePasswordDialog:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5EV-c9-96N"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pha-Qf-gvh">
                                 <rect key="frame" x="248" y="370" width="105" height="30"/>
-                                <state key="normal" title="弹出下拉列表框"/>
+                                <state key="normal" title="弹出下拉列表框">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="popupComboxDialog:" destination="BYZ-38-t0r" eventType="touchUpInside" id="476-ef-zOc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O0W-UE-AWx">
-                                <rect key="frame" x="263" y="262" width="75" height="30"/>
-                                <state key="normal" title="弹出登录框"/>
-                                <connections>
-                                    <action selector="popupLoginInputDialog:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h8t-ta-piP"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9P-Kp-BnP">
                                 <rect key="frame" x="263" y="423" width="75" height="30"/>
-                                <state key="normal" title="弹出文本框"/>
+                                <state key="normal" title="弹出文本框">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="popupTextAreaDialog:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7WI-Le-neG"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqm-bl-kpu">
                                 <rect key="frame" x="255" y="478" width="90" height="30"/>
-                                <state key="normal" title="自定义对话框"/>
+                                <state key="normal" title="自定义对话框">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="popupCustomDialog" destination="BYZ-38-t0r" eventType="touchUpInside" id="kZn-CZ-zsY"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q0J-1E-u2o">
+                                <rect key="frame" x="361" y="205" width="240" height="189"/>
+                                <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="dqm-bl-kpu" firstAttribute="top" secondItem="o9P-Kp-BnP" secondAttribute="bottom" constant="25" id="30U-9d-mIM"/>
+                            <constraint firstItem="q0J-1E-u2o" firstAttribute="leading" secondItem="Kd3-4L-Qgy" secondAttribute="trailing" constant="8" symbolic="YES" id="61W-db-LSP"/>
                             <constraint firstItem="pha-Qf-gvh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8HP-Tt-YDH"/>
                             <constraint firstItem="4lL-Dn-fD1" firstAttribute="top" secondItem="sTU-sZ-z6J" secondAttribute="bottom" constant="22" id="AmC-Vi-mrq"/>
                             <constraint firstItem="Kd3-4L-Qgy" firstAttribute="top" secondItem="O0W-UE-AWx" secondAttribute="bottom" constant="22" id="CkG-kP-73R"/>
                             <constraint firstItem="sTU-sZ-z6J" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Kqt-tO-ZgM"/>
                             <constraint firstItem="Kd3-4L-Qgy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LLH-iO-86w"/>
+                            <constraint firstItem="q0J-1E-u2o" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="185" id="MWk-Sq-Cpw"/>
                             <constraint firstItem="7e5-Z4-v5r" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VQe-dP-X0t"/>
                             <constraint firstItem="O0W-UE-AWx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aBo-iZ-PGh"/>
                             <constraint firstItem="sTU-sZ-z6J" firstAttribute="top" secondItem="7e5-Z4-v5r" secondAttribute="bottom" constant="28" id="aG1-5Q-3z3"/>
                             <constraint firstItem="o9P-Kp-BnP" firstAttribute="top" secondItem="pha-Qf-gvh" secondAttribute="bottom" constant="23" id="gYo-yA-fpJ"/>
                             <constraint firstItem="pha-Qf-gvh" firstAttribute="top" secondItem="Kd3-4L-Qgy" secondAttribute="bottom" constant="26" id="jnX-d0-M48"/>
+                            <constraint firstItem="q0J-1E-u2o" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="n5w-Oq-xiH"/>
                             <constraint firstItem="O0W-UE-AWx" firstAttribute="top" secondItem="4lL-Dn-fD1" secondAttribute="bottom" constant="22" id="oTc-mP-xGa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="q0J-1E-u2o" secondAttribute="trailing" constant="-21" id="pK5-hR-oTd"/>
                             <constraint firstItem="o9P-Kp-BnP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qLx-pV-Ue4"/>
                             <constraint firstItem="7e5-Z4-v5r" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="sHX-wy-yAJ"/>
                             <constraint firstItem="4lL-Dn-fD1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="y4O-wl-aAs"/>
@@ -97,7 +122,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="250" y="249"/>
+            <point key="canvasLocation" x="312" y="208"/>
         </scene>
     </scenes>
 </document>

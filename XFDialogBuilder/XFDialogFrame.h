@@ -31,6 +31,8 @@ typedef float(^addAnimationEngineBlock)(UIView *view);
 extern const NSString *XFDialogMaskViewBackgroundColor;
 /** 遮罩层透明度 float类型*/
 extern const NSString *XFDialogMaskViewAlpha;
+/** 对话框仿UIAlterView毛玻璃效果 BOOL类型*/
+extern const NSString *XFDialogEnableBlurEffect;
 /** 对话框大小 CGSize类型*/
 extern const NSString *XFDialogSize; // 如果不设置，会根据当前对话框类型自己计算
 /** 对话框圆角 float类型*/
