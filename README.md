@@ -1,6 +1,6 @@
 ![XFDialogBuilder logo](./ScreenShot/logo.png)
 
-[![CocoaPods](https://img.shields.io/badge/cocoapods-v1.2.3-brightgreen.svg)](http://cocoadocs.org/docsets/XFSettings)
+[![CocoaPods](https://img.shields.io/badge/cocoapods-v1.2.5-brightgreen.svg)](http://cocoadocs.org/docsets/XFSettings)
 ![Language](https://img.shields.io/badge/language-ObjC-orange.svg)
 ![License](https://img.shields.io/npm/l/express.svg)
 ![Version](https://img.shields.io/badge/platform-ios6%2B-green.svg)
@@ -27,11 +27,11 @@
 
 ##安装
 1、通过cocoapods
-> pod 'XFDialogBuilder','1.2.3'
+> pod 'XFDialogBuilder','1.2.5'
 
 2、手动加入
 
-把XFDialogBuilder整个目录拖入到工程，添加依赖库`pop`、`UITextView+Placeholder`。
+把XFDialogBuilder整个目录拖入到工程，添加依赖库`pop`。
 
 ##Demo运行注意
 需要用命令行:
