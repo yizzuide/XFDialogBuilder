@@ -1,9 +1,9 @@
 //
 //  XFDropdownMenu.h
-//  
+//  XFDialogBuilder
 //
 //  Created by Yizzuide on 15/6/10.
-//  Copyright © 2015年 Yizzuide. All rights reserved.
+//  Copyright © 2015年 yizzuide. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

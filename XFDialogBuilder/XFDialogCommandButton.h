@@ -1,9 +1,9 @@
 //
 //  XFDecideView.h
-//  CreativeButton
+//  XFDialogBuilder
 //
 //  Created by yizzuide on 15/9/19.
-//  Copyright © 2015年 RightBrain. All rights reserved.
+//  Copyright © 2015年 yizzuide. All rights reserved.
 //
 
 #import "XFDialogFrame.h"

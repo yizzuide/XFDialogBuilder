@@ -1,16 +1,16 @@
 //
 //  XFDialogTextArea.m
-//  CreativeButton
+//  XFDialogBuilder
 //
 //  Created by yizzuide on 16/3/3.
-//  Copyright © 2016年 RightBrain-Tech. All rights reserved.
+//  Copyright © 2016年 yizzuide. All rights reserved.
 //
 
 #import "XFDialogTextArea.h"
 #import "XFDialogMacro.h"
 #import "XFMaskView.h"
 #import "UIView+DialogMeasure.h"
-#import "UITextView+Placeholder.h"
+#import "XFTextView.h"
 
 const NSString *XFDialogTextAreaTypeKey = @"XFDialogTextAreaTypeKey";
 const NSString *XFDialogTextAreaPlaceholderKey = @"XFDialogTextAreaPlaceholderKey";
@@ -26,7 +26,7 @@ typedef BOOL(^ValidatorBlock)(UITextView *textView);
 @interface XFDialogTextArea () <UITextViewDelegate>
 
 @property (nonatomic, copy, readwrite) errorHappenBlock errorCallBack;
-@property (nonatomic, weak) UITextView *textView;
+@property (nonatomic, weak) XFTextView *textView;
 @end
 
 @implementation XFDialogTextArea
@@ -43,14 +43,14 @@ typedef BOOL(^ValidatorBlock)(UITextView *textView);
 {
     [super addContentView];
     
-    UITextView *textView = [[UITextView alloc] init];
+    XFTextView *textView = [[XFTextView alloc] init];
     textView.autocorrectionType = UITextAutocorrectionTypeNo;
     textView.autocapitalizationType = UITextAutocapitalizationTypeNone;
     textView.spellCheckingType = UITextSpellCheckingTypeNo;
     textView.keyboardType = XFDialogRealValueWithType(XFDialogTextAreaTypeKey, intValue, UIKeyboardTypeDefault);
     textView.tintColor = XFDialogRealValue(XFDialogTextAreaHintColor, [UIColor blackColor]);
-    textView.placeholder = XFDialogRealValue(XFDialogTextAreaPlaceholderKey, @"请输入内容");
-    textView.placeholderColor = XFDialogRealValue(XFDialogTextAreaPlaceholderColorKey, [UIColor blackColor]);
+    textView.placeHodler = XFDialogRealValue(XFDialogTextAreaPlaceholderKey, @"请输入内容");
+    textView.placeHodlerColor = XFDialogRealValue(XFDialogTextAreaPlaceholderColorKey, [UIColor blackColor]);
     textView.textColor = XFDialogRealValue(XFDialogTextAreaTextColor, [UIColor blackColor]);
     textView.enablesReturnKeyAutomatically = YES;
     textView.textAlignment = NSTextAlignmentLeft;

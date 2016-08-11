@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name = 'XFDialogBuilder'
-s.version = '1.2.3'
+s.version = '1.2.5'
 s.license = 'MIT'
 s.summary = 'Configurable dialog for IOS.'
 s.homepage = 'https://github.com/yizzuide/XFDialogBuilder'
@@ -10,5 +10,4 @@ s.requires_arc = true
 s.ios.deployment_target = '6.0'
 s.source_files = 'XFDialogBuilder/**/*.{h,m}'
 s.dependency 'pop'
-s.dependency 'UITextView+Placeholder'
 end

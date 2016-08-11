@@ -1,9 +1,9 @@
 //
 //  XFDialogMaskView.m
-//  CreativeButton
+//  XFDialogBuilder
 //
 //  Created by yizzuide on 15/9/30.
-//  Copyright © 2015年 RightBrain-Tech. All rights reserved.
+//  Copyright © 2015年 yizzuide. All rights reserved.
 //
 
 #import "XFMaskView.h"

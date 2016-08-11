@@ -1,6 +1,6 @@
 //
 //  UIView+Extention.h
-//  
+//  XFDialogBuilder
 //
 //  Created by Yizzuide on 15/6/8.
 //  Copyright (c) 2015年 Yizzuide. All rights reserved.

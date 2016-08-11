@@ -1,9 +1,9 @@
 //
 //  XFDialogTextArea.h
-//  CreativeButton
+//  XFDialogBuilder
 //
 //  Created by yizzuide on 16/3/3.
-//  Copyright © 2016年 RightBrain-Tech. All rights reserved.
+//  Copyright © 2016年 yizzuide. All rights reserved.
 //
 
 #import "XFDialogCommandButton.h"

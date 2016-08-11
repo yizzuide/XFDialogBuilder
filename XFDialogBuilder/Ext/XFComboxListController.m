@@ -1,6 +1,6 @@
 //
 //  XFComboxListController.m
-//  XFDialogBuilderExample
+//  XFDialogBuilder
 //
 //  Created by yizzuide on 15/9/15.
 //  Copyright (c) 2015年 yizzuide. All rights reserved.

@@ -1,6 +1,6 @@
 //
 //  XFDialogMacro.h
-//  XFDialogBuilderExample
+//  XFDialogBuilder
 //
 //  Created by yizzuide on 16/1/1.
 //  Copyright © 2016年 yizzuide. All rights reserved.
