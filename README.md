@@ -15,7 +15,7 @@
 ##XFDialogBuilder框架特点
 1.快速开发，使用json搭建界面。
 
-2.相比其它高度封装+酷炫框架([SIAlertView](https://github.com/Sumi-Interactive/SIAlertView)、[SCLAlertView](https://github.com/dogo/SCLAlertView)、[AMSmoothAlertView](https://github.com/mtonio91/AMSmoothAlert)等)，本框架UI定制性更强,，需求更符合国情，是真正能拿到自己项目用的。
+2.相比其它高度封装+酷炫库([SIAlertView](https://github.com/Sumi-Interactive/SIAlertView)、[SCLAlertView](https://github.com/dogo/SCLAlertView)、[AMSmoothAlertView](https://github.com/mtonio91/AMSmoothAlert)等)，本框架UI定制性更强,，需求更符合国情，是真正能拿到自己项目用的。
 
 3.使用者能分别自定义弹入、弹出动画引擎，可使用IOS自带动画方式，也可用其它第三方引擎，如[pop](https://github.com/facebook/pop)、[MMTweenAnimation](https://github.com/adad184/MMTweenAnimation)、[JHChainableAnimations](https://github.com/jhurray/JHChainableAnimations)等（兼容所有UIView动画引擎的嵌入)。
 
@@ -23,7 +23,7 @@
 
 5.内置强大输入框验证系统，开发者可自定义配置验证规则。
 
-6.最低支持到IOS6。
+6.它不只是一个库，而属于一个重量级框架。
 
 ##安装
 1、通过cocoapods
