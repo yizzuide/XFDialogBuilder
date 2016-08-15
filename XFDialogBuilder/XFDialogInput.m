@@ -43,6 +43,8 @@ const NSString *XFDialogInputEyeCloseImage = @"XFDialogInputEyeCloseImage";
 
 @property (nonatomic, strong) NSMutableArray<UITextField *> *inputTextFields;
 @property (nonatomic, assign) NSInteger currentNextIndex;
+// 侦听对象
+@property (nonatomic, weak) id<NSObject> observer;
 @end
 
 @implementation XFDialogInput
@@ -121,7 +123,7 @@ const NSString *XFDialogInputEyeCloseImage = @"XFDialogInputEyeCloseImage";
 //    LogError(@"inputTFS : %zd",self.inputTextFields.count);
     
     WS(weakSelf)
-    [[NSNotificationCenter defaultCenter] addObserverForName:UIKeyboardWillChangeFrameNotification object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull noti) {
+    self.observer = [[NSNotificationCenter defaultCenter] addObserverForName:UIKeyboardWillChangeFrameNotification object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull noti) {
         CGFloat keyY = [noti.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue].origin.y;
         CGFloat kScreenH = [[UIScreen mainScreen] bounds].size.height;
         
@@ -272,5 +274,10 @@ const NSString *XFDialogInputEyeCloseImage = @"XFDialogInputEyeCloseImage";
     }
     
     return nil;
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self.observer];
 }
 @end

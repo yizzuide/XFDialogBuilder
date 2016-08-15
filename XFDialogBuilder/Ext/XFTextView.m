@@ -54,6 +54,8 @@ static CGFloat y = 8;
 
 - (void)drawRect:(CGRect)rect
 {
+    [super drawRect:rect];
+    
     // 如果有内容返回
     if (self.hasText) return;
     // 文字属性

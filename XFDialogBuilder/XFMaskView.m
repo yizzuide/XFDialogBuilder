@@ -20,22 +20,6 @@
 @end
 
 @implementation XFMaskView
- 
-- (instancetype)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        // 侦听屏幕旋转
-        //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(willRotateWithNoti:) name:UIDeviceOrientationDidChangeNotification object:nil];
-    }
-    return self;
-}
-
-//- (void)willRotateWithNoti:(NSNotification *)noti {
-    //[UIView animateWithDuration:0.25 animations:^{
-        //self.frame = CGRectMake(0, 0, ScreenSize.width, ScreenSize.height);
-    //}];
-//}
 
 - (UIWindow *)frontWindow
 {
@@ -69,9 +53,6 @@
     NSArray *vConstraint = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[maskView]-0-|" options:0 metrics:nil views:@{@"maskView":self}];
     [self.frontWindow addConstraints:vConstraint];
     
-    
-    dialogView.centerX = self.centerX;
-    dialogView.centerY = self.centerY;
     dialogView.hidden = YES;
     
     [dialogView.layer removeAllAnimations];
@@ -174,11 +155,5 @@
     self.dialogView.centerY = self.centerY;
     [self.dialogView layoutIfNeeded];
 }
-
-
-/*- (void)dealloc
-{
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-}*/
 
 @end

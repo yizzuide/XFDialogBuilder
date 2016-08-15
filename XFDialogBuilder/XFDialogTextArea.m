@@ -27,6 +27,8 @@ typedef BOOL(^ValidatorBlock)(UITextView *textView);
 
 @property (nonatomic, copy, readwrite) errorHappenBlock errorCallBack;
 @property (nonatomic, weak) XFTextView *textView;
+// 侦听对象
+@property (nonatomic, weak) id<NSObject> observer;
 @end
 
 @implementation XFDialogTextArea
@@ -65,7 +67,7 @@ typedef BOOL(^ValidatorBlock)(UITextView *textView);
     self.textView = textView;
     
     WS(weakSelf)
-    [[NSNotificationCenter defaultCenter] addObserverForName:UIKeyboardWillChangeFrameNotification object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull noti) {
+    self.observer = [[NSNotificationCenter defaultCenter] addObserverForName:UIKeyboardWillChangeFrameNotification object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull noti) {
         CGFloat keyY = [noti.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue].origin.y;
         CGFloat kScreenH = [[UIScreen mainScreen] bounds].size.height;
         
@@ -161,6 +163,11 @@ typedef BOOL(^ValidatorBlock)(UITextView *textView);
         }
     }
     return nil;
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self.observer];
 }
 
 @end

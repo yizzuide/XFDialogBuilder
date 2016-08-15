@@ -24,6 +24,8 @@ CGRect RectAroundCenter(CGPoint center, CGSize size)
 @interface XFDialogPanelView ()
 
 @property (nonatomic, weak) UIView *blurView;
+
+@property (nonatomic, assign) BOOL hasShowing;
 @end
 
 @implementation XFDialogPanelView
@@ -54,7 +56,14 @@ CGRect RectAroundCenter(CGPoint center, CGSize size)
     CGRect rect = [keyWindow bounds];
     UIGraphicsBeginImageContext(rect.size);
     CGContextRef context = UIGraphicsGetCurrentContext();
-    [keyWindow.layer renderInContext:context];
+    if (self.hasShowing) {
+        NSInteger count = keyWindow.subviews.count;
+        // count - 1 是self.dailogView  count -2 是self
+        UIView *controllerView = keyWindow.subviews[count - 3];
+        [controllerView.layer renderInContext:context];
+    }else{
+        [keyWindow.layer renderInContext:context];
+    }
     UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     return img;
@@ -67,12 +76,17 @@ CGRect RectAroundCenter(CGPoint center, CGSize size)
     UIImage *bgImage = [self captureScreen];
     CGRect drawingRect = RectAroundCenter(RectGetCenter(rect), bgImage.size);
     [bgImage drawInRect:drawingRect];
+    
+    self.hasShowing = YES;
+    
 }
 
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-    self.blurView.size = self.size;
+    self.blurView.size =  self.size;
+    // 重新截屏
+    [self setNeedsDisplay];
 }
 
 @end
