@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XFMaskView.h"
 
 /**
  *  动画执行代码
@@ -63,16 +64,15 @@ extern const NSString *XFDialogMultiLineTitleMargin;
  *
  *  @param inputText 确定内容
  */
-typedef void(^commitClickBlock)(NSString *inputText);
+typedef void(^CommitClickBlock)(NSString *inputText);
 
 
-@class XFMaskView;
 @interface XFDialogFrame : UIView
 
 // 下面的不用直接赋值，使用类方法
 @property (nonatomic, strong, readonly) NSDictionary *attrs;
 @property (nonatomic, weak, readonly) UILabel *titleLabel;
-@property (nonatomic, copy, readonly) commitClickBlock commitCallBack;
+@property (nonatomic, copy, readonly) CommitClickBlock commitCallBack;
 
 /**
  *  设置取消事件的动画效果（只有在自定义动画时要设置）
@@ -107,7 +107,7 @@ typedef void(^commitClickBlock)(NSString *inputText);
  *  @param commitCallBack 确定输入内容的回调
  *
  */
-+ (instancetype)dialogWithTitle:(NSString *)title attrs:(NSDictionary *)attrs commitCallBack:(commitClickBlock)commitCallBack;
++ (instancetype)dialogWithTitle:(NSString *)title attrs:(NSDictionary *)attrs commitCallBack:(CommitClickBlock)commitCallBack;
 /**
  *  通过动画引擎显示,使用默认可传nil
  *
@@ -119,4 +119,10 @@ typedef void(^commitClickBlock)(NSString *inputText);
  *  @param animationEngineBlock 动画执行Block，如果为空则为默认效果
  */
 - (void)hideWithAnimationBlock:(addAnimationEngineBlock)animationEngineBlock;
+/**
+ *  设置对话框取消时执行的代码
+ *
+ *  @param cancelCallBack 取消Block
+ */
+- (instancetype)setCancelCallBack:(CancelClickBlock)cancelCallBack;
 @end

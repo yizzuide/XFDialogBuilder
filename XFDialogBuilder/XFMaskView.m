@@ -107,6 +107,11 @@
 
 - (void)hideWithAnimationBlock:(addAnimationEngineBlock)animationEngineBlock
 {
+    // 检测是否有用户自定义取消代码
+    if (self.cancelCallBack) {
+        self.cancelCallBack();
+    }
+    
     self.willDisapper = YES;
     if (animationEngineBlock) {
         float duration = animationEngineBlock(self.dialogView);

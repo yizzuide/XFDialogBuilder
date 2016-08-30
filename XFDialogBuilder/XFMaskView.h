@@ -16,10 +16,20 @@
  *  @return 动画执行时间
  */
 typedef float(^addAnimationEngineBlock)(UIView *view);
+/**
+ *  取消回调Block
+ */
+typedef void(^CancelClickBlock)();
 
 @interface XFMaskView : UIView
-
+/**
+ *  对话框视图
+ */
 @property (nonatomic, weak) UIView *dialogView;
+/**
+ *  取消回调
+ */
+@property (nonatomic, copy) CancelClickBlock cancelCallBack;
 
 /**
  *  添加遮罩层

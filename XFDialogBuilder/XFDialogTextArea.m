@@ -34,7 +34,7 @@ typedef BOOL(^ValidatorBlock)(UITextView *textView);
 @implementation XFDialogTextArea
 
 
-+ (instancetype)dialogWithTitle:(NSString *)title attrs:(NSDictionary *)attrs commitCallBack:(commitClickBlock)commitCallBack errorCallBack:(errorHappenBlock)errorCallBack
++ (instancetype)dialogWithTitle:(NSString *)title attrs:(NSDictionary *)attrs commitCallBack:(CommitClickBlock)commitCallBack errorCallBack:(errorHappenBlock)errorCallBack
 {
     XFDialogTextArea *dialogView = [super dialogWithTitle:title attrs:attrs commitCallBack:commitCallBack];
     dialogView.errorCallBack = errorCallBack;

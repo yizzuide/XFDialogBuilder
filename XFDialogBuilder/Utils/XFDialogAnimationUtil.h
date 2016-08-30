@@ -24,13 +24,4 @@
  */
 + (addAnimationEngineBlock)centerToTop;
 
-/**
- *  退出对话框动画
- *
- *  @param workBlock 退出前的操作
- *
- *  @return 动画Block
- */
-+ (addAnimationEngineBlock)dialogDisappearAnimWithWorkBlock:(void(^)())workBlock;
-
 @end

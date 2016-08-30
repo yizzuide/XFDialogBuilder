@@ -58,7 +58,7 @@ const NSString *XFDialogInputEyeCloseImage = @"XFDialogInputEyeCloseImage";
     return _inputTextFields;
 }
 
-+ (instancetype)dialogWithTitle:(NSString *)title attrs:(NSDictionary *)attrs commitCallBack:(commitClickBlock)commitCallBack errorCallBack:(errorHappenBlock)errorCallBack
++ (instancetype)dialogWithTitle:(NSString *)title attrs:(NSDictionary *)attrs commitCallBack:(CommitClickBlock)commitCallBack errorCallBack:(errorHappenBlock)errorCallBack
 {
     XFDialogInput *dialogView = [super dialogWithTitle:title attrs:attrs commitCallBack:commitCallBack];
     dialogView.errorCallBack = errorCallBack;

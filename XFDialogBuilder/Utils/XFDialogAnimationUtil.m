@@ -44,11 +44,4 @@
     };
 }
 
-+ (addAnimationEngineBlock)dialogDisappearAnimWithWorkBlock:(void(^)())workBlock {
-    if (workBlock) {
-        workBlock();
-    }
-    return [self centerToTop];
-}
-
 @end

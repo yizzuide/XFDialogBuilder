@@ -38,7 +38,7 @@ typedef void(^errorHappenBlock)(NSString *errorMessage);
  *  @param commitCallBack 确定输入内容的回调
  *
  */
-+ (instancetype)dialogWithTitle:(NSString *)title attrs:(NSDictionary *)attrs commitCallBack:(commitClickBlock)commitCallBack errorCallBack:(errorHappenBlock)errorCallBack;
++ (instancetype)dialogWithTitle:(NSString *)title attrs:(NSDictionary *)attrs commitCallBack:(CommitClickBlock)commitCallBack errorCallBack:(errorHappenBlock)errorCallBack;
 
 - (void)focusErrorEventInputView;
 @end

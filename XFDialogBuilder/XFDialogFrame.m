@@ -7,7 +7,6 @@
 //
 
 #import "XFDialogFrame.h"
-#import "XFMaskView.h"
 #import "UIView+DialogMeasure.h"
 #import "XFDialogMacro.h"
 #import "XFDialogPanelView.h"
@@ -34,7 +33,7 @@ const NSString *XFDialogMultiLineTitleMargin = @"XFDialogMultiLineTitleMargin";
 
 @property (nonatomic, strong, readwrite) NSDictionary *attrs;
 @property (nonatomic, weak, readwrite) UILabel *titleLabel;
-@property (nonatomic, copy,readwrite) commitClickBlock commitCallBack;
+@property (nonatomic, copy,readwrite) CommitClickBlock commitCallBack;
 @property (nonatomic, weak, readwrite) XFMaskView *maskView;
 
 @property (nonatomic, weak) UIView *panelView;
@@ -53,7 +52,7 @@ const NSString *XFDialogMultiLineTitleMargin = @"XFDialogMultiLineTitleMargin";
     return self;
 }
 
-+ (instancetype)dialogWithTitle:(NSString *)title attrs:(NSDictionary *)attrs commitCallBack:(commitClickBlock)commitCallBack
++ (instancetype)dialogWithTitle:(NSString *)title attrs:(NSDictionary *)attrs commitCallBack:(CommitClickBlock)commitCallBack
 {
     // 初始化对话框
     XFDialogFrame *dialogFrameView = [[self alloc] init];
@@ -112,6 +111,12 @@ const NSString *XFDialogMultiLineTitleMargin = @"XFDialogMultiLineTitleMargin";
 - (void)hideWithAnimationBlock:(addAnimationEngineBlock)animationEngineBlock
 {
     [self.maskView hideWithAnimationBlock:animationEngineBlock];
+}
+
+- (instancetype)setCancelCallBack:(CancelClickBlock)cancelCallBack
+{
+    self.maskView.cancelCallBack = cancelCallBack;
+    return self;
 }
 
 - (void)addContentView

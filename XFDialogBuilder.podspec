@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name = 'XFDialogBuilder'
-s.version = '1.2.6'
+s.version = '1.2.7'
 s.license = 'MIT'
 s.summary = 'Configurable dialog for IOS.'
 s.homepage = 'https://github.com/yizzuide/XFDialogBuilder'

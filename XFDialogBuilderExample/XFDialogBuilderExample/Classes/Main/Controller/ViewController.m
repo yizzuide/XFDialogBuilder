@@ -300,7 +300,18 @@
                          errorCallBack:^(NSString *errorMessage) {
                              
                          }] showWithAnimationBlock:nil];
+    [self.dialogView setCancelCallBack:^{
+        NSLog(@"用户取消输入！");
+    }];
 }
+
+- (addAnimationEngineBlock)dialogDisappearAnimWithWorkBlock:(void(^)())workBlock {
+    if (workBlock) {
+        workBlock();
+    }
+    return nil;
+}
+
 
 
 - (IBAction)popupCustomDialog {
