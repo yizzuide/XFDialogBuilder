@@ -262,12 +262,19 @@ extern const NSString *XFDialogCommitButtonMiddleLineDisable;
 成功回调,可以直接使用上面的显示对话框类方法赋值，定义如下：
 ```objc
 /**
- *  确定事件的回调
+ *  点击事件的回调
  *
  *  @param inputText 确定内容
  */
 typedef void(^commitClickBlock)(NSString *inputText);
 @property (nonatomic, copy, readonly) commitClickBlock commitCallBack;
+
+/**
+ *  设置对话框取消时执行的代码
+ *
+ *  @param cancelCallBack 取消Block
+ */
+- (instancetype)setCancelCallBack:(CancelClickBlock)cancelCallBack;
 ```
 确定消息的回传：
 ```objc
@@ -276,22 +283,7 @@ typedef void(^commitClickBlock)(NSString *inputText);
  */
 @property (nonatomic, copy) NSString *inputText;
 ```
-取消回调，没有直接使用的回调方式（处理这个回调情况很少），可以参考`XFDialogAnimationUtil`实现的方法：
-```objc
-/**
- *  退出对话框动画
- *
- *  @param workBlock 退出前的操作
- *
- *  @return 动画Block
- */
-+ (addAnimationEngineBlock)dialogDisappearAnimWithWorkBlock:(void(^)())workBlock {
-    if (workBlock) {
-        workBlock();
-    }
-    return [self centerToTop];
-}
-```
+
 
 #####2.2.抽象验证
 
