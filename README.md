@@ -10,20 +10,18 @@
 ![XFDialogBuilder usage](./ScreenShot/usage.gif)
 
 ##前言
-当初项目中要使用对话框处理各种信息，在github和code4app中找了几个中意的，但都不能完全和项目进行融合，这些开源项目动画效果炫、UI很精致，但定制性不强，它们封的太死板了，所谓的一行代码显示效果，在对话框视图根本就是胡扯。本想自己随便布个局，就能显示一个对话框，但项目很多地方都要显示这样的对话框，复用性太差，基于此，决定自己搭一个对话框框架模板，然后根据基本模板向下扩展，在项目不停变化，这个框架也经历了多次迭代，做了对正确、错误信息、输入验证的处理，动画引擎的加入，向外提供不同样式的配置字段，这才开源出来。
+当初项目中要使用对话框处理各种信息，在github和code4app中找了几个中意的，但都不能完全和项目进行融合，这些开源项目动画效果炫、UI很精致，但定制性不强，它们封的太死板了。本想自己随便布个局，就能显示一个对话框，但项目很多地方都要显示这样的对话框，复用性太差，基于此，决定自己搭一个对话框框架模板，然后根据基本模板向下扩展，在项目不停变化，这个框架也经历了多次迭代，做了对正确、错误信息、输入验证的处理，动画引擎的加入，向外提供不同样式的配置字段，这才开源出来。
 
 ##XFDialogBuilder框架特点
-1.快速开发，使用json搭建界面。
+1.快速开发，使用OC式JSON搭建界面。
 
 2.相比其它高度封装+酷炫库([SIAlertView](https://github.com/Sumi-Interactive/SIAlertView)、[SCLAlertView](https://github.com/dogo/SCLAlertView)、[AMSmoothAlertView](https://github.com/mtonio91/AMSmoothAlert)等)，本框架UI定制性更强,，需求更符合国情，是真正能拿到自己项目用的。
 
 3.使用者能分别自定义弹入、弹出动画引擎，可使用IOS自带动画方式，也可用其它第三方引擎，如[pop](https://github.com/facebook/pop)、[MMTweenAnimation](https://github.com/adad184/MMTweenAnimation)、[JHChainableAnimations](https://github.com/jhurray/JHChainableAnimations)等（兼容所有UIView动画引擎的嵌入)。
 
-4.扩展性强，提供多种对话框类型，开发者可自己基于模板进行扩展。
+4.扩展性强，提供多种对话框类型，没有提供的类型开发者可自己基于相关模板基类进行扩展。
 
 5.内置强大输入框验证系统，开发者可自定义配置验证规则。
-
-6.它不只是一个库，而属于一个重量级框架。
 
 ##安装
 1、通过cocoapods
@@ -31,7 +29,7 @@
 
 2、手动加入
 
-把XFDialogBuilder整个目录拖入到工程，添加依赖库`pop`。
+把XFDialogBuilder整个目录拖入到工程，添加依赖库`pop`（考虑到帮开发者通过`pop`来自定义加入动画引擎，所以有个帮助类依赖于它）。
 
 ##Demo运行注意
 需要用命令行:
@@ -56,7 +54,7 @@
 ```objc
     __weak ViewController *weakSelf = self;
     self.dialogView =
-    [[XFDialogNotice dialogWithTitle:@"提示"
+    [[[XFDialogNotice dialogWithTitle:@"提示"
                                attrs:@{
                                           XFDialogTitleViewBackgroundColor : [UIColor grayColor],
                                           XFDialogNoticeText: @"确定退出？",
@@ -64,7 +62,9 @@
                                           }
                          commitCallBack:^(NSString *inputText) {
                              [weakSelf.dialogView hideWithAnimationBlock:nil];
-                         }] showWithAnimationBlock:nil];
+                         }] showWithAnimationBlock:nil] setCancelCallBack:^{
+                             NSLog(@"取消对话框！");
+                         }];
 ```
 
 ###二、框架文档
