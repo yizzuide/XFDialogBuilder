@@ -1,6 +1,6 @@
 ![XFDialogBuilder logo](./ScreenShot/logo.png)
 
-[![CocoaPods](https://img.shields.io/badge/cocoapods-v1.2.7-brightgreen.svg)](http://cocoadocs.org/docsets/XFSettings)
+[![CocoaPods](https://img.shields.io/badge/cocoapods-v1.2.7-brightgreen.svg)](http://cocoadocs.org/docsets/XFDialogBuilder)
 ![Language](https://img.shields.io/badge/language-ObjC-orange.svg)
 ![License](https://img.shields.io/npm/l/express.svg)
 ![Version](https://img.shields.io/badge/platform-ios6%2B-green.svg)
