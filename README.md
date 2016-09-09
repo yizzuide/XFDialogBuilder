@@ -5,6 +5,7 @@
 ![License](https://img.shields.io/npm/l/express.svg)
 ![Version](https://img.shields.io/badge/platform-ios6%2B-green.svg)
 
+A configable dialog for IOS. Developer can custom mask layer,window size,UI theme,text content,font,layout content,push and pop Animation. 
 可配置型IOS对话框，使用者定制蒙版层背景、窗口大小、UI主题、文本内容、字体大小、布局内容、弹出消失动画引擎。
 
 ![XFDialogBuilder usage](./ScreenShot/usage.gif)
