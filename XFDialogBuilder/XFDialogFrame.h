@@ -70,7 +70,7 @@ typedef void(^CommitClickBlock)(NSString *inputText);
 @interface XFDialogFrame : UIView
 
 // 下面的不用直接赋值，使用类方法
-@property (nonatomic, strong, readonly) NSDictionary *attrs;
+@property (nonatomic, strong,readonly) NSMutableDictionary *attrs;
 @property (nonatomic, weak, readonly) UILabel *titleLabel;
 @property (nonatomic, copy, readonly) CommitClickBlock commitCallBack;
 

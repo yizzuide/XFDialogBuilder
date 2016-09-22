@@ -31,7 +31,7 @@ const NSString *XFDialogMultiLineTitleMargin = @"XFDialogMultiLineTitleMargin";
 
 @interface XFDialogFrame ()
 
-@property (nonatomic, strong, readwrite) NSDictionary *attrs;
+@property (nonatomic, strong, readwrite) NSMutableDictionary *attrs;
 @property (nonatomic, weak, readwrite) UILabel *titleLabel;
 @property (nonatomic, copy,readwrite) CommitClickBlock commitCallBack;
 @property (nonatomic, weak, readwrite) XFMaskView *maskView;
@@ -56,7 +56,7 @@ const NSString *XFDialogMultiLineTitleMargin = @"XFDialogMultiLineTitleMargin";
 {
     // 初始化对话框
     XFDialogFrame *dialogFrameView = [[self alloc] init];
-    dialogFrameView.attrs = attrs;
+    dialogFrameView.attrs = [attrs mutableCopy];
     dialogFrameView.commitCallBack = commitCallBack;
     
     dialogFrameView.layer.cornerRadius = XFDialogRealValueWithTypeForRef(attrs, XFDialogCornerRadius, floatValue, XFDialogDefCornerRadius);

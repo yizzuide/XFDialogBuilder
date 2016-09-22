@@ -19,7 +19,7 @@ const NSString *XFDialogCancelButtonTitle = @"XFDialogCancelButtonTitle";
 const NSString *XFDialogCommitButtonTitle = @"XFDialogCommitButtonTitle";
 const NSString *XFDialogCommitButtonFontSize = @"XFDialogCommitButtonFontSize";
 const NSString *XFDialogCommitButtonMiddleLineDisable = @"XFDialogCommitButtonMiddleLineDisable";
-
+const NSString *XFDialogCommitButtonCancelDisable = @"XFDialogCommitButtonCancelDisable";
 
 @interface XFDialogCommandButton ()
 
@@ -89,6 +89,11 @@ const NSString *XFDialogCommitButtonMiddleLineDisable = @"XFDialogCommitButtonMi
     
     // 添加线条
     [self buttonTopLine];
+    
+    // 如果禁用Cancel按钮,那么就禁用中线
+    if(XFDialogRealValueWithType(XFDialogCommitButtonCancelDisable, boolValue, NO)){
+        self.attrs[XFDialogCommitButtonMiddleLineDisable] = @YES;
+    }
     if (!XFDialogRealValueWithType(XFDialogCommitButtonMiddleLineDisable, boolValue, NO)) {
         [self buttonMiddleLine];
     }
@@ -99,19 +104,27 @@ const NSString *XFDialogCommitButtonMiddleLineDisable = @"XFDialogCommitButtonMi
     [super layoutSubviews];
     
     CGFloat buttonH = [self realCommandButtonHeight];
-
-    self.cancelButton.y = self.dialogSize.height - buttonH;
-    self.cancelButton.width = self.dialogSize.width * 0.5;
-    self.cancelButton.height = buttonH;
     
-    self.commitButton.x = self.dialogSize.width * 0.5;
-    self.commitButton.y = self.dialogSize.height - buttonH;
-    self.commitButton.width = self.dialogSize.width * 0.5;
-    self.commitButton.height = buttonH;
-    
+    // 如果禁用Cancel按钮
+    if(XFDialogRealValueWithType(XFDialogCommitButtonCancelDisable, boolValue, NO)){
+        self.commitButton.y = self.dialogSize.height - buttonH;
+        self.commitButton.width = self.dialogSize.width;
+        self.commitButton.height = buttonH;
+    }else{
+        self.cancelButton.y = self.dialogSize.height - buttonH;
+        self.cancelButton.width = self.dialogSize.width * 0.5;
+        self.cancelButton.height = buttonH;
+        
+        self.commitButton.x = self.dialogSize.width * 0.5;
+        self.commitButton.y = self.dialogSize.height - buttonH;
+        self.commitButton.width = self.dialogSize.width * 0.5;
+        self.commitButton.height = buttonH;
+    }
+    // 布局顶部线条
     self.buttonTopLine.y = self.commitButton.y - 1;
     self.buttonTopLine.width = self.dialogSize.width;
     
+    // 布局中线
     if (!XFDialogRealValueWithType(XFDialogCommitButtonMiddleLineDisable, boolValue, NO)) {
         self.buttonMiddleLine.y = self.commitButton.y;
         self.buttonMiddleLine.x = (self.dialogSize.width - self.buttonMiddleLine.width) * 0.5;

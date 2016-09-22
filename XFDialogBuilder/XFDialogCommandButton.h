@@ -25,6 +25,8 @@ extern const NSString *XFDialogCommitButtonTitle;
 extern const NSString *XFDialogCommitButtonFontSize;
 /** 禁用中线 BOOL类型*/
 extern const NSString *XFDialogCommitButtonMiddleLineDisable;
+/** 禁用取消按钮 */
+extern const NSString *XFDialogCommitButtonCancelDisable;
 
 
 @interface XFDialogCommandButton : XFDialogFrame

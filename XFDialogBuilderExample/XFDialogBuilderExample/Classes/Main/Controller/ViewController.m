@@ -78,6 +78,7 @@
                                           XFDialogEnableBlurEffect:@YES,
                                           XFDialogTitleViewBackgroundColor :UIColorFromARGB(0x00000000),
                                           XFDialogTitleColor: [UIColor blackColor],
+                                          XFDialogCommitButtonCancelDisable:@YES, // 禁用取消按钮
                                           XFDialogNoticeText: @"确定退出？",
                                           }
                          commitCallBack:^(NSString *inputText) {
