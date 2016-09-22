@@ -1,6 +1,6 @@
 ![XFDialogBuilder logo](./ScreenShot/logo.png)
 
-[![CocoaPods](https://img.shields.io/badge/cocoapods-v1.2.8-brightgreen.svg)](http://cocoadocs.org/docsets/XFDialogBuilder)
+[![CocoaPods](https://img.shields.io/badge/cocoapods-v1.2.9-brightgreen.svg)](http://cocoadocs.org/docsets/XFDialogBuilder)
 ![Language](https://img.shields.io/badge/language-ObjC-orange.svg)
 ![License](https://img.shields.io/npm/l/express.svg)
 ![Version](https://img.shields.io/badge/platform-ios6%2B-green.svg)
@@ -26,7 +26,7 @@ A configable dialog for IOS. Developer can custom mask layer,window size,UI them
 
 ##安装
 1、通过cocoapods
-> pod 'XFDialogBuilder','1.2.8'
+> pod 'XFDialogBuilder','1.2.9'
 
 2、手动加入
 
