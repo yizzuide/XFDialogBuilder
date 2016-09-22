@@ -149,7 +149,7 @@ const NSString *XFDialogCommitButtonCancelDisable = @"XFDialogCommitButtonCancel
     if (!errorMessage) {
         if (self.commitCallBack) {
             [self endEditing:YES];
-            self.commitCallBack([self inputText]);
+            self.commitCallBack([self inputData]);
         }
     }else{
         // 发给子类有错误
@@ -159,7 +159,7 @@ const NSString *XFDialogCommitButtonCancelDisable = @"XFDialogCommitButtonCancel
 
 - (void)onErrorWithMesssage:(NSString *)errorMessage{}
 
-- (NSString *)inputText
+- (id)inputData
 {
     return @"commit";
 }

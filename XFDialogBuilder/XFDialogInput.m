@@ -216,9 +216,13 @@ const NSString *XFDialogInputEyeCloseImage = @"XFDialogInputEyeCloseImage";
     return CGSizeMake(XFDialogDefW, topH + allInputFieldsH + allMarginH + bottomButtonH);
 }
 
-- (NSString *)inputText
+- (id)inputData
 {
-    return self.inputTextFields.lastObject.text;
+    NSMutableArray<NSString *> *inputs = [NSMutableArray array];
+    [self.inputTextFields enumerateObjectsUsingBlock:^(UITextField * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [inputs addObject:obj.text];
+    }];
+    return inputs;
 }
 
 - (void)focusErrorEventInputView

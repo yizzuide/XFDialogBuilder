@@ -62,9 +62,9 @@ extern const NSString *XFDialogMultiLineTitleMargin;
 /**
  *  确定事件的回调
  *
- *  @param inputText 确定内容
+ *  @param inputData 确定内容(大多数是一个文本，多输入文本对话框是一个数组）
  */
-typedef void(^CommitClickBlock)(NSString *inputText);
+typedef void(^CommitClickBlock)(id inputData);
 
 
 @interface XFDialogFrame : UIView

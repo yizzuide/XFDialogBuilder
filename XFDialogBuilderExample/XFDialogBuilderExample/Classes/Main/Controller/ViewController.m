@@ -229,9 +229,9 @@
     },ValidatorErrorKey: @"两次密码不一致！"
                                                      }]
                                          }
-                        commitCallBack:^(NSString *inputText) {
-                            NSLog(@"输的密码：%@",inputText);
-                            [XFUITool showToastWithTitle:[NSString stringWithFormat:@"你密码的是: %@",inputText] complete:nil];
+                        commitCallBack:^(NSArray<NSString *> *inputs) {
+                            NSLog(@"输的密码：%@",inputs[1]);
+                            [XFUITool showToastWithTitle:[NSString stringWithFormat:@"你密码的是: %@",inputs[1]] complete:nil];
                             [weakSelf.dialogView hideWithAnimationBlock:nil];
                         } errorCallBack:^(NSString *errorMessage) {
                             NSLog(@"error -- %@",errorMessage);

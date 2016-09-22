@@ -35,7 +35,7 @@ extern const NSString *XFDialogCommitButtonCancelDisable;
 /**
  *  子控件可以覆盖确定时的输入内容，用于作为参数输出给commitCallBack回调，默认返回"commit"
  */
-@property (nonatomic, copy) NSString *inputText;
+@property (nonatomic, copy) id inputData;
 
 /**
  *  子类可以调用确定按钮事件
