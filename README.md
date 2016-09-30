@@ -267,7 +267,7 @@ extern const NSString *XFDialogCommitButtonMiddleLineDisable;
  *
  *  @param inputText 确定内容
  */
-typedef void(^commitClickBlock)(NSString *inputText);
+typedef void(^commitClickBlock)(id inputData);
 @property (nonatomic, copy, readonly) commitClickBlock commitCallBack;
 
 /**
@@ -282,7 +282,7 @@ typedef void(^commitClickBlock)(NSString *inputText);
 /**
  *  子控件可以覆盖确定时的输入内容，用于作为参数输出给commitCallBack回调，默认返回"commit"
  */
-@property (nonatomic, copy) NSString *inputText;
+@property (nonatomic, copy) id inputData;
 ```
 
 
@@ -449,8 +449,9 @@ self.dialogView =
     },ValidatorErrorKey: @"两次密码不一致！"
                                                      }]
                                          }
-                        commitCallBack:^(NSString *inputText) {
-                            NSLog(@"输的密码：%@",inputText);
+                        commitCallBack:^(NSArray<NSString *> *inputs) {
+                            NSLog(@"输入第一个的密码：%@",inputs[0]);
+                            NSLog(@"输入第二个的密码：%@",inputs[1]);
                             [weakSelf.dialogView hideWithAnimationBlock:nil];
                         } errorCallBack:^(NSString *errorMessage) {
                             NSLog(@"error -- %@",errorMessage);
