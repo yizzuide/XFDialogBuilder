@@ -10,10 +10,10 @@ A configable dialog for IOS. Developer can custom mask layer,window size,UI them
 
 ![XFDialogBuilder usage](./ScreenShot/usage.gif)
 
-##前言
+## 前言
 当初项目中要使用对话框处理各种信息，在github和code4app中找了几个中意的，但都不能完全和项目进行融合，这些开源项目动画效果炫、UI很精致，但定制性不强，它们封的太死板了。本想自己随便布个局，就能显示一个对话框，但项目很多地方都要显示这样的对话框，复用性太差，基于此，决定自己搭一个对话框框架模板，然后根据基本模板向下扩展，在项目不停变化，这个框架也经历了多次迭代，做了对正确、错误信息、输入验证的处理，动画引擎的加入，向外提供不同样式的配置字段，这才开源出来。
 
-##XFDialogBuilder框架特点
+## XFDialogBuilder框架特点
 1.快速开发，使用OC式JSON搭建界面。
 
 2.相比其它高度封装+酷炫库([SIAlertView](https://github.com/Sumi-Interactive/SIAlertView)、[SCLAlertView](https://github.com/dogo/SCLAlertView)、[AMSmoothAlertView](https://github.com/mtonio91/AMSmoothAlert)等)，本框架UI定制性更强,，需求更符合国情，是真正能拿到自己项目用的。
@@ -24,7 +24,7 @@ A configable dialog for IOS. Developer can custom mask layer,window size,UI them
 
 5.内置强大输入框验证系统，开发者可自定义配置验证规则。
 
-##安装
+## 安装
 1、通过cocoapods
 > pod 'XFDialogBuilder','1.2.9'
 
@@ -32,15 +32,15 @@ A configable dialog for IOS. Developer can custom mask layer,window size,UI them
 
 把XFDialogBuilder整个目录拖入到工程，添加依赖库`pop`（考虑到帮开发者通过`pop`来自定义加入动画引擎，所以有个帮助类依赖于它）。
 
-##Demo运行注意
+## Demo运行注意
 需要用命令行:
 
 1.`cd ...XFDialogBuilderExample`("..."要根据自己的路径来)
 
 2.`pod install`
 
-##开发文档
-###一、快速开始
+## 开发文档
+### 一、快速开始
 1.导入主头文件`#import "XFDialogBuilder.h"`
 
 2.在控制器引用`@property (nonatomic, weak) XFDialogFrame *dialogView;`
@@ -68,15 +68,15 @@ A configable dialog for IOS. Developer can custom mask layer,window size,UI them
                          }];
 ```
 
-###二、框架文档
-####1.顶级显示容器`XFDialogFrame`
+### 二、框架文档
+#### 1.顶级显示容器`XFDialogFrame`
 这是布局的核心类，也作为与`XFMaskView`沟通的桥梁，后者是用来显示和动画执行关键类，所以基于`XFDialogFrame`的子控件具有显示和动画执行的能力，所以开发者不用关心`XFMaskView`。
 
 下图是框架整体结构：
 ![XFDialogBuilder framework](./ScreenShot/framework.png)
 
 
-#####1.1.容器配置属性
+##### 1.1.容器配置属性
 子控件类都会继承自`XFDialogFrame`这些配置：
 ```objc
 // 注意：以下属性都有默认设置
@@ -111,7 +111,7 @@ extern const NSString *XFDialogTitleIsMultiLine;
 /** 对话框多行标题的Margin float类型*/
 extern const NSString *XFDialogMultiLineTitleMargin;
 ```
-#####1.2.构建对话框
+##### 1.2.构建对话框
 所有子控件调用下面方法显示对话框，子控件添加自己的视图则通过`- (void)addContentView;`勾子方法。
 ```objc
 /**
@@ -124,7 +124,7 @@ extern const NSString *XFDialogMultiLineTitleMargin;
  */
 + (instancetype)dialogWithTitle:(NSString *)title attrs:(NSDictionary *)attrs commitCallBack:(commitClickBlock)commitCallBack;
 ```
-#####1.3.动画引擎
+##### 1.3.动画引擎
 设置动画引擎,内建有默认`Core Animation`动画，不自定义动画时可以传`nil`。
 ```objc
 /**
@@ -204,7 +204,7 @@ typedef float(^addAnimationEngineBlock)(UIView *view);
     }];
 ```
 
-#####1.4.扩展子对话框
+##### 1.4.扩展子对话框
 显示自己想要的对话框，如果完全自己自定义就继承`XFDialogFrame`,如果想拥有底部“取消”、“确定”按钮而只定义上面内容就继承`XFDialogCommandButton`，然后通过以下两个方法进行扩展（可以参考`XFDialogTextArea`类的扩展实现）:
 
 ```objc
@@ -238,7 +238,7 @@ typedef float(^addAnimationEngineBlock)(UIView *view);
 ```
 
 
-####2.命令式按钮控件`XFDialogCommandButton`
+#### 2.命令式按钮控件`XFDialogCommandButton`
 所有具有“确定”、“取消”的对话框都继承自`XFDialogCommandButton`，这个类具有“确定”、“取消”的回调，并有在“确定”时执行的抽象验证方法，验证方法的具体实现在它的子控件`XFDialogInput`。
 
 扩展配置属性：
@@ -259,7 +259,7 @@ extern const NSString *XFDialogCommitButtonFontSize;
 extern const NSString *XFDialogCommitButtonMiddleLineDisable;
 ```
 
-#####2.1.命令式回调
+##### 2.1.命令式回调
 成功回调,可以直接使用上面的显示对话框类方法赋值，定义如下：
 ```objc
 /**
@@ -286,7 +286,7 @@ typedef void(^commitClickBlock)(id inputData);
 ```
 
 
-#####2.2.抽象验证
+##### 2.2.抽象验证
 
 验证器核心方法:
 ```objc
@@ -304,7 +304,7 @@ typedef void(^commitClickBlock)(id inputData);
 - (void)onErrorWithMesssage:(NSString *)errorMessage;
 ```
 
-####3.功能强大的输入对话框`XFDialogInput`
+#### 3.功能强大的输入对话框`XFDialogInput`
 之所以说它强大，是因为它能做的事很多：
 - 可添加无数个UITextField,只有屏幕能显示得下
 - 支持文本框的普通文本显示和密码框显示，并支持密码明文切换显示
@@ -346,7 +346,7 @@ extern const NSString *XFDialogInputEyeOpenImage;
 /** 文本框明文图标名 NSString类型*/
 extern const NSString *XFDialogInputEyeCloseImage;
 ```
-#####3.1.扩展创建对话框类方法，支持错误回调：
+##### 3.1.扩展创建对话框类方法，支持错误回调：
 ```objc
 /**
  *  显示对话框
@@ -358,7 +358,7 @@ extern const NSString *XFDialogInputEyeCloseImage;
  */
 + (instancetype)dialogWithTitle:(NSString *)title attrs:(NSDictionary *)attrs commitCallBack:(commitClickBlock)commitCallBack errorCallBack:(errorHappenBlock)errorCallBack;
 ```
-#####3.2.单项文本框验证使用：
+##### 3.2.单项文本框验证使用：
 ```objc
     self.dialogView =
     [[XFDialogInput dialogWithTitle:@"登录"
@@ -404,7 +404,7 @@ extern const NSString *XFDialogInputEyeCloseImage;
                             NSLog(@"error -- %@",errorMessage);
                         }] showWithAnimationBlock:nil];
 ```
-#####3.3.多项文本框验证：
+##### 3.3.多项文本框验证：
 ```objc
 self.dialogView =
     [[XFDialogInput dialogWithTitle:@"修改密码"
