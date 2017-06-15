@@ -11,13 +11,15 @@
 #import "UIView+DialogMeasure.h"
 #import "XFDialogMacro.h"
 
-
-
 const NSString *XFDialogOptionTextList = @"XFDialogOptionTextList";
+const NSString *XFDialogOptionImageList = @"XFDialogOptionImageList";
+const NSString *XFDialogOptionButtonMarginBetweenContent = @"XFDialogOptionButtonMarginBetweenContent";
 const NSString *XFDialogOptionTextColor = @"XFDialogOptionTextColor";
 const NSString *XFDialogOptionCancelTextColor = @"XFDialogOptionCancelTextColor";
+const NSString *XFDialogOptionCancelDisable = @"XFDialogOptionCancelDisable";
 const NSString *XFDialogOptionButtonHeight = @"XFDialogOptionButtonHeight";
 const NSString *XFDialogOptionButtonFontSize = @"XFDialogOptionButtonFontSize";
+
 
 
 @interface XFDialogOptionButton ()
@@ -45,6 +47,7 @@ const NSString *XFDialogOptionButtonFontSize = @"XFDialogOptionButtonFontSize";
     
     // 可选按钮
     NSUInteger count = [self.attrs[XFDialogOptionTextList] count];
+    NSArray *imageList = XFDialogRealValue(XFDialogOptionImageList, [[NSArray alloc] init]);
     for (int i = 0; i < count; i++) {
         UIButton *optionButton = [[UIButton alloc] init];
         [optionButton setTitle:self.attrs[XFDialogOptionTextList][i] forState:UIControlStateNormal];
@@ -52,6 +55,16 @@ const NSString *XFDialogOptionButtonFontSize = @"XFDialogOptionButtonFontSize";
         optionButton.titleLabel.font = XFDialogRealFont(XFDialogOptionButtonFontSize, XFDialogOptionButtonDefFontSize);
         [self addSubview:optionButton];
         [optionButton addTarget:self action:@selector(commitAction:) forControlEvents:UIControlEventTouchUpInside];
+        if (imageList.count) {
+            [optionButton setImage:[UIImage imageNamed:imageList[i]] forState:UIControlStateNormal];
+            CGFloat margin = XFDialogRealValueWithFloatType(XFDialogOptionButtonMarginBetweenContent, 25);
+            optionButton.titleEdgeInsets = UIEdgeInsetsMake(0, margin * 0.5, 0, 0);
+            optionButton.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, margin * 0.5);
+        }
+    }
+    BOOL disableCancel = XFDialogRealValueWithType(XFDialogOptionCancelDisable, boolValue, NO);
+    if (disableCancel) {
+        return;
     }
     // 取消按钮
     UIButton *cancelButton = [[UIButton alloc] init];
@@ -71,7 +84,9 @@ const NSString *XFDialogOptionButtonFontSize = @"XFDialogOptionButtonFontSize";
     [self.lines removeAllObjects];
     
 //    LogError(@"layout optionView");
-    
+    CGFloat lineMargin = XFDialogRealValueWithType(XFDialogLineMargin, floatValue, 0);
+    BOOL disableCancel = XFDialogRealValueWithType(XFDialogOptionCancelDisable, boolValue, NO);
+    NSInteger lineCount = disableCancel ? [self.attrs[XFDialogOptionTextList] count] - 1 : [self.attrs[XFDialogOptionTextList] count];
     NSUInteger count = self.subviews.count;
     CGFloat buttonCount = 0;
     for (int i = 0; i < count; i++) {
@@ -81,9 +96,10 @@ const NSString *XFDialogOptionButtonFontSize = @"XFDialogOptionButtonFontSize";
             view.height = XFDialogRealValueWithFloatType(XFDialogOptionButtonHeight, XFDialogOptionButtonDefHeight);
             view.y = buttonCount++ * view.height + [self realTitleHeight];
             // 在没有超过OptionButton个数的情况下添加线条
-            if (buttonCount <= [self.attrs[XFDialogOptionTextList] count]) {
+            if (buttonCount <= lineCount) {
                 UIView *lineView = [self createMiddleLine];
-                lineView.width = self.dialogSize.width;
+                lineView.x = lineMargin;
+                lineView.width = self.dialogSize.width - lineMargin * 2;
                 lineView.y = CGRectGetMaxY(view.frame);
             }
         }
@@ -92,7 +108,9 @@ const NSString *XFDialogOptionButtonFontSize = @"XFDialogOptionButtonFontSize";
 
 - (CGSize)dialogSize
 {
-    return CGSizeMake(XFDialogDefW, [self realTitleHeight] + ([self.attrs[XFDialogOptionTextList] count] + 1) * XFDialogRealValueWithFloatType(XFDialogOptionButtonHeight, XFDialogOptionButtonDefHeight) + ([self.attrs[XFDialogOptionTextList] count] - 1) * XFDialogCommandButtonLineDefH);
+    BOOL disableCancel = XFDialogRealValueWithType(XFDialogOptionCancelDisable, boolValue, NO);
+    NSInteger hasCancel = disableCancel ? 0 : 1;
+    return CGSizeMake(XFDialogDefW, [self realTitleHeight] + ([self.attrs[XFDialogOptionTextList] count] + hasCancel) * XFDialogRealValueWithFloatType(XFDialogOptionButtonHeight, XFDialogOptionButtonDefHeight) + ([self.attrs[XFDialogOptionTextList] count] - 1) * XFDialogCommandButtonLineDefH);
 }
 
 - (void)cancelAction:(id)sender {

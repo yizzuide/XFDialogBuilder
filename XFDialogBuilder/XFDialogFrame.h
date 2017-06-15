@@ -44,6 +44,8 @@ extern const NSString *XFDialogBackground;
 extern const NSString *XFDialogLineColor;
 /** 对话框线条宽度 float类型*/
 extern const NSString *XFDialogLineWidth;
+/** 线条外间距*/
+extern const NSString *XFDialogLineMargin;
 /** 对话框标题背景色 UIColor类型*/
 extern const NSString *XFDialogTitleViewBackgroundColor;
 /** 对话框标题颜色 UIColor类型*/
