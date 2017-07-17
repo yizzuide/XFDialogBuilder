@@ -75,7 +75,7 @@ const NSString *XFDialogComboBoxTitle = @"XFDialogComboBoxTitle";
 }
 
 // 返回输入内容
-- (NSString *)inputText
+- (id)inputData
 {    
     return self.menuSelectors[self.menuSelectors.count -1].titleLabel.text;
 }

@@ -125,7 +125,7 @@ typedef BOOL(^ValidatorBlock)(UITextView *textView);
     return CGSizeMake(XFDialogDefW, topH + textAreaH + allMarginH + bottomButtonH);
 }
 
-- (NSString *)inputText
+- (id)inputData
 {
     [self endEditing:YES];
     return self.textView.text;
